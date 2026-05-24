@@ -1,55 +1,48 @@
 # Finans Hafızası
 
-Finans Hafızası, Borsa İstanbul'da işlem gören şirketlerde yaşanan önemli olayları kaynaklarıyla birlikte arşivleyen; bu olaylardan sonra fiyat, hacim ve piyasa tepkisinin 1 gün, 3 gün, 1 hafta, 2 hafta ve 30 gün içinde nasıl değiştiğini gösteren tarafsız bir finans medya ürünüdür.
+Finans Hafızası, Borsa İstanbul şirketlerinde yaşanan önemli gelişmeleri kaynaklarıyla birlikte düzenleyen bir piyasa hafızası projesidir.
 
-Ürünün ana ilkesi:
+Amaç: haberi yorumlamak değil; gelişmenin ardından fiyat, hacim ve BIST 100 kıyasının nasıl değiştiğini düzenli biçimde göstermektir.
 
-> Yorum yapmaz. Yönlendirmez. Geçmişi düzenler, veriyi gösterir, kaynağı belirtir.
+## Ürün İlkesi
 
-## İlk MVP
+> Yorum yapmaz. Yönlendirmez. Kaynak gösterir. Geçmiş piyasa tepkilerini düzenler.
 
-- Hedef pazar: Türkiye
-- İlk kullanıcı: BIST yatırımcısı olan bireysel kullanıcı
-- Ana domain: `finanshafizasi.com`
-- Format: Medya ürünü gibi okunabilir, veri terminali kadar metodolojik
-- Kapsam: Seçilmiş popüler BIST hisseleri ve onaylı olay arşivi
-- Veri modeli: Olay, fiyat tepkisi, endeks karşılaştırması, hacim, kaynaklar, kamuya açık söylem özeti
+## MVP Özeti
 
-## Dosyalar
+- Pazar: Türkiye
+- Domain: `finanshafizasi.com`
+- Kullanıcı: BIST yatırımcısı
+- Format: Medya ürünü gibi okunabilir, veri ürünü kadar düzenli
+- İlk kapsam: Seçilmiş popüler BIST sembolleri
 
-- `app/`: Next.js uygulama rotaları
+## Proje Dosyaları
+
+- `app/`: Next.js sayfaları
 - `components/`: Arayüz bileşenleri
-- `lib/`: Örnek olay ve hisse verileri
-- `data/sample-events.json`: MVP için örnek olay verileri
-- `docs/product-blueprint.md`: Ürün konumu, hedef kitle, sayfa yapısı
-- `docs/methodology.md`: Olay seçimi ve fiyat tepkisi hesaplama metodolojisi
-- `docs/mvp-architecture.md`: MVP teknik mimarisi, rotalar, fazlar ve riskler
-- `docs/data-model.md`: Şirket, olay, kaynak, fiyat tepkisi ve editör kayıtları için veri modeli
-- `docs/editor-workflow.md`: Yarı otomatik ve editör onaylı yayın akışı
-- `docs/domain-brand-strategy.md`: Alınan domain, marka konumu ve global açılım notları
-- `docs/founder-action-plan.md`: Domain sonrası kurucu ve teknik aksiyon planı
-- `docs/vercel-deploy-guide.md`: Vercel deploy ve GoDaddy DNS bağlama rehberi
+- `lib/`: Örnek veri
+- `data/`: JSON örnekleri
+- `docs/`: Ürün, veri modeli, editör akışı ve deploy notları
 
-## Sıradaki Teknik Adımlar
+## Yakın Teknik İşler
 
 1. GitHub deposunu Vercel'e bağla.
 2. İlk Next.js deploy'unu al.
 3. `finanshafizasi.com` ve `www.finanshafizasi.com` domainlerini Vercel projesine ekle.
-4. GoDaddy DNS kayıtlarını Vercel'in verdiği değerlere göre güncelle.
-5. Olay detay sayfasını gerçek veri modeline bağla.
-6. Editör panelinde olay adayı, kaynak girişi ve onay akışını kur.
-7. Fiyat tepkisi hesaplama motorunun ilk sürümünü yaz.
+4. GoDaddy DNS kayıtlarını Vercel değerleriyle güncelle.
+5. Detay sayfasını gerçek veri modeline bağla.
+6. Editör panelini kur.
+7. Fiyat tepki hesaplama motorunu yaz.
 
-## MVP Yayın Çıkışı İçin Minimum Hedef
+## İlk Yayın Kriterleri
 
-- 20 hisse
-- Her hisse için en az 3 onaylı olay
-- Toplam en az 60 olay
-- Her olayda en az 1 kaynak
-- Her olayda 1G, 3G, 1H, 2H ve 30G fiyat tepkisi
-- BIST 100 ile karşılaştırmalı performans
-- Metodoloji ve yasal uyarı sayfaları
+- 20 BIST sembolü
+- Toplam 60+ onaylı kayıt
+- Her kayıtta en az 1 kaynak
+- Her kayıtta 1G, 3G, 1H, 2H ve 30G fiyat tepkisi
+- BIST 100 kıyası
+- Metodoloji sayfası
 
-## Yasal Uyarı
+## Yatırım Tavsiyesi Değildir
 
-Finans Hafızası yatırım tavsiyesi sunmaz. Platformda yer alan bilgiler geçmiş olayların ve piyasa verilerinin incelenmesi amacıyla hazırlanır.
+Finans Hafızası yatırım tavsiyesi sunmaz. İçerikler yalnızca geçmiş verileri, kaynakları ve piyasa tepkilerini incelemek için hazırlanır.
