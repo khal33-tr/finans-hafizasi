@@ -1,0 +1,469 @@
+[
+  {
+    "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+    "researchTargetId": "THYAO-01",
+    "ticker": "THYAO",
+    "date": "2026-04-29",
+    "publishDateTime": "2026-04-29T18:21:33+03:00",
+    "reactionStartDate": "2026-04-30",
+    "category": "earnings",
+    "title": "THYAO 2026 ilk çeyrek finansal sonuçları",
+    "summary": "Türk Hava Yolları'nın 2026 ilk çeyrek finansal sonuçlarına ilişkin KAP bildirimi kaynak olarak bulundu. Fiyat, hacim ve BIST 100 kıyası henüz hesaplanmadığı için kayıt candidate statüsündedir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1598902,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Finansal Sonuçlar",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1598902",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Açıklama seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": ["KAP linki", "Açıklama saati", "Tepki başlangıç tarihi", "Düzeltilmiş fiyat serisi", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "tuprs-2025-kar-dagitim-onerisi",
+    "researchTargetId": "TUPRS-01",
+    "ticker": "TUPRS",
+    "date": "2026-03-11",
+    "publishDateTime": "2026-03-11T18:58:50+03:00",
+    "reactionStartDate": "2026-03-12",
+    "category": "dividend",
+    "title": "TUPRS 2025 kar dağıtım önerisi",
+    "summary": "Tüpraş'ın 2025 yılı kar dağıtım önerisine ilişkin KAP bildirimi kaynak olarak bulundu. Temettü etkisi düzeltilmiş fiyat serisiyle ayrıca hesaplanmalıdır.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1570793,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: kar dağıtım önerisi",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1570793",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Temettü kayıtlarında hak kullanım ve fiyat düzeltmesi özellikle kontrol edilmelidir.",
+    "editorChecklist": ["KAP linki", "Kar payı tablosu", "Hak kullanım tarihi", "Düzeltilmiş fiyat serisi", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "asels-2026-sozlesme-imzalanmasi",
+    "researchTargetId": "ASELS-01",
+    "ticker": "ASELS",
+    "date": "2026-05-21",
+    "publishDateTime": "2026-05-21T09:17:15+03:00",
+    "reactionStartDate": "2026-05-21",
+    "category": "contract",
+    "title": "ASELS 2026 sözleşme imzalanması",
+    "summary": "Aselsan'ın sözleşme imzalanmasına ilişkin KAP bildirimi kaynak olarak bulundu. Sözleşme tutarı ve teslim takvimi detay sayfası için ayrıca kontrol edilmelidir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1609287,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Sözleşme İmzalanması",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1609287",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Açıklama işlem günü sabahı yayımlandığı için tepki başlangıcı aynı işlem günü olarak adaylandı.",
+    "editorChecklist": ["KAP linki", "Sözleşme tutarı", "Teslim takvimi", "Açıklama saati", "Hacim ortalaması"]
+  },
+  {
+    "slug": "kchol-2026-ilk-ceyrek-finansal-raporlar",
+    "researchTargetId": "KCHOL-01",
+    "ticker": "KCHOL",
+    "date": "2026-05-08",
+    "publishDateTime": "2026-05-08T18:30:04+03:00",
+    "reactionStartDate": "2026-05-11",
+    "category": "earnings",
+    "title": "KCHOL 2026 ilk çeyrek finansal raporları",
+    "summary": "Koç Holding'in finansal raporların açıklanmasına ilişkin KAP bildirimi kaynak olarak bulundu. Holding etkisi nedeniyle iştirak kırılımı editör notunda ayrıca ele alınmalıdır.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1603638,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Finansal raporların açıklanması",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1603638",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim Cuma seans kapanışı sonrasında geldiği için tepki başlangıcı sonraki işlem günü olarak adaylandı.",
+    "editorChecklist": ["KAP linki", "Açıklama saati", "İştirak etkisi notu", "Düzeltilmiş fiyat serisi", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "sahol-akcansa-pay-devri-rekabet-kurumu-izni",
+    "researchTargetId": "SAHOL-02",
+    "ticker": "SAHOL",
+    "date": "2026-05-22",
+    "publishDateTime": "2026-05-22T19:30:11+03:00",
+    "reactionStartDate": "2026-05-25",
+    "category": "investment",
+    "title": "SAHOL Akçansa pay devri için Rekabet Kurumu izni",
+    "summary": "Sabancı Holding'in Akçansa paylarının devrine Rekabet Kurumu tarafından izin verilmesine ilişkin KAP bildirimi kaynak olarak bulundu.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1610797,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Akçansa paylarının devrine Rekabet Kurumu izni",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1610797",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim Cuma seans kapanışı sonrasında geldiği için tepki başlangıcı sonraki işlem günü olarak adaylandı.",
+    "editorChecklist": ["KAP linki", "İşlem konusu", "İzin tarihi", "İlgili hisse notu", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "eregl-2026-nakit-kar-payi-odeme-tarihi",
+    "researchTargetId": "EREGL-01",
+    "ticker": "EREGL",
+    "date": "2026-04-28",
+    "publishDateTime": "2026-04-28T20:12:55+03:00",
+    "reactionStartDate": "2026-04-29",
+    "category": "dividend",
+    "title": "EREGL 2026 nakit kar payı ödeme tarihi",
+    "summary": "Ereğli Demir Çelik'in nakit kar payı ödeme tarihine ilişkin KAP bildirimi kaynak olarak bulundu. Temettü hesaplaması düzeltilmiş fiyat serisiyle yapılmalıdır.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1598409,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Nakit Kar Payı Ödeme Tarihi",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1598409",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Kar payı olaylarında fiyat düzeltmesi ve hak kullanım takvimi kontrol edilmeden verified yapılmamalıdır.",
+    "editorChecklist": ["KAP linki", "Kar payı ödeme tarihi", "Hak kullanım tarihi", "Düzeltilmiş fiyat serisi", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "sise-abd-stockton-liman-projesi-sonlandirilmasi",
+    "researchTargetId": "SISE-01",
+    "ticker": "SISE",
+    "date": "2026-05-22",
+    "publishDateTime": "2026-05-22T18:32:55+03:00",
+    "reactionStartDate": "2026-05-25",
+    "category": "investment",
+    "title": "SISE ABD Stockton Liman Projesinin sonlandırılması",
+    "summary": "Şişecam'ın ABD Stockton Liman Projesinin sonlandırılmasına ilişkin KAP bildirimi kaynak olarak bulundu. Olay yatırım/kapsam değişikliği sınıfında candidate olarak tutulur.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1610722,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: ABD Stockton Liman Projesinin Sonlandırılması",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1610722",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim Cuma seans kapanışı sonrasında geldiği için tepki başlangıcı sonraki işlem günü olarak adaylandı.",
+    "editorChecklist": ["KAP linki", "Proje konusu", "Sonlandırma gerekçesi", "Açıklama saati", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "bimas-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "BIMAS-01",
+    "ticker": "BIMAS",
+    "date": "2026-05-11",
+    "publishDateTime": "2026-05-11T22:34:46+03:00",
+    "reactionStartDate": "2026-05-12",
+    "category": "earnings",
+    "title": "BIMAS 2026 ilk çeyrek faaliyet raporu",
+    "summary": "BİM'in 2026 ilk çeyrek finansal dönemine ilişkin faaliyet raporu KAP'ta kaynak olarak bulundu. Finansal sonuç analizi için ilgili finansal tablo kalemleri ayrıca çıkarılmalıdır.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1605795,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1605795",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Faaliyet raporu finansal sonuç kaydı için başlangıç kaynağıdır; finansal tablo bildirimi veya sunumu ayrıca eşleştirilmelidir.",
+    "editorChecklist": ["KAP linki", "Finansal dönem", "Finansal tablo eşleştirmesi", "Düzeltilmiş fiyat serisi", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "akbnk-2026-ilk-ceyrek-konsolide-sorumluluk-beyani",
+    "researchTargetId": "AKBNK-01",
+    "ticker": "AKBNK",
+    "date": "2026-04-28",
+    "publishDateTime": "2026-04-28T18:16:05+03:00",
+    "reactionStartDate": "2026-04-29",
+    "category": "earnings",
+    "title": "AKBNK 2026 ilk çeyrek konsolide raporlama paketi",
+    "summary": "Akbank'ın 31.03.2026 dönemine ilişkin konsolide sorumluluk beyanı KAP'ta kaynak olarak bulundu. Finansal sonuç kaydı verified olmadan önce konsolide finansal tablo kaynağı ayrıca eşleştirilmelidir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1598268,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Akbank konsolide sorumluluk beyanı",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1598268",
+        "isPrimary": true
+      },
+      {
+        "type": "kap",
+        "label": "KAP şirket finansal bilgileri: Akbank",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/sirket-finansal-bilgileri/2413-akbank-t-a-s",
+        "isPrimary": false
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "KAP kaynakları bulundu ancak finansal tablo bildirimi ayrıca eşleştirilmelidir. Bu kayıt bu nedenle yalnızca candidate statüsündedir.",
+    "editorChecklist": ["KAP linki", "Finansal tablo kaynağı", "Açıklama saati", "Düzeltilmiş fiyat serisi", "BIST 100 kıyası"]
+  },
+  {
+    "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+    "researchTargetId": "GARAN-01",
+    "ticker": "GARAN",
+    "date": "2026-04-29",
+    "publishDateTime": "2026-04-29T18:24:21+03:00",
+    "reactionStartDate": "2026-04-30",
+    "category": "earnings",
+    "title": "GARAN 2026 ilk çeyrek finansal sonuç sunumu",
+    "summary": "Türkiye Garanti Bankası'nın 29 Nisan 2026 finansal sonuçlara ilişkin sunumu hakkında KAP bildirimi kaynak olarak bulundu.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1598912,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Finansal sonuçlara ilişkin sunum",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1598912",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Açıklama seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı.",
+    "editorChecklist": ["KAP linki", "Sunum eki", "Açıklama saati", "Düzeltilmiş fiyat serisi", "BIST 100 kıyası"]
+  }
+]

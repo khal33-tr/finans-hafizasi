@@ -35,7 +35,9 @@ Faz 3 çıktıları:
 
 - `data/research-queue.json`: 20 hisse için 60 olay araştırma hedefi
 - `data/event-intake-template.json`: doğrulanacak olaylar için giriş şablonu
+- `data/candidate-events.json`: ilk 10 kaynaklı olay adayı
 - `docs/event-research-queue.md`: editörün takip edeceği araştırma sırası
+- `docs/candidate-source-log.md`: candidate kayıtların kaynak günlüğü
 - `docs/source-standard.md`: kaynak doğrulama standardı
 
 ## İlk Yayın Kriterleri
