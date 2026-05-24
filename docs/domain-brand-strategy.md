@@ -105,6 +105,43 @@ GoDaddy panelinde ilk kontrol edilecek alanlar:
 - Hosting secildikten sonra apex domain ve `www` icin gerekli DNS kayitlari eklenecek.
 - GoDaddy'nin "Web Siteleri + Pazarlama Araclari" urunu MVP icin kullanilmamalidir; site Next.js uygulamasi olarak ayri hosting uzerinden yayinlanacaktir.
 
+## Vercel Icin Gerekli DNS Kayitlari
+
+Vercel domain ekraninda gorunen kayitlar:
+
+```text
+A      @      216.198.79.1
+CNAME  www    7426f42037064161.vercel-dns-017.com.
+```
+
+Not:
+
+- Vercel yeni IP araligi olarak `216.198.79.1` degerini onerdi.
+- `www` icin Vercel'in projeye ozel CNAME degeri kullanilmalidir.
+
+## Domain Baglama Durumu
+
+GoDaddy DNS kayitlari guncellendi ve dogrulandi:
+
+```text
+finanshafizasi.com      A      216.198.79.1
+www.finanshafizasi.com  CNAME  7426f42037064161.vercel-dns-017.com
+```
+
+Canli kontrol:
+
+```text
+https://finanshafizasi.com      -> https://www.finanshafizasi.com/
+https://www.finanshafizasi.com  -> Finans Hafizasi uygulamasi
+```
+
+Sonuc:
+
+- SSL aktif.
+- Apex domain `www` adresine yonleniyor.
+- Site basligi ve ana baslik dogru gorunuyor.
+- Tarayici konsolunda hata gorulmedi.
+
 ## Mevcut DNS Durumu
 
 GoDaddy DNS ekraninda gorunen baslangic kayitlari:

@@ -96,11 +96,11 @@ Vercel projesi deploy edildikten sonra:
 
 ## 4. GoDaddy DNS Guncelleme
 
-Vercel domain ekraninda dogrulama icin verilen kayitlar kullanilir. Standart kurulum genellikle:
+Vercel domain ekraninda dogrulama icin verilen kayitlar kullanilir. Bu proje icin gorunen kayitlar:
 
 ```text
-A      @      76.76.21.21
-CNAME  www    cname.vercel-dns.com
+A      @      216.198.79.1
+CNAME  www    7426f42037064161.vercel-dns-017.com.
 ```
 
 GoDaddy'de:
@@ -119,6 +119,7 @@ DNS degisiklikleri hemen ya da birkac saat icinde yayilabilir.
 Kontrol edilecek adresler:
 
 ```text
+https://finans-hafizasi-web.vercel.app
 https://finanshafizasi.com
 https://www.finanshafizasi.com
 ```
@@ -133,3 +134,17 @@ Vercel panelinde domain durumu `Valid Configuration` veya benzeri basarili durum
 - Mobil gorunum bozulmuyor mu?
 - Footer'da yatirim tavsiyesi uyarisi var mi?
 - Sayfa basligi ve aciklama dogru mu?
+
+Canli Vercel kontrolu:
+
+- `https://finans-hafizasi-web.vercel.app` aciliyor.
+- Turkce marka metinleri dogru gorunuyor.
+- Konsol hatasi gorunmedi.
+
+Canli custom domain kontrolu:
+
+- `https://finanshafizasi.com` adresi `https://www.finanshafizasi.com/` adresine yonleniyor.
+- `https://www.finanshafizasi.com/` aciliyor.
+- SSL aktif.
+- Baslik: `Finans Hafizasi`
+- H1: `Haber degil, piyasa hafizasi.`

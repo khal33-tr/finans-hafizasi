@@ -98,6 +98,11 @@ Kurucu tarafinda gerekenler:
 - Gerekirse Codex'e repository veya hosting projesi icin yetki verilmesi
 - Domain DNS paneline erisim
 - GitHub repository: `https://github.com/khal33-tr/finans-hafizasi`
+- Ilk proje dosyalari GitHub repository'ye yuklendi.
+- Ilk Vercel deploy adresi: `https://finans-hafizasi-web.vercel.app`
+- Turkce arayuz metinleri Vercel deploy uzerinde dogrulandi.
+- Custom domain yayinda: `https://www.finanshafizasi.com/`
+- Apex domain `https://finanshafizasi.com` adresinden `www` adresine yonleniyor.
 
 ## 5. Icerik ve Veri Hazirligi
 
@@ -153,6 +158,6 @@ Codex kullanici onayi olmadan yapmamalidir:
 
 Kurucunun cevaplamasi gerekenler:
 
-1. Yerel proje dosyalari GitHub repository'ye yuklenecek.
+1. Vercel'de GitHub repository import edilip ilk deploy alinacak.
 2. E-posta hemen kurulacak mi?
 3. Veritabani ilk etapta yerel prototip mi, yoksa cloud PostgreSQL mi olacak?
