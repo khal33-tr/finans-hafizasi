@@ -1,85 +1,83 @@
-# Finans Hafizasi Veri Modeli
+# Finans Hafızası Veri Modeli
 
-## Amac
+Bu doküman, Finans Hafızası MVP'sinde olayların güvenilir ve tekrar üretilebilir biçimde
+yayınlanması için kullanılacak veri standardını tanımlar.
 
-Bu dokuman, Finans Hafizasi MVP'sinde tutulmasi gereken ana veri varliklarini ve iliskilerini tanimlar. Modelin hedefi, olaylari kaynaklariyla birlikte guvenilir sekilde yayinlamak ve standart fiyat tepkisi hesaplarini tekrar uretilebilir hale getirmektir.
+## Temel İlke
 
-## Ana Varliklar
+Bir kayıt, haber başlığı değil olay hafızasıdır. Bu yüzden her olayda üç şey ayrı tutulur:
 
-### Company
+- Olayın kendisi: şirket, tarih, kategori, başlık, özet.
+- Piyasa tepkisi: 1G, 3G, 1H, 2H, 30G fiyat değişimi, BIST 100 kıyası, hacim çarpanı.
+- Güven standardı: kaynaklar, doğrulama durumu, veri notu, editör kontrol listesi.
 
-Sirketin temel kimligi.
+## Company
 
-Alanlar:
+Şirketin temel kimliği ve ilk MVP evrenindeki yeri.
 
-- `id`
+Zorunlu alanlar:
+
 - `ticker`
 - `name`
-- `market`
 - `sector`
-- `industry`
-- `is_active`
-- `created_at`
-- `updated_at`
+- `priority`
+- `description`
+- `watchReason`
+- `eventTargets`
 
 Notlar:
 
-- `ticker` benzersiz olmalidir.
-- MVP pazari BIST oldugu icin `market` varsayilan olarak `BIST` olabilir.
+- `priority`, ilk 20 hisse içinde araştırma önceliğini gösterir.
+- `watchReason`, hissenin neden ilk evrende olduğunu kullanıcıya açıklar.
+- `eventTargets`, editörün o hisse için öncelikle arayacağı olay sınıflarıdır.
 
-### Event
+## Event
 
-Arsivde yayinlanan veya editor onayinda bekleyen ana olay kaydi.
+Arşivde gösterilen ana olay kaydı.
 
-Alanlar:
+Zorunlu alanlar:
 
-- `id`
-- `company_id`
-- `title`
 - `slug`
-- `summary`
+- `ticker`
+- `date`
+- `reactionStartDate`
 - `category`
-- `event_date`
-- `market_reaction_start_date`
-- `status`
-- `importance_score`
-- `editor_note`
-- `data_quality_note`
-- `published_at`
-- `created_at`
-- `updated_at`
+- `title`
+- `summary`
+- `verificationStatus`
+- `dataStatus`
+- `sources`
+- `returns`
+- `bistRelative`
+- `volumeMultiple`
+- `sentiment`
+- `qualityNote`
+- `editorChecklist`
 
 Durumlar:
 
-- `candidate`
-- `needs_review`
-- `approved`
-- `published`
-- `archived`
-- `rejected`
+- `sample`: Örnek veri. Yayında görünebilir ama gerçek kayıt gibi sunulmaz.
+- `candidate`: Araştırma adayı.
+- `review`: Editör kontrolünde.
+- `verified`: Kaynak, tarih ve hesap kontrolü tamamlanmış kayıt.
 
 Notlar:
 
-- `event_date`, bilginin kamuya aciklandigi tarihtir.
-- `market_reaction_start_date`, fiyat tepkisinin baz alinacagi ilk islem tarihidir.
-- Seans sonrasi aciklamalarda bu iki tarih farkli olabilir.
+- `date`, olayın kamuya açıklandığı tarihtir.
+- `reactionStartDate`, fiyat tepkisinin baz alınacağı ilk işlem tarihidir.
+- Seans sonrası açıklamalarda `date` ve `reactionStartDate` farklı olabilir.
 
-### EventSource
+## EventSource
 
-Bir olayi destekleyen kaynak kaydi.
+Bir olayı destekleyen kaynak kaydı.
 
-Alanlar:
+Zorunlu alanlar:
 
-- `id`
-- `event_id`
-- `source_type`
-- `title`
-- `url`
+- `type`
+- `label`
 - `publisher`
-- `published_at`
-- `accessed_at`
-- `is_primary`
-- `created_at`
+- `url`
+- `isPrimary`
 
 Kaynak tipleri:
 
@@ -88,218 +86,100 @@ Kaynak tipleri:
 - `bist`
 - `spk`
 - `news`
-- `other_official`
+- `data_provider`
 
-Notlar:
+Yayın standardı:
 
-- Her yayinlanmis olayda en az bir kaynak olmalidir.
-- KAP veya resmi sirket duyurusu varsa `is_primary` isaretlenmelidir.
+- Her olayda en az 1 birincil kaynak olmalıdır.
+- KAP bildirimi varsa `isPrimary: true` olarak işaretlenmelidir.
+- Fiyat ve hacim hesapları için veri sağlayıcı veya Borsa İstanbul veri referansı ayrıca tutulmalıdır.
+- Haber kaynakları tek başına yeterli değildir; resmi kaynak yoksa kayıt `verified` olamaz.
 
-### PriceBar
+## EventReturn
 
-Gunluk fiyat ve hacim verisi.
+Bir olay için hesaplanan fiyat tepkisi.
 
-Alanlar:
+Zorunlu pencereler:
 
-- `id`
-- `symbol`
-- `date`
-- `open`
-- `high`
-- `low`
-- `close`
-- `adjusted_close`
-- `volume`
-- `source`
-- `created_at`
+- `d1`: 1 işlem günü
+- `d3`: 3 işlem günü
+- `w1`: 1 hafta
+- `w2`: 2 hafta
+- `d30`: 30 gün
 
-Notlar:
-
-- Hesaplarda mumkunse `adjusted_close` kullanilmalidir.
-- Temettu, bolunme ve sermaye artirimi sonrasi duzeltmeler izlenmelidir.
-
-### MarketIndexBar
-
-BIST 100 veya ilgili endeks verisi.
-
-Alanlar:
-
-- `id`
-- `index_symbol`
-- `date`
-- `open`
-- `high`
-- `low`
-- `close`
-- `adjusted_close`
-- `volume`
-- `source`
-- `created_at`
-
-### EventReturn
-
-Bir olay icin hesaplanmis fiyat tepkisi.
-
-Alanlar:
-
-- `id`
-- `event_id`
-- `window`
-- `base_date`
-- `end_date`
-- `base_price`
-- `end_price`
-- `stock_return_pct`
-- `index_return_pct`
-- `relative_return_pct`
-- `calculation_status`
-- `calculation_note`
-- `created_at`
-
-Pencere degerleri:
-
-- `event_day`
-- `d1`
-- `d3`
-- `w1`
-- `w2`
-- `d30`
-
-Notlar:
-
-- Pencere sonu tatil gunune denk gelirse en yakin uygun islem gunu kullanilmalidir.
-- Hesap tekrar calistirilirse onceki sonuc versiyonlanabilir veya audit log'a yazilabilir.
-
-### VolumeReaction
-
-Olay sonrasi hacim tepkisi.
-
-Alanlar:
-
-- `id`
-- `event_id`
-- `event_volume`
-- `avg_volume_20d`
-- `volume_multiple`
-- `calculation_note`
-- `created_at`
-
-### SentimentSnapshot
-
-Kamuya acik soylem ozeti.
-
-Alanlar:
-
-- `id`
-- `event_id`
-- `method`
-- `positive_pct`
-- `neutral_pct`
-- `negative_pct`
-- `sample_size`
-- `source_scope`
-- `summary`
-- `confidence`
-- `created_at`
-
-Notlar:
-
-- MVP'de `method` degeri `editorial_observation` olabilir.
-- Otomatik duygu analizi daha sonraki faza birakilabilir.
-- `confidence` dusukse public sayfada veri siniri gosterilmelidir.
-
-### EditorialReview
-
-Editor onay sureci kaydi.
-
-Alanlar:
-
-- `id`
-- `event_id`
-- `reviewer_name`
-- `status_from`
-- `status_to`
-- `comment`
-- `created_at`
-
-Notlar:
-
-- MVP'de kullanici sistemi yoksa `reviewer_name` metin olarak tutulabilir.
-- Daha sonra `User` tablosuna baglanabilir.
-
-## Iliskiler
+Hesap standardı:
 
 ```text
-Company 1 - N Event
-Event 1 - N EventSource
-Event 1 - N EventReturn
-Event 1 - 1 VolumeReaction
-Event 1 - 0..1 SentimentSnapshot
-Event 1 - N EditorialReview
+hisse getirisi = (pencere sonu düzeltilmiş kapanış / baz düzeltilmiş kapanış - 1) * 100
+göreli getiri = hisse getirisi - BIST 100 getirisi
 ```
 
-## Olay Kategorileri
+Notlar:
 
-Ilk kategori listesi:
+- Pencere sonu tatil gününe denk gelirse en yakın uygun işlem günü kullanılır.
+- Temettü, bölünme ve sermaye artırımı etkileri için düzeltilmiş kapanış kullanılır.
+- Hesap tekrar üretilemiyorsa kayıt `verified` olamaz.
 
-- `earnings`
-- `dividend`
-- `capital_increase`
-- `contract`
-- `investment`
-- `regulation`
-- `legal_penalty`
-- `management_change`
-- `macro_sector`
+## SentimentSnapshot
 
-Public gorunumde Turkce karsiliklar kullanilir:
+Kamuya açık söylem özeti.
 
-- Bilanco
-- Temettu
-- Sermaye artirimi
-- Ihale veya sozlesme
-- Yatirim karari
-- Regulasyon
-- Dava, ceza veya sorusturma
-- Yonetim degisikligi
-- Makro veya sektorel etki
+Alanlar:
 
-## Yayinlama Kurallari
+- `positive`
+- `neutral`
+- `negative`
+- `method`
+- `sampleSize`
+- `qualityNote`
 
-Bir olay `published` durumuna gecmeden once:
+MVP kararı:
 
-- En az bir kaynak baglanmis olmali.
-- `event_date` ve `market_reaction_start_date` onaylanmis olmali.
-- Olay kategorisi secilmis olmali.
-- Baslik ve ozet yatirim tavsiyesi icermemeli.
-- En az `d1`, `d3`, `w1`, `w2`, `d30` fiyat tepkileri hesaplanmis olmali.
-- Hacim tepkisi hesaplanmis veya veri eksikligi notu girilmis olmali.
+- İlk sürümde bu alan editör gözlemi veya sınırlı örnekleme ile tutulabilir.
+- Otomatik duygu analizi sonraki faza bırakılır.
+- Bu veri yatırım sinyali gibi sunulmaz.
 
-## Ornek Event JSON
+## Yayınlama Kuralları
+
+Bir olay `verified` statüsüne geçmeden önce:
+
+- Doğrudan kaynak linki eklenmiş olmalı.
+- Olay tarihi ve tepki başlangıç tarihi kontrol edilmiş olmalı.
+- Fiyat pencereleri tekrar üretilebilir olmalı.
+- BIST 100 karşılaştırması hesaplanmış olmalı.
+- Hacim çarpanı hesaplanmış veya veri eksikliği açıkça notlanmış olmalı.
+- Başlık ve özet yatırım tavsiyesi dili içermemeli.
+
+## Örnek Event JSON
 
 ```json
 {
+  "slug": "thyao-2024-ikinci-ceyrek-finansal-sonuclari",
   "ticker": "THYAO",
-  "title": "THYAO 2024 ikinci ceyrek finansal sonuclari",
+  "date": "2024-08-09",
+  "reactionStartDate": "2024-08-12",
   "category": "earnings",
-  "event_date": "2024-08-09",
-  "market_reaction_start_date": "2024-08-12",
-  "status": "published",
+  "title": "THYAO 2024 ikinci çeyrek finansal sonuçları",
+  "verificationStatus": "sample",
+  "dataStatus": "sample",
   "sources": [
     {
-      "source_type": "kap",
-      "publisher": "KAP",
-      "url": "https://www.kap.org.tr/",
-      "is_primary": true
+      "type": "kap",
+      "label": "KAP bildirim araması",
+      "publisher": "Kamuyu Aydınlatma Platformu",
+      "url": "https://www.kap.org.tr/tr/",
+      "isPrimary": true
     }
   ],
-  "returns": [
-    {
-      "window": "d1",
-      "stock_return_pct": 1.8,
-      "index_return_pct": 0.5,
-      "relative_return_pct": 1.3
-    }
-  ]
+  "returns": {
+    "d1": 1.8,
+    "d3": 3.2,
+    "w1": 2.4,
+    "w2": -1.1,
+    "d30": 4.6
+  },
+  "bistRelative": 1.3,
+  "volumeMultiple": 1.7,
+  "qualityNote": "Örnek MVP kaydıdır; doğrudan kaynak ve fiyat serisi doğrulanmalıdır."
 }
 ```

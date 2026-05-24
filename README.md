@@ -14,35 +14,32 @@ Amaç: haberi yorumlamak değil; gelişmenin ardından fiyat, hacim ve BIST 100 
 - Domain: `finanshafizasi.com`
 - Kullanıcı: BIST yatırımcısı
 - Format: Medya ürünü gibi okunabilir, veri ürünü kadar düzenli
-- İlk kapsam: Seçilmiş popüler BIST sembolleri
+- İlk kapsam: 20 seçilmiş BIST sembolü
+- Olay standardı: kaynak, tepki başlangıcı, veri durumu, editör kontrol notu
 
 ## Proje Dosyaları
 
 - `app/`: Next.js sayfaları
 - `components/`: Arayüz bileşenleri
-- `lib/`: Örnek veri
-- `data/`: JSON örnekleri
+- `lib/`: Uygulamanın kullandığı örnek veri ve yardımcı fonksiyonlar
+- `data/`: JSON örnekleri ve olay giriş şablonu
 - `docs/`: Ürün, veri modeli, editör akışı ve deploy notları
-- `docs/execution-roadmap.md`: Fazlara ayrılmış uygulama yol haritası
 
-## Yakın Teknik İşler
+## Mevcut Aşama
 
-1. GitHub deposunu Vercel'e bağla.
-2. İlk Next.js deploy'unu al.
-3. `finanshafizasi.com` ve `www.finanshafizasi.com` domainlerini Vercel projesine ekle.
-4. GoDaddy DNS kayıtlarını Vercel değerleriyle güncelle.
-5. Detay sayfasını gerçek veri modeline bağla.
-6. Editör panelini kur.
-7. Fiyat tepki hesaplama motorunu yaz.
+Faz 1 ve Faz 2 tamamlandı. Canlı domain, temel sayfalar, SEO dosyaları, hisse sayfaları ve olay detay sayfası çalışıyor.
+
+Şu an Faz 3 içindeyiz: veri standardı ve içerik sistemi.
 
 ## İlk Yayın Kriterleri
 
 - 20 BIST sembolü
-- Toplam 60+ onaylı kayıt
-- Her kayıtta en az 1 kaynak
+- Toplam 60+ doğrulanmış kayıt
+- Her kayıtta en az 1 birincil kaynak
 - Her kayıtta 1G, 3G, 1H, 2H ve 30G fiyat tepkisi
 - BIST 100 kıyası
-- Metodoloji sayfası
+- Kaynak ve veri kalitesi notu
+- Metodoloji ve yasal uyarı sayfaları
 
 ## Yatırım Tavsiyesi Değildir
 

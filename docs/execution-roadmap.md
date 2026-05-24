@@ -4,7 +4,7 @@ Bu yol haritasi, canli domain yayina alindiktan sonra urunun hangi sirayla gelis
 
 ## Faz 1: Public Urun Temeli
 
-Durum: Basladi.
+Durum: Tamamlandi.
 
 Hedef:
 
@@ -29,7 +29,7 @@ Basari kriteri:
 
 ## Faz 2: Gorsel ve UX Iyilestirme
 
-Durum: Basladi.
+Durum: Tamamlandi.
 
 Hedef:
 
@@ -52,6 +52,8 @@ Basari kriteri:
 
 ## Faz 3: Veri Standardi ve Icerik Sistemi
 
+Durum: Basladi.
+
 Hedef:
 
 - Demo veriler daha duzenli bir icerik modeline tasinmali.
@@ -59,10 +61,10 @@ Hedef:
 
 Isler:
 
-1. Sirket, olay, kaynak, fiyat tepkisi ve soylem alanlarini kesinlestir.
-2. Ilk 20 hisse icin seed veri dosyasi olustur.
-3. Her hisse icin en az 3 olay hedefini parcalara bol.
-4. Kaynak ve veri notu alanlarini zorunlu hale getir.
+1. Sirket, olay, kaynak, fiyat tepkisi ve soylem alanlarini kesinlestirildi.
+2. Ilk 20 hisse icin seed veri yapisi olusturuldu.
+3. Her hisse icin oncelikli olay hedefleri eklendi.
+4. Kaynak, dogrulama durumu ve veri notu alanlari public sayfalarda gorunur hale getirildi.
 
 Basari kriteri:
 
@@ -151,5 +153,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 1'i tamamla: SEO dosyalari, sitemap, robots ve 404 sayfasi.
+Faz 3'u tamamla: Ilk 20 hisse icin gercek olay arastirma kuyrugu ve dogrudan kaynak linkleri.
 ```

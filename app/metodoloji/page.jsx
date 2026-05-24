@@ -25,7 +25,7 @@ const steps = [
   {
     title: "Editör onayı",
     body:
-      "Başlık, kaynak, olay tarihi, özet ve veri notu yayın öncesi editör kontrolünden geçer."
+      "Başlık, kaynak, olay tarihi, özet, veri notu ve hesap tekrar üretilebilirliği yayın öncesi editör kontrolünden geçer."
   }
 ];
 

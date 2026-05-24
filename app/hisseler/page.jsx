@@ -16,8 +16,8 @@ export default function StocksPage() {
           <p className="eyebrow">İzleme havuzu</p>
           <h1>Hisseler</h1>
           <p className="lead">
-            İlk MVP kapsamındaki BIST sembolleri. Her hisse sayfası, şirketin olay geçmişini ve
-            standart fiyat tepki pencerelerini göstermek için hazırlanır.
+            İlk MVP kapsamındaki BIST sembolleri. Her hisse sayfası şirketin olay geçmişini, kaynak
+            kalitesini ve standart fiyat tepki pencerelerini düzenlemek için hazırlanır.
           </p>
         </section>
 
@@ -42,9 +42,13 @@ export default function StocksPage() {
             return (
               <a className="company-card" href={`/hisseler/${company.ticker}`} key={company.ticker}>
                 <div>
-                  <span className="badge">{company.ticker}</span>
+                  <div className="company-card-top">
+                    <span className="badge">{company.ticker}</span>
+                    <span>#{company.priority}</span>
+                  </div>
                   <h2>{company.name}</h2>
                   <p>{company.description}</p>
+                  <p className="watch-reason">{company.watchReason}</p>
                 </div>
                 <div className="company-card-foot">
                   <span>{company.sector}</span>

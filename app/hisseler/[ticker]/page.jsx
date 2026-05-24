@@ -53,11 +53,11 @@ export default async function StockDetailPage({ params }) {
           <div className="detail-stats" aria-label="Hisse özeti">
             <div>
               <strong>{companyEvents.length}</strong>
-              <span>onaylı örnek kayıt</span>
+              <span>örnek olay kaydı</span>
             </div>
             <div>
-              <strong>5</strong>
-              <span>tepki penceresi</span>
+              <strong>{company.priority}</strong>
+              <span>MVP önceliği</span>
             </div>
             <div>
               <strong>BIST</strong>
@@ -76,8 +76,19 @@ export default async function StockDetailPage({ params }) {
             <span>sektör</span>
           </div>
           <div className="compact-stat">
-            <strong>Editör</strong>
-            <span>kaynak ve tarih kontrolü</span>
+            <strong>{company.eventTargets.length}</strong>
+            <span>hedef olay sınıfı</span>
+          </div>
+        </section>
+
+        <section className="content-panel wide-panel">
+          <p className="eyebrow">İzleme gerekçesi</p>
+          <h2>Bu hisse neden ilk evrende?</h2>
+          <p>{company.watchReason}</p>
+          <div className="target-list" aria-label="Hedef olay sınıfları">
+            {company.eventTargets.map((target) => (
+              <span key={target}>{target}</span>
+            ))}
           </div>
         </section>
 

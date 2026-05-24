@@ -65,7 +65,7 @@ export default function HomeClient({ events, tickers }) {
           <aside className="panel market-pulse" aria-label="Piyasa özeti">
             <p className="eyebrow">MVP kapsamı</p>
             <div className="metric">
-              <strong>20</strong>
+              <strong>{tickers.length}</strong>
               <span>ilk hisse</span>
             </div>
             <div className="metric">

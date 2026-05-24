@@ -3,7 +3,15 @@ import ReturnGrid from "@/components/return-grid";
 import SentimentSummary from "@/components/sentiment-summary";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
-import { events, formatReturn, getCompany, getEventBySlug } from "@/lib/market-data";
+import {
+  events,
+  formatReturn,
+  getCompany,
+  getEventBySlug,
+  getEventStatus,
+  getPrimarySource,
+  sourceTypeLabels
+} from "@/lib/market-data";
 
 export function generateStaticParams() {
   return events.map((event) => ({ slug: event.slug }));
@@ -26,6 +34,8 @@ export default async function EventDetailPage({ params }) {
   if (!event) notFound();
 
   const company = getCompany(event.ticker);
+  const status = getEventStatus(event);
+  const primarySource = getPrimarySource(event);
 
   return (
     <>
@@ -70,8 +80,8 @@ export default async function EventDetailPage({ params }) {
             <h2>Standart zaman pencereleri</h2>
             <ReturnGrid returns={event.returns} />
             <p className="panel-note">
-              Hesaplar örnek MVP verisidir. Gerçek yayın öncesi fiyat serisi, temettü düzeltmesi ve
-              işlem günü takvimi doğrulanmalıdır.
+              Bu kayıt {status.label.toLowerCase()} statüsündedir. Yayın öncesi düzeltilmiş fiyat,
+              işlem günü takvimi ve endeks kıyası tekrar üretilebilir olmalıdır.
             </p>
           </article>
 
@@ -87,7 +97,7 @@ export default async function EventDetailPage({ params }) {
         </section>
 
         <section className="content-panel wide-panel">
-          <p className="eyebrow">Kaynak ve not</p>
+          <p className="eyebrow">Kaynak ve kalite</p>
           <h2>{company?.name ?? event.ticker} için kayıt standardı</h2>
           <div className="record-summary">
             <div>
@@ -95,17 +105,40 @@ export default async function EventDetailPage({ params }) {
               <strong>{company?.name ?? event.ticker}</strong>
             </div>
             <div>
-              <span>Olay tipi</span>
-              <strong>{event.type}</strong>
+              <span>Tepki başlangıcı</span>
+              <strong>{event.reactionStartDate}</strong>
             </div>
             <div>
-              <span>Kaynak</span>
-              <strong>{event.sourceLabel}</strong>
+              <span>Durum</span>
+              <strong>{status.label}</strong>
             </div>
           </div>
-          <p>{event.note}</p>
-          <a className="source-link" href={event.sourceUrl}>
-            {event.sourceLabel}
+
+          <div className="quality-layout">
+            <div>
+              <h3>Kaynaklar</h3>
+              <div className="source-list">
+                {event.sources.map((source) => (
+                  <a href={source.url} key={`${source.type}-${source.label}`}>
+                    <span>{sourceTypeLabels[source.type] ?? source.type}</span>
+                    <strong>{source.label}</strong>
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div>
+              <h3>Editör kontrolü</h3>
+              <ul className="quality-list">
+                {event.editorChecklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <p>{event.qualityNote}</p>
+          <a className="source-link" href={primarySource.url}>
+            Birincil kaynağı aç
           </a>
         </section>
       </main>
