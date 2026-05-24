@@ -1,80 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-
-const windows = [
-  ["d1", "1G"],
-  ["d3", "3G"],
-  ["w1", "1H"],
-  ["w2", "2H"],
-  ["d30", "30G"]
-];
-
-function formatReturn(value) {
-  const prefix = value > 0 ? "+" : "";
-  return `${prefix}${value.toFixed(1)}%`;
-}
-
-function returnClass(value) {
-  return value >= 0 ? "positive" : "negative";
-}
-
-function SentimentRow({ label, value, tone = "positive" }) {
-  return (
-    <div className="sentiment-row">
-      <span>{label}</span>
-      <div className={`bar ${tone}`}>
-        <span style={{ width: `${value}%` }} />
-      </div>
-      <strong>{value}%</strong>
-    </div>
-  );
-}
-
-function EventCard({ event }) {
-  return (
-    <article className="event-card">
-      <div>
-        <div className="event-meta">
-          <span className="badge">{event.ticker}</span>
-          <span>{event.company}</span>
-          <span>{event.date}</span>
-          <span>{event.type}</span>
-        </div>
-        <h3>{event.title}</h3>
-        <p>{event.summary}</p>
-        <p>
-          <strong>Kaynak:</strong> {event.sourceLabel}
-        </p>
-      </div>
-
-      <div>
-        <div className="return-grid">
-          {windows.map(([key, label]) => {
-            const value = event.returns[key];
-            return (
-              <div className="return-cell" key={key}>
-                <span>{label}</span>
-                <strong className={returnClass(value)}>{formatReturn(value)}</strong>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="sentiment" aria-label="Kamuya açık söylem özeti">
-          <SentimentRow label="Pozitif" value={event.sentiment.positive} />
-          <SentimentRow label="Nötr" value={event.sentiment.neutral} tone="neutral" />
-          <SentimentRow label="Negatif" value={event.sentiment.negative} tone="negative" />
-        </div>
-
-        <p>
-          <strong>BIST 100'e göre:</strong> {formatReturn(event.bistRelative)} |{" "}
-          <strong>Hacim:</strong> {event.volumeMultiple.toFixed(1)}x
-        </p>
-      </div>
-    </article>
-  );
-}
+import EventCard from "@/components/event-card";
+import SiteFooter from "@/components/site-footer";
+import SiteHeader from "@/components/site-header";
 
 export default function HomeClient({ events, tickers }) {
   const [query, setQuery] = useState("");
@@ -92,17 +21,7 @@ export default function HomeClient({ events, tickers }) {
 
   return (
     <>
-      <header className="topbar">
-        <a className="brand" href="/" aria-label="Finans Hafızası ana sayfa">
-          <span className="brand-mark">FH</span>
-          <span>Finans Hafızası</span>
-        </a>
-        <nav className="nav" aria-label="Ana menü">
-          <a href="#gundem">Gündem</a>
-          <a href="#hisseler">Hisseler</a>
-          <a href="#metodoloji">Metodoloji</a>
-        </nav>
-      </header>
+      <SiteHeader />
 
       <main>
         <section className="workspace" id="gundem">
@@ -203,12 +122,7 @@ export default function HomeClient({ events, tickers }) {
         </section>
       </main>
 
-      <footer className="footer">
-        <p>
-          Finans Hafızası yatırım tavsiyesi sunmaz. Bilgiler geçmiş olayların ve piyasa verilerinin
-          incelenmesi amacıyla hazırlanır.
-        </p>
-      </footer>
+      <SiteFooter />
     </>
   );
 }
