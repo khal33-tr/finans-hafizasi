@@ -22,14 +22,21 @@ Amaç: haberi yorumlamak değil; gelişmenin ardından fiyat, hacim ve BIST 100 
 - `app/`: Next.js sayfaları
 - `components/`: Arayüz bileşenleri
 - `lib/`: Uygulamanın kullandığı örnek veri ve yardımcı fonksiyonlar
-- `data/`: JSON örnekleri ve olay giriş şablonu
-- `docs/`: Ürün, veri modeli, editör akışı ve deploy notları
+- `data/`: JSON örnekleri, olay giriş şablonu ve araştırma kuyruğu
+- `docs/`: Ürün, veri modeli, kaynak standardı, araştırma kuyruğu ve deploy notları
 
 ## Mevcut Aşama
 
 Faz 1 ve Faz 2 tamamlandı. Canlı domain, temel sayfalar, SEO dosyaları, hisse sayfaları ve olay detay sayfası çalışıyor.
 
 Şu an Faz 3 içindeyiz: veri standardı ve içerik sistemi.
+
+Faz 3 çıktıları:
+
+- `data/research-queue.json`: 20 hisse için 60 olay araştırma hedefi
+- `data/event-intake-template.json`: doğrulanacak olaylar için giriş şablonu
+- `docs/event-research-queue.md`: editörün takip edeceği araştırma sırası
+- `docs/source-standard.md`: kaynak doğrulama standardı
 
 ## İlk Yayın Kriterleri
 

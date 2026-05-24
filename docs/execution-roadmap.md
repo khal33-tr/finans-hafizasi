@@ -65,6 +65,8 @@ Isler:
 2. Ilk 20 hisse icin seed veri yapisi olusturuldu.
 3. Her hisse icin oncelikli olay hedefleri eklendi.
 4. Kaynak, dogrulama durumu ve veri notu alanlari public sayfalarda gorunur hale getirildi.
+5. `data/research-queue.json` ile 20 hisse icin 60 olay arastirma hedefi olusturuldu.
+6. `docs/event-research-queue.md` ile ilk editor arastirma sirasi belirlendi.
 
 Basari kriteri:
 
@@ -153,5 +155,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 3'u tamamla: Ilk 20 hisse icin gercek olay arastirma kuyrugu ve dogrudan kaynak linkleri.
+Faz 3'u tamamla: Ilk 10 arastirma hedefi icin dogrudan kaynak linklerini bul ve candidate kayitlari olustur.
 ```
