@@ -23,6 +23,7 @@ Amaç: haberi yorumlamak değil; gelişmenin ardından fiyat, hacim ve BIST 100 
 - `lib/`: Örnek veri
 - `data/`: JSON örnekleri
 - `docs/`: Ürün, veri modeli, editör akışı ve deploy notları
+- `docs/execution-roadmap.md`: Fazlara ayrılmış uygulama yol haritası
 
 ## Yakın Teknik İşler
 
