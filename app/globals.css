@@ -561,6 +561,17 @@ h3 {
   padding: 18px;
 }
 
+.event-main,
+.event-side {
+  min-width: 0;
+}
+
+.event-side {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+}
+
 .event-meta {
   display: flex;
   flex-wrap: wrap;
@@ -578,9 +589,83 @@ h3 {
   font-weight: 800;
 }
 
+.event-title-link {
+  color: inherit;
+}
+
+.event-title-link:hover,
+.event-actions a:hover,
+.text-link:hover,
+.source-link:hover {
+  color: var(--teal);
+}
+
 .event-card p {
   color: var(--muted);
   line-height: 1.55;
+}
+
+.event-source {
+  display: inline-grid;
+  gap: 3px;
+  margin-top: 4px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.event-source span,
+.mini-stat span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.event-source strong {
+  color: var(--navy);
+  font-size: 13px;
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.event-actions a {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mini-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.mini-stat {
+  padding: 11px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f7fafb;
+}
+
+.mini-stat strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--navy);
+  font-size: 18px;
 }
 
 .return-grid {
@@ -621,7 +706,7 @@ h3 {
 .sentiment {
   display: grid;
   gap: 7px;
-  margin-top: 14px;
+  margin-top: 0;
 }
 
 .sentiment-row {
@@ -725,6 +810,10 @@ h3 {
   .return-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .event-side {
+    gap: 10px;
+  }
 }
 
 @media (max-width: 560px) {
@@ -757,5 +846,36 @@ h3 {
 
   .window-tabs button {
     flex: 1;
+  }
+
+  .hero-actions,
+  .event-actions {
+    flex-direction: column;
+  }
+
+  .primary-link,
+  .secondary-link,
+  .event-actions a {
+    width: 100%;
+  }
+
+  .mini-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .event-card {
+    padding: 14px;
+  }
+
+  .return-cell {
+    min-height: 64px;
+  }
+
+  .return-cell strong {
+    font-size: 17px;
+  }
+
+  .sentiment-row {
+    grid-template-columns: 58px 1fr 38px;
   }
 }

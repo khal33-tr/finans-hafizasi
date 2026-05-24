@@ -40,9 +40,9 @@ Hedef:
 Isler:
 
 1. Ana sayfaya daha net "son olaylar" ve "hisseye git" akisi eklendi.
-2. Olay kartlarinda kaynak ve zaman pencerelerini daha okunur yap.
+2. Olay kartlarinda kaynak, detay aksiyonlari ve zaman pencereleri daha okunur hale getirildi.
 3. Hisse detay sayfasinda kapsam ozet bloklari eklendi.
-4. Mobil gorunumu tekrar kontrol et.
+4. Mobil gorunum icin kart, aksiyon ve tepki tablolari daha stabil hale getirildi.
 
 Basari kriteri:
 
