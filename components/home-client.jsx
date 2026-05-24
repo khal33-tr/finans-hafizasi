@@ -61,14 +61,14 @@ function EventCard({ event }) {
           })}
         </div>
 
-        <div className="sentiment" aria-label="Kamuya acik soylem ozeti">
+        <div className="sentiment" aria-label="Kamuya açık söylem özeti">
           <SentimentRow label="Pozitif" value={event.sentiment.positive} />
-          <SentimentRow label="Notr" value={event.sentiment.neutral} tone="neutral" />
+          <SentimentRow label="Nötr" value={event.sentiment.neutral} tone="neutral" />
           <SentimentRow label="Negatif" value={event.sentiment.negative} tone="negative" />
         </div>
 
         <p>
-          <strong>BIST 100'e gore:</strong> {formatReturn(event.bistRelative)} |{" "}
+          <strong>BIST 100'e göre:</strong> {formatReturn(event.bistRelative)} |{" "}
           <strong>Hacim:</strong> {event.volumeMultiple.toFixed(1)}x
         </p>
       </div>
@@ -93,12 +93,12 @@ export default function HomeClient({ events, tickers }) {
   return (
     <>
       <header className="topbar">
-        <a className="brand" href="/" aria-label="Finans Hafizasi ana sayfa">
+        <a className="brand" href="/" aria-label="Finans Hafızası ana sayfa">
           <span className="brand-mark">FH</span>
-          <span>Finans Hafizasi</span>
+          <span>Finans Hafızası</span>
         </a>
-        <nav className="nav" aria-label="Ana menu">
-          <a href="#gundem">Gundem</a>
+        <nav className="nav" aria-label="Ana menü">
+          <a href="#gundem">Gündem</a>
           <a href="#hisseler">Hisseler</a>
           <a href="#metodoloji">Metodoloji</a>
         </nav>
@@ -107,11 +107,11 @@ export default function HomeClient({ events, tickers }) {
       <main>
         <section className="workspace" id="gundem">
           <div className="panel intro">
-            <p className="eyebrow">BIST olay arsivi</p>
-            <h1>Haber degil, piyasa hafizasi.</h1>
+            <p className="eyebrow">BIST olay arşivi</p>
+            <h1>Haber değil, piyasa hafızası.</h1>
             <p className="lead">
-              Onemli sirket olaylarini kaynaklariyla birlikte inceleyin; olay sonrasi fiyat, hacim
-              ve kamuya acik soylem tepkisini standart zaman pencerelerinde gorun.
+              Önemli şirket olaylarını kaynaklarıyla birlikte inceleyin; olay sonrası fiyat, hacim
+              ve kamuya açık söylem tepkisini standart zaman pencerelerinde görün.
             </p>
             <form className="search-row" role="search" onSubmit={handleSubmit}>
               <label className="sr-only" htmlFor="ticker-search">
@@ -128,22 +128,22 @@ export default function HomeClient({ events, tickers }) {
               />
               <button type="submit">Ara</button>
             </form>
-            <div className="principles" aria-label="Urun ilkeleri">
+            <div className="principles" aria-label="Ürün ilkeleri">
               <span>Yorum yapmaz</span>
-              <span>Yonlendirmez</span>
-              <span>Kaynagi belirtir</span>
+              <span>Yönlendirmez</span>
+              <span>Kaynağı belirtir</span>
             </div>
           </div>
 
-          <aside className="panel market-pulse" aria-label="Piyasa ozeti">
-            <p className="eyebrow">MVP kapsami</p>
+          <aside className="panel market-pulse" aria-label="Piyasa özeti">
+            <p className="eyebrow">MVP kapsamı</p>
             <div className="metric">
               <strong>20</strong>
               <span>ilk hisse</span>
             </div>
             <div className="metric">
               <strong>9</strong>
-              <span>olay sinifi</span>
+              <span>olay sınıfı</span>
             </div>
             <div className="metric">
               <strong>5</strong>
@@ -154,10 +154,10 @@ export default function HomeClient({ events, tickers }) {
 
         <section className="section-row" id="hisseler">
           <div>
-            <p className="eyebrow">Izleme havuzu</p>
-            <h2>Ilk takip edilecek hisseler</h2>
+            <p className="eyebrow">İzleme havuzu</p>
+            <h2>İlk takip edilecek hisseler</h2>
           </div>
-          <div className="ticker-grid" aria-label="Ilk hisse listesi">
+          <div className="ticker-grid" aria-label="İlk hisse listesi">
             {tickers.slice(0, 8).map((ticker) => (
               <button type="button" key={ticker} onClick={() => setQuery(ticker)}>
                 {ticker}
@@ -170,7 +170,7 @@ export default function HomeClient({ events, tickers }) {
           <div className="section-head">
             <div>
               <p className="eyebrow">Son eklenen olaylar</p>
-              <h2>Olay sonrasi tepki kartlari</h2>
+              <h2>Olay sonrası tepki kartları</h2>
             </div>
             <div className="window-tabs" aria-label="Zaman pencereleri">
               <button type="button" className="active">
@@ -191,22 +191,22 @@ export default function HomeClient({ events, tickers }) {
 
         <section className="method" id="metodoloji">
           <div>
-            <p className="eyebrow">Guven standardi</p>
-            <h2>Yari otomatik, editor onayli akis</h2>
+            <p className="eyebrow">Güven standardı</p>
+            <h2>Yarı otomatik, editör onaylı akış</h2>
           </div>
           <ol className="method-steps">
-            <li>Olay adaylari KAP, sirket duyurulari ve guvenilir haber kaynaklarindan toplanir.</li>
-            <li>Sistem olay tipini, ilgili hisseyi ve ilk piyasa tarihini onerir.</li>
-            <li>Fiyat, hacim ve endeks karsilastirmalari otomatik hesaplanir.</li>
-            <li>Editor kaynak, ozet ve tarih dogrulamasindan sonra olayi yayinlar.</li>
+            <li>Olay adayları KAP, şirket duyuruları ve güvenilir haber kaynaklarından toplanır.</li>
+            <li>Sistem olay tipini, ilgili hisseyi ve ilk piyasa tarihini önerir.</li>
+            <li>Fiyat, hacim ve endeks karşılaştırmaları otomatik hesaplanır.</li>
+            <li>Editör kaynak, özet ve tarih doğrulamasından sonra olayı yayınlar.</li>
           </ol>
         </section>
       </main>
 
       <footer className="footer">
         <p>
-          Finans Hafizasi yatirim tavsiyesi sunmaz. Bilgiler gecmis olaylarin ve piyasa verilerinin
-          incelenmesi amaciyla hazirlanir.
+          Finans Hafızası yatırım tavsiyesi sunmaz. Bilgiler geçmiş olayların ve piyasa verilerinin
+          incelenmesi amacıyla hazırlanır.
         </p>
       </footer>
     </>

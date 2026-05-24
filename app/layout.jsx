@@ -1,19 +1,19 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Finans Hafizasi",
+  title: "Finans Hafızası",
   description:
-    "BIST sirket olaylarini, kaynaklari ve piyasa tepkileriyle birlikte inceleyen tarafsiz finans arsivi.",
+    "BIST şirket olaylarını, kaynakları ve piyasa tepkileriyle birlikte inceleyen tarafsız finans arşivi.",
   metadataBase: new URL("https://finanshafizasi.com"),
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "Finans Hafizasi",
+    title: "Finans Hafızası",
     description:
-      "Haber degil, piyasa hafizasi. Olaylari, fiyat tepkilerini ve kaynaklari birlikte inceleyin.",
+      "Haber değil, piyasa hafızası. Olayları, fiyat tepkilerini ve kaynakları birlikte inceleyin.",
     url: "https://finanshafizasi.com",
-    siteName: "Finans Hafizasi",
+    siteName: "Finans Hafızası",
     locale: "tr_TR",
     type: "website"
   }
