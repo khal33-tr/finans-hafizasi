@@ -50,7 +50,7 @@ const payload = {
   status: "price_data_requirements",
   sourceInput: "data/calculation-inputs.json",
   principle:
-    "Bu dosya ilk 10 candidate kaydın kısa tepki ve uzun izleme fiyat/takvim verisi kapsamını denetlemek amacıyla üretilmiştir.",
+    `Bu dosya ${events.length} candidate kaydın kısa tepki ve uzun izleme fiyat/takvim verisi kapsamını denetlemek amacıyla üretilmiştir.`,
   coverageRule: {
     beforeBaseCalendarBufferDays: beforeBufferDays,
     afterBaseCalendarBufferDays: afterBufferDays,

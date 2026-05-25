@@ -555,5 +555,500 @@
       "Düzeltilmiş fiyat serisi",
       "BIST 100 kıyası"
     ]
+  },
+  {
+    "slug": "ykbnk-2026-ilk-ceyrek-konsolide-finansal-rapor",
+    "researchTargetId": "YKBNK-01",
+    "ticker": "YKBNK",
+    "date": "2026-04-29",
+    "publishDateTime": "2026-04-29T08:01:51+03:00",
+    "reactionStartDate": "2026-04-29",
+    "category": "earnings",
+    "title": "YKBNK 2026 ilk çeyrek konsolide finansal raporu",
+    "summary": "Yapı ve Kredi Bankası’nın 31.03.2026 dönemine ilişkin konsolide finansal raporu KAP’ta kaynak olarak bulundu. Fiyat, hacim ve BIST 100 kıyası hesaplanmadan kayıt candidate statüsündedir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1598444,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Konsolide Finansal Rapor",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1598444",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans öncesinde geldiği için tepki başlangıcı aynı işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır. Banka finansallarında konsolide ve konsolide olmayan rapor ayrımı editör kontrolünde tutulmalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
+  },
+  {
+    "slug": "isctr-2026-olagan-genel-kurul-kar-dagitim-karari",
+    "researchTargetId": "ISCTR-02",
+    "ticker": "ISCTR",
+    "date": "2026-03-31",
+    "publishDateTime": "2026-03-31T13:49:24+03:00",
+    "reactionStartDate": "2026-03-31",
+    "category": "dividend",
+    "title": "ISCTR 2026 olağan genel kurul kar dağıtım kararı",
+    "summary": "Türkiye İş Bankası’nın 2025 hesap dönemi olağan genel kurul kararları ve kar dağıtımının 01.04.2026 tarihinde başlamasına ilişkin KAP bildirimi kaynak olarak bulundu.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1580235,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: Olağan Genel Kurul Kararları",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1580235",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans içinde geldiği için ilk günlük tepki ve kar payı hak kullanım etkisi ayrı kontrol edilmelidir.",
+    "editorChecklist": [
+      "KAP linki",
+      "Genel kurul sonucu",
+      "Kar dağıtım tablosu",
+      "Hak kullanım/dağıtım başlangıcı",
+      "Düzeltilmiş fiyat serisi"
+    ]
+  },
+  {
+    "slug": "tcell-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "TCELL-01",
+    "ticker": "TCELL",
+    "date": "2026-05-11",
+    "publishDateTime": "2026-05-11T18:34:13+03:00",
+    "reactionStartDate": "2026-05-12",
+    "category": "earnings",
+    "title": "TCELL 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Turkcell’in 2026 ilk çeyrek ara dönem faaliyet raporu KAP’ta kaynak olarak bulundu. Finansal sonuç etkisi fiyat, hacim ve BIST 100 kıyasıyla ayrıca hesaplanmalıdır.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1605253,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Ara Dönem Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1605253",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
+  },
+  {
+    "slug": "froto-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "FROTO-01",
+    "ticker": "FROTO",
+    "date": "2026-05-05",
+    "publishDateTime": "2026-05-05T19:27:58+03:00",
+    "reactionStartDate": "2026-05-06",
+    "category": "earnings",
+    "title": "FROTO 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Ford Otomotiv’in 31.03.2026 dönemine ilişkin ara dönem faaliyet raporu KAP’ta kaynak olarak bulundu. Otomotiv sektör etkisi editör notunda ayrıca izlenmelidir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1601423,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Ara Dönem Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1601423",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
+  },
+  {
+    "slug": "toaso-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "TOASO-01",
+    "ticker": "TOASO",
+    "date": "2026-05-05",
+    "publishDateTime": "2026-05-05T21:51:42+03:00",
+    "reactionStartDate": "2026-05-06",
+    "category": "earnings",
+    "title": "TOASO 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Tofaş’ın 01.01.2026 - 31.03.2026 dönemine ait ara dönem faaliyet raporu KAP’ta kaynak olarak bulundu.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1601475,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Ara Dönem Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1601475",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
+  },
+  {
+    "slug": "sasa-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "SASA-03",
+    "ticker": "SASA",
+    "date": "2026-05-04",
+    "publishDateTime": "2026-05-04T07:40:43+03:00",
+    "reactionStartDate": "2026-05-04",
+    "category": "earnings",
+    "title": "SASA 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Sasa Polyester’in 01.01.2026 - 31.03.2026 dönemine ait faaliyet raporu KAP’ta kaynak olarak bulundu. Yüksek yatırımcı ilgisi nedeniyle fiyat tepkisi ayrıca izlenmelidir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1600196,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1600196",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans öncesinde geldiği için tepki başlangıcı aynı işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
+  },
+  {
+    "slug": "hekts-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "HEKTS-02",
+    "ticker": "HEKTS",
+    "date": "2026-05-05",
+    "publishDateTime": "2026-05-05T20:00:28+03:00",
+    "reactionStartDate": "2026-05-06",
+    "category": "earnings",
+    "title": "HEKTS 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Hektaş’ın 01.01.2026 - 31.03.2026 dönemi yönetim kurulu faaliyet raporu KAP’ta kaynak olarak bulundu.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1601441,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1601441",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
+  },
+  {
+    "slug": "kontr-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "KONTR-03",
+    "ticker": "KONTR",
+    "date": "2026-05-11",
+    "publishDateTime": "2026-05-11T20:03:12+03:00",
+    "reactionStartDate": "2026-05-12",
+    "category": "earnings",
+    "title": "KONTR 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Kontrolmatik’in 31.03.2026 ara dönem faaliyet raporu KAP’ta kaynak olarak bulundu. Sözleşme ve yatırım haberleriyle ayrıştırma editör kontrolünde tutulmalıdır.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1605582,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Ara Dönem Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1605582",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
+  },
+  {
+    "slug": "astor-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "ASTOR-03",
+    "ticker": "ASTOR",
+    "date": "2026-05-11",
+    "publishDateTime": "2026-05-11T22:37:57+03:00",
+    "reactionStartDate": "2026-05-12",
+    "category": "earnings",
+    "title": "ASTOR 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Astor Enerji’nin 2026 ilk çeyrek yönetim kurulu faaliyet raporu KAP’ta kaynak olarak bulundu. Sipariş ve ihracat etkisi ayrı olaylarda izlenmelidir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1605801,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1605801",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans kapanışı sonrasında geldiği için tepki başlangıcı bir sonraki işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
   }
 ]

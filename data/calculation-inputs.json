@@ -286,6 +286,172 @@
       "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "ykbnk-2026-ilk-ceyrek-konsolide-finansal-rapor",
+      "ticker": "YKBNK",
+      "kapDisclosureId": 1598444,
+      "category": "earnings",
+      "eventDate": "2026-04-29",
+      "publishDateTime": "2026-04-29T08:01:51+03:00",
+      "baseDate": "2026-04-29",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "YKBNK",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "isctr-2026-olagan-genel-kurul-kar-dagitim-karari",
+      "ticker": "ISCTR",
+      "kapDisclosureId": 1580235,
+      "category": "dividend",
+      "eventDate": "2026-03-31",
+      "publishDateTime": "2026-03-31T13:49:24+03:00",
+      "baseDate": "2026-03-31",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "ISCTR",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data",
+      "specialHandling": [
+        "dividend_adjusted_price_required",
+        "dividend_effective_date_review_required"
+      ]
+    },
+    {
+      "slug": "tcell-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "TCELL",
+      "kapDisclosureId": 1605253,
+      "category": "earnings",
+      "eventDate": "2026-05-11",
+      "publishDateTime": "2026-05-11T18:34:13+03:00",
+      "baseDate": "2026-05-12",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "TCELL",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "froto-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "FROTO",
+      "kapDisclosureId": 1601423,
+      "category": "earnings",
+      "eventDate": "2026-05-05",
+      "publishDateTime": "2026-05-05T19:27:58+03:00",
+      "baseDate": "2026-05-06",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "FROTO",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "toaso-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "TOASO",
+      "kapDisclosureId": 1601475,
+      "category": "earnings",
+      "eventDate": "2026-05-05",
+      "publishDateTime": "2026-05-05T21:51:42+03:00",
+      "baseDate": "2026-05-06",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "TOASO",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "sasa-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "SASA",
+      "kapDisclosureId": 1600196,
+      "category": "earnings",
+      "eventDate": "2026-05-04",
+      "publishDateTime": "2026-05-04T07:40:43+03:00",
+      "baseDate": "2026-05-04",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "SASA",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "hekts-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "HEKTS",
+      "kapDisclosureId": 1601441,
+      "category": "earnings",
+      "eventDate": "2026-05-05",
+      "publishDateTime": "2026-05-05T20:00:28+03:00",
+      "baseDate": "2026-05-06",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "HEKTS",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "kontr-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "KONTR",
+      "kapDisclosureId": 1605582,
+      "category": "earnings",
+      "eventDate": "2026-05-11",
+      "publishDateTime": "2026-05-11T20:03:12+03:00",
+      "baseDate": "2026-05-12",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "KONTR",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "astor-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "ASTOR",
+      "kapDisclosureId": 1605801,
+      "category": "earnings",
+      "eventDate": "2026-05-11",
+      "publishDateTime": "2026-05-11T22:37:57+03:00",
+      "baseDate": "2026-05-12",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "ASTOR",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
     }
   ],
   "windowGroups": {

@@ -1,7 +1,7 @@
 {
   "version": "2026-05-25",
   "status": "sample_fixture_not_market_data",
-  "warning": "Bu dosya ger?ek piyasa verisi de?ildir; hesap motorunu do?rulamak i?in yapay olarak ?retilmi?tir.",
+  "warning": "Bu dosya gerçek piyasa verisi değildir; hesap motorunu doğrulamak için yapay olarak üretilmiştir.",
   "coveredInputSlug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
   "symbols": [
     "THYAO",
@@ -12,367 +12,367 @@
       "date": "2026-04-02",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-03",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-04",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-05",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-06",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-07",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-08",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-09",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-10",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-11",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-12",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-13",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-14",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-15",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-16",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-17",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-18",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-19",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-20",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-21",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-22",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-23",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-24",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-25",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-26",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-04-27",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-28",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-29",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-04-30",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-01",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-02",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-03",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-04",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-05",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-06",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-07",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-08",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-09",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-10",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-11",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-12",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-13",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-14",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-15",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-16",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-17",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-18",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-19",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-20",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-21",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-22",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-23",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-24",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-25",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-26",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-27",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-28",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-29",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     },
     {
       "date": "2026-05-30",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-05-31",
       "isTradingDay": false,
       "sessionType": "closed",
-      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+      "note": "Örnek kapalı gün; resmi takvim değildir."
     },
     {
       "date": "2026-06-01",
       "isTradingDay": true,
       "sessionType": "full",
-      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+      "note": "Örnek işlem günü; resmi takvim değildir."
     }
   ],
   "bars": [

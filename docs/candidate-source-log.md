@@ -4,11 +4,11 @@ Bu dosya, ilk araştırma kuyruğundan gerçek kaynak linki bulunan olay adaylar
 
 ## Durum Özeti
 
-- Kaynak bulunan candidate kayıt: 10
-- Kapsanan hisse: 10
+- Kaynak bulunan candidate kayıt: 19
+- Kapsanan hisse: 19
 - Ana kaynak: KAP bildirimleri
 - Piyasa verisi kaynağı: Borsa İstanbul veri sayfaları
-- Sonraki iş: 1G, 3G, 1H, 2H, 30G hesaplarını üretmek
+- Sonraki iş: 1G, 3G, 1H, 2H, 30G hesaplarını ve 90G, 180G, 1Y uzun izleme pencerelerini üretmek
 
 ## Candidate Kayıtlar
 
@@ -24,6 +24,15 @@ Bu dosya, ilk araştırma kuyruğundan gerçek kaynak linki bulunan olay adaylar
 | 8 | BIMAS | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1605795](https://www.kap.org.tr/tr/Bildirim/1605795) | 2026-05-12 | Finansal tablo bildirimi ayrıca eşleştirilmeli |
 | 9 | AKBNK | Bilanço | 2026 ilk çeyrek konsolide raporlama paketi | [1598268](https://www.kap.org.tr/tr/Bildirim/1598268) | 2026-04-29 | Finansal tablo bildirimi ayrıca eşleştirilmeli |
 | 10 | GARAN | Bilanço | 2026 ilk çeyrek finansal sonuç sunumu | [1598912](https://www.kap.org.tr/tr/Bildirim/1598912) | 2026-04-30 | Sunum eki kontrol edilmeli |
+| 11 | YKBNK | Bilanço | 2026 ilk çeyrek konsolide finansal raporu | [1598444](https://www.kap.org.tr/tr/Bildirim/1598444) | 2026-04-29 | Seans öncesi açıklama |
+| 12 | ISCTR | Temettü | Olağan genel kurul kar dağıtım kararı | [1580235](https://www.kap.org.tr/tr/Bildirim/1580235) | 2026-03-31 | Seans içi açıklama; hak kullanım etkisi ayrı kontrol edilmeli |
+| 13 | TCELL | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1605253](https://www.kap.org.tr/tr/Bildirim/1605253) | 2026-05-12 | Seans sonrası açıklama |
+| 14 | FROTO | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1601423](https://www.kap.org.tr/tr/Bildirim/1601423) | 2026-05-06 | Seans sonrası açıklama |
+| 15 | TOASO | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1601475](https://www.kap.org.tr/tr/Bildirim/1601475) | 2026-05-06 | Seans sonrası açıklama |
+| 16 | SASA | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1600196](https://www.kap.org.tr/tr/Bildirim/1600196) | 2026-05-04 | Seans öncesi açıklama |
+| 17 | HEKTS | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1601441](https://www.kap.org.tr/tr/Bildirim/1601441) | 2026-05-06 | Seans sonrası açıklama |
+| 18 | KONTR | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1605582](https://www.kap.org.tr/tr/Bildirim/1605582) | 2026-05-12 | Seans sonrası açıklama |
+| 19 | ASTOR | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1605801](https://www.kap.org.tr/tr/Bildirim/1605801) | 2026-05-12 | Seans sonrası açıklama |
 
 ## Doğrulama Notları
 
