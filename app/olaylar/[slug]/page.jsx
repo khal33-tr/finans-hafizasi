@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import EventDataStatusPanel from "@/components/event-data-status-panel";
 import ReturnGrid from "@/components/return-grid";
 import RecordReadiness from "@/components/record-readiness";
 import SentimentSummary from "@/components/sentiment-summary";
@@ -14,6 +15,7 @@ import {
   longMonitoringWindows,
   sourceTypeLabels
 } from "@/lib/market-data";
+import { getEventImportState } from "@/lib/data-operations";
 
 export function generateStaticParams() {
   return events.map((event) => ({ slug: event.slug }));
@@ -38,6 +40,7 @@ export default async function EventDetailPage({ params }) {
   const company = getCompany(event.ticker);
   const status = getEventStatus(event);
   const dataStatus = getEventDataStatus(event);
+  const importState = getEventImportState(event);
   const primarySource = getPrimarySource(event);
 
   return (
@@ -67,7 +70,7 @@ export default async function EventDetailPage({ params }) {
               <span>olay tarihi</span>
             </div>
             <div>
-              <strong>{dataStatus.label}</strong>
+              <strong>{importState.statusLabel}</strong>
               <span>veri durumu</span>
             </div>
             <div>
@@ -101,9 +104,11 @@ export default async function EventDetailPage({ params }) {
           <article className="content-panel">
             <p className="eyebrow">Kayıt hazırlığı</p>
             <h2>Yayın öncesi kontrol hattı</h2>
-            <RecordReadiness event={event} dataStatus={dataStatus} />
+            <RecordReadiness event={event} dataStatus={dataStatus} importState={importState} />
           </article>
         </section>
+
+        <EventDataStatusPanel event={event} importState={importState} />
 
         <section className="content-panel wide-panel">
           <p className="eyebrow">Söylem özeti</p>
@@ -129,7 +134,7 @@ export default async function EventDetailPage({ params }) {
             </div>
             <div>
               <span>Veri durumu</span>
-              <strong>{dataStatus.label}</strong>
+              <strong>{importState.statusLabel}</strong>
             </div>
           </div>
 

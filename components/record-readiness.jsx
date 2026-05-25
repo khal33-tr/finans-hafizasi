@@ -1,4 +1,4 @@
-export default function RecordReadiness({ event, dataStatus }) {
+export default function RecordReadiness({ event, dataStatus, importState }) {
   const steps = [
     {
       label: "Olay kaynağı",
@@ -7,12 +7,17 @@ export default function RecordReadiness({ event, dataStatus }) {
     },
     {
       label: "Fiyat serisi",
-      state: dataStatus.label,
-      note: dataStatus.description
+      state: importState?.statusLabel ?? dataStatus.label,
+      note: importState?.description ?? dataStatus.description
     },
     {
-      label: "Hesap üretimi",
-      state: "Tekrar üretim bekliyor",
+      label: "Takvim kapsamı",
+      state: importState?.calendarStatusLabel ?? "Takvim bekliyor",
+      note: "İlk tepki tarihi ve işlem günü kapsamı doğrulanmadan pencere getirileri hesaplanmaz."
+    },
+    {
+      label: "Yayın kilidi",
+      state: importState?.publicationGate ?? "Veri eksik",
       note: "Kısa tepki için 1G, 3G, 1H, 2H ve 30G; uzun izleme için 90G, 180G ve 1Y aynı yöntemle yeniden hesaplanmalıdır."
     }
   ];

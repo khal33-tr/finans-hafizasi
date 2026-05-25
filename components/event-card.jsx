@@ -1,10 +1,12 @@
 import { formatReturn, getEventDataStatus, getEventStatus, getPrimarySource } from "@/lib/market-data";
+import { getEventImportState } from "@/lib/data-operations";
 import ReturnGrid from "@/components/return-grid";
 import SentimentSummary from "@/components/sentiment-summary";
 
 export default function EventCard({ event, linked = true }) {
   const status = getEventStatus(event);
   const dataStatus = getEventDataStatus(event);
+  const importState = getEventImportState(event);
   const primarySource = getPrimarySource(event);
   const relativeReturn = typeof event.bistRelative === "number" ? formatReturn(event.bistRelative) : "Bekliyor";
   const volumeMultiple =
@@ -28,6 +30,7 @@ export default function EventCard({ event, linked = true }) {
           <span>{event.date}</span>
           <span>{event.type}</span>
           <span className={`status-pill ${status.tone}`}>{status.label}</span>
+          <span className={`status-pill ${importState.tone}`}>{importState.shortLabel}</span>
         </div>
         <h3>{title}</h3>
         <p>{event.summary}</p>
@@ -43,13 +46,13 @@ export default function EventCard({ event, linked = true }) {
           </div>
           <div>
             <span>Veri durumu</span>
-            <strong>{dataStatus.label}</strong>
+            <strong>{importState.statusLabel}</strong>
           </div>
         </div>
 
-        <div className={`data-status-note ${dataStatus.tone}`}>
+        <div className={`data-status-note ${importState.tone}`}>
           <span>Yayın kontrolü</span>
-          <p>{dataStatus.description}</p>
+          <p>{importState.description}</p>
         </div>
 
         <a className="event-source" href={primarySource.url}>

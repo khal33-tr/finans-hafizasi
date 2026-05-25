@@ -701,6 +701,11 @@ h3 {
   color: var(--green);
 }
 
+.status-pill.red {
+  background: #fbecea;
+  color: var(--red);
+}
+
 .event-title-link {
   color: inherit;
 }
@@ -787,6 +792,10 @@ h3 {
 
 .data-status-note.green {
   border-left-color: var(--green);
+}
+
+.data-status-note.red {
+  border-left-color: var(--red);
 }
 
 .data-status-note span,
@@ -1068,6 +1077,11 @@ h3 {
   color: var(--red);
 }
 
+.status-chip.muted {
+  background: #edf1f3;
+  color: var(--muted);
+}
+
 .import-summary-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1268,6 +1282,82 @@ h3 {
   background: var(--line);
 }
 
+.data-detail-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.data-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.data-detail-grid div {
+  min-width: 0;
+  padding: 14px 12px;
+  border-right: 1px solid var(--line);
+}
+
+.data-detail-grid div:last-child {
+  border-right: 0;
+}
+
+.data-detail-grid span,
+.data-range-panel span,
+.data-window-grid span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.data-detail-grid strong,
+.data-range-panel strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--navy);
+  font-size: 16px;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.data-range-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.data-range-panel div,
+.data-window-grid > div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.data-window-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.data-window-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.data-window-pills strong {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: #eef2f4;
+  color: var(--navy);
+  font-size: 12px;
+}
+
 .method-steps {
   display: grid;
   gap: 10px;
@@ -1314,6 +1404,9 @@ h3 {
   .operation-control-grid,
   .operation-layout,
   .coverage-row,
+  .data-detail-grid,
+  .data-range-panel,
+  .data-window-grid,
   .archive-toolbar,
   .event-card,
   .detail-hero,
@@ -1357,6 +1450,15 @@ h3 {
   }
 
   .import-summary-grid div:last-child {
+    border-bottom: 0;
+  }
+
+  .data-detail-grid div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .data-detail-grid div:last-child {
     border-bottom: 0;
   }
 }
