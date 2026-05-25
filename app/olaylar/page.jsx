@@ -14,7 +14,39 @@ export const metadata = {
   description: "KAP kaynaklı aday olaylar, veri durumu ve fiyat tepkisi hesap akışı."
 };
 
-export default function EventsArchivePage() {
+const sortOptions = ["newest", "oldest", "pilot_first", "missing_first", "ticker"];
+
+function getSearchValue(searchParams, key) {
+  const value = searchParams?.[key];
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function readFilter(value, allowedValues, fallback = "all") {
+  return value && allowedValues.includes(value) ? value : fallback;
+}
+
+function buildInitialFilters(searchParams, { categories, statuses, importStatuses }) {
+  return {
+    ticker: readFilter(getSearchValue(searchParams, "ticker"), tickers),
+    category: readFilter(
+      getSearchValue(searchParams, "category"),
+      categories.map((item) => item.value)
+    ),
+    status: readFilter(
+      getSearchValue(searchParams, "status"),
+      statuses.map((item) => item.value)
+    ),
+    importStatus: readFilter(
+      getSearchValue(searchParams, "import"),
+      importStatuses.map((item) => item.value)
+    ),
+    sort: readFilter(getSearchValue(searchParams, "sort"), sortOptions, "newest"),
+    query: (getSearchValue(searchParams, "q") ?? "").slice(0, 120)
+  };
+}
+
+export default async function EventsArchivePage({ searchParams }) {
+  const resolvedSearchParams = await searchParams;
   const eventsWithImportState = sampleEvents.map((event) => ({
     ...event,
     importState: getEventImportState(event)
@@ -33,6 +65,7 @@ export default function EventsArchivePage() {
   ];
   const pilotCount = sortedEvents.filter((event) => event.importState.inPilot).length;
   const pilotOutsideCount = sortedEvents.filter((event) => event.importState.status === "not_in_pilot").length;
+  const initialFilters = buildInitialFilters(resolvedSearchParams, { categories, statuses, importStatuses });
 
   return (
     <>
@@ -76,6 +109,7 @@ export default function EventsArchivePage() {
           categories={categories}
           statuses={statuses}
           importStatuses={importStatuses}
+          initialFilters={initialFilters}
         />
       </main>
       <SiteFooter />
