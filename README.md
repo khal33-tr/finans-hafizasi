@@ -60,6 +60,10 @@ Faz 4 hazırlık çıktıları:
 - `data/imports/`: pilot fiyat ve takvim verisi giriş dosyaları
 - `scripts/generate-pilot-import-templates.mjs`: pilot CSV giriş dosyalarını üreten script
 - `data/imports/pilot-validation-report.json`: pilot CSV dosyalarının ilk doğrulama raporu
+- `scripts/generate-pilot-readiness.mjs`: pilot pencerelerinin tarihsel olarak oluşup oluşmadığını ayıran script
+- `data/imports/pilot-window-maturity-report.json`: 25 Mayıs 2026 itibarıyla pilot olgunluk raporu
+- `data/imports/today-completable-price-data-requirements.json`: bugün tamamlanabilir TUPRS pilot gereksinimi
+- `docs/today-completable-pilot.md`: bugün doldurulacak gerçek veri kapsamı
 - `docs/market-data-source-plan.md`: resmi kaynak ve veri sağlayıcı karar planı
 - `docs/pilot-price-data-runbook.md`: pilot fiyat verisi giriş ve doğrulama adımları
 

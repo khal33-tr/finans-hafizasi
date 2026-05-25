@@ -1,0 +1,148 @@
+{
+  "version": "2026-05-25",
+  "status": "pilot_window_maturity_report",
+  "asOfDate": "2026-05-25",
+  "principle": "Bu rapor fiyat verisi üretmez; yalnızca pilot olayların hesap pencerelerinin takvim olarak olgunlaşıp olgunlaşmadığını gösterir.",
+  "calendarAssumption": "Hafta sonları kapalı, 2026-05-01 kapalı varsayılmıştır. Resmi BIST işlem takvimi yerine geçmez.",
+  "summary": {
+    "dateMaturedEvents": 1,
+    "awaitingFutureWindowEvents": 2
+  },
+  "events": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "baseDate": "2026-04-30",
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "windows": [
+        {
+          "key": "d1",
+          "label": "1G",
+          "estimatedEndDate": "2026-05-04",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d3",
+          "label": "3G",
+          "estimatedEndDate": "2026-05-06",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w1",
+          "label": "1H",
+          "estimatedEndDate": "2026-05-07",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w2",
+          "label": "2H",
+          "estimatedEndDate": "2026-05-14",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-06-01",
+          "status": "future_window"
+        }
+      ],
+      "status": "awaiting_future_window",
+      "blockingWindows": [
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+      "ticker": "GARAN",
+      "baseDate": "2026-04-30",
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "windows": [
+        {
+          "key": "d1",
+          "label": "1G",
+          "estimatedEndDate": "2026-05-04",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d3",
+          "label": "3G",
+          "estimatedEndDate": "2026-05-06",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w1",
+          "label": "1H",
+          "estimatedEndDate": "2026-05-07",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w2",
+          "label": "2H",
+          "estimatedEndDate": "2026-05-14",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-06-01",
+          "status": "future_window"
+        }
+      ],
+      "status": "awaiting_future_window",
+      "blockingWindows": [
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-06-01"
+        }
+      ]
+    },
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "baseDate": "2026-03-12",
+      "requiredRangeStart": "2026-01-26",
+      "requiredRangeEnd": "2026-04-18",
+      "windows": [
+        {
+          "key": "d1",
+          "label": "1G",
+          "estimatedEndDate": "2026-03-13",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d3",
+          "label": "3G",
+          "estimatedEndDate": "2026-03-17",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w1",
+          "label": "1H",
+          "estimatedEndDate": "2026-03-19",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w2",
+          "label": "2H",
+          "estimatedEndDate": "2026-03-26",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-04-13",
+          "status": "available_by_date"
+        }
+      ],
+      "status": "date_matured",
+      "blockingWindows": []
+    }
+  ]
+}

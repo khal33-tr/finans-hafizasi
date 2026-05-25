@@ -1,0 +1,3 @@
+symbol,requiredRangeStart,requiredRangeEnd,eventSlugs,note
+TUPRS,2026-01-26,2026-04-18,tuprs-2025-kar-dagitim-onerisi,Hisse serisi; hacim ve adjustedClose zorunludur.
+XU100,2026-01-26,2026-04-18,tuprs-2025-kar-dagitim-onerisi,Benchmark endeks serisi; hacim boş kalabilir.

@@ -100,6 +100,8 @@ Isler:
 13. Piyasa verisi kaynak ve lisans ilkesi tanimlandi.
 14. THYAO, GARAN ve TUPRS icin ilk pilot fiyat verisi giris plani olusturuldu.
 15. Pilot fiyat ve takvim CSV dosya yapisi uretildi.
+16. 25 Mayis 2026 itibariyla pilot pencere olgunlugu ayrildi.
+17. Bugun tamamlanabilir TUPRS pilotu icin ayri gereksinim dosyalari olusturuldu.
 
 Basari kriteri:
 
@@ -168,5 +170,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 4: Pilot CSV dosyalarini gercek fiyat ve BIST takvim verisiyle doldur, once 3 pilot kaydi ready durumuna getir.
+Faz 4: Once TUPRS icin bugun tamamlanabilir fiyat ve BIST takvim verisini doldur; THYAO ve GARAN'i 1 Haziran 2026 sonrasi 30G penceresi olusunca tamamla.
 ```

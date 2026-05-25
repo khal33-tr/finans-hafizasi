@@ -1,0 +1,50 @@
+{
+  "version": "2026-05-25",
+  "status": "future_window_price_data_requirements",
+  "sourceInput": "data/pilot-price-import-plan.json",
+  "principle": "Bu dosya asOfDate itibarıyla 30G gibi gelecekteki penceresi henüz oluşmamış pilot kayıtları kapsar.",
+  "coverageRule": {
+    "beforeBaseCalendarBufferDays": 45,
+    "afterBaseCalendarBufferDays": 37,
+    "preBaseTradingDaysRequired": 20,
+    "postBaseCalendarDaysRequired": 30,
+    "benchmark": "XU100"
+  },
+  "symbols": [
+    "GARAN",
+    "THYAO",
+    "XU100"
+  ],
+  "events": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "baseDate": "2026-04-30",
+      "requiredSeries": [
+        "THYAO",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+      "ticker": "GARAN",
+      "baseDate": "2026-04-30",
+      "requiredSeries": [
+        "GARAN",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    }
+  ]
+}

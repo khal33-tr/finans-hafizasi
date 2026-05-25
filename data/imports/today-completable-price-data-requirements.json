@@ -1,0 +1,36 @@
+{
+  "version": "2026-05-25",
+  "status": "today_completable_price_data_requirements",
+  "sourceInput": "data/pilot-price-import-plan.json",
+  "principle": "Bu dosya yalnızca asOfDate itibarıyla tüm pencereleri tarihsel olarak oluşmuş pilot kayıtları kapsar.",
+  "coverageRule": {
+    "beforeBaseCalendarBufferDays": 45,
+    "afterBaseCalendarBufferDays": 37,
+    "preBaseTradingDaysRequired": 20,
+    "postBaseCalendarDaysRequired": 30,
+    "benchmark": "XU100"
+  },
+  "symbols": [
+    "TUPRS",
+    "XU100"
+  ],
+  "events": [
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "baseDate": "2026-03-12",
+      "requiredSeries": [
+        "TUPRS",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-01-26",
+      "requiredRangeEnd": "2026-04-18",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [
+        "dividend_adjusted_price_required"
+      ],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    }
+  ]
+}
