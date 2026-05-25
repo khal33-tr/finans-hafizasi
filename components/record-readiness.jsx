@@ -13,7 +13,7 @@ export default function RecordReadiness({ event, dataStatus }) {
     {
       label: "Hesap üretimi",
       state: "Tekrar üretim bekliyor",
-      note: "1G, 3G, 1H, 2H ve 30G pencereleri aynı yöntemle yeniden hesaplanmalıdır."
+      note: "Kısa tepki için 1G, 3G, 1H, 2H ve 30G; uzun izleme için 90G, 180G ve 1Y aynı yöntemle yeniden hesaplanmalıdır."
     }
   ];
 

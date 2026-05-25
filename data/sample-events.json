@@ -30,7 +30,10 @@
       "d3": 3.2,
       "w1": 2.4,
       "w2": -1.1,
-      "d30": 4.6
+      "d30": 4.6,
+      "d90": null,
+      "d180": null,
+      "y1": null
     },
     "bistRelative": 1.3,
     "volumeMultiple": 1.7,
@@ -40,7 +43,12 @@
       "negative": 22
     },
     "qualityNote": "Örnek MVP kaydıdır. Yayın öncesinde doğrudan KAP bildirim linki, açıklama saati ve düzeltilmiş fiyat serisi doğrulanmalıdır.",
-    "editorChecklist": ["Doğrudan bildirim linki", "İlk işlem günü", "Düzeltilmiş fiyat", "BIST 100 kıyası"]
+    "editorChecklist": [
+      "Doğrudan bildirim linki",
+      "İlk işlem günü",
+      "Düzeltilmiş fiyat",
+      "BIST 100 kıyası"
+    ]
   },
   {
     "slug": "tuprs-temettu-dagitim-karari",
@@ -73,9 +81,12 @@
       "d3": 0.6,
       "w1": 1.4,
       "w2": 3.8,
-      "d30": 5.1
+      "d30": 5.1,
+      "d90": null,
+      "d180": null,
+      "y1": null
     },
-    "bistRelative": 2.0,
+    "bistRelative": 2,
     "volumeMultiple": 1.4,
     "sentiment": {
       "positive": 47,
@@ -83,7 +94,12 @@
       "negative": 13
     },
     "qualityNote": "Temettü etkisi için fiyat düzeltmesi özellikle kontrol edilmelidir. Oranlar gerçek yayın datası değildir.",
-    "editorChecklist": ["Temettü düzeltmesi", "Hak kullanım tarihi", "Doğrudan kaynak", "Endeks karşılaştırması"]
+    "editorChecklist": [
+      "Temettü düzeltmesi",
+      "Hak kullanım tarihi",
+      "Doğrudan kaynak",
+      "Endeks karşılaştırması"
+    ]
   },
   {
     "slug": "asels-yeni-sozlesme-aciklamasi",
@@ -116,7 +132,10 @@
       "d3": 4.1,
       "w1": 6.8,
       "w2": 3.5,
-      "d30": 8.2
+      "d30": 8.2,
+      "d90": null,
+      "d180": null,
+      "y1": null
     },
     "bistRelative": 4.7,
     "volumeMultiple": 2.3,
@@ -126,6 +145,11 @@
       "negative": 11
     },
     "qualityNote": "Sözleşme büyüklüğü, teslim takvimi ve açıklama saati editör tarafından doğrulanmadan yayın statüsüne alınmamalıdır.",
-    "editorChecklist": ["Sözleşme tutarı", "Teslim takvimi", "Açıklama saati", "Hacim ortalaması"]
+    "editorChecklist": [
+      "Sözleşme tutarı",
+      "Teslim takvimi",
+      "Açıklama saati",
+      "Hacim ortalaması"
+    ]
   }
 ]

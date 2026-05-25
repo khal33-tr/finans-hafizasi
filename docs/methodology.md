@@ -1,48 +1,55 @@
-# Finans Hafizasi Metodoloji Taslagi
+# Finans Hafızası Metodoloji Taslağı
 
-## Olay Secimi
+## Olay Seçimi
 
-Bir olay arsive girebilmek icin en az bir guvenilir kaynakla dogrulanmalidir. MVP doneminde olay adaylari otomatik toplanir, ancak yayinlanmadan once editor tarafindan onaylanir.
+Bir olay arşive girebilmek için en az bir güvenilir kaynakla doğrulanmalıdır. MVP döneminde olay adayları otomatik veya yarı otomatik toplanabilir, ancak yayınlanmadan önce editör tarafından onaylanır.
 
-Oncelikli kaynak tipleri:
+Öncelikli kaynak tipleri:
 
 - KAP bildirimleri
-- Sirket yatirimci iliskileri duyurulari
-- Borsa Istanbul duyurulari
-- SPK ve resmi kurum aciklamalari
-- Guvenilir finans haber kaynaklari
+- Şirket yatırımcı ilişkileri duyuruları
+- Borsa İstanbul duyuruları
+- SPK ve resmi kurum açıklamaları
+- Güvenilir finans haber kaynakları
 
-## Olay Siniflari
+## Olay Sınıfları
 
-- Bilanco
-- Temettu
-- Bedelli veya bedelsiz sermaye artirimi
-- Ihale veya sozlesme
-- Yatirim karari
-- Regulasyon
-- Dava, ceza veya sorusturma
-- Yonetim degisikligi
-- Makro veya sektorel etki
+- Bilanço
+- Temettü
+- Bedelli veya bedelsiz sermaye artırımı
+- İhale veya sözleşme
+- Yatırım kararı
+- Regülasyon
+- Dava, ceza veya soruşturma
+- Yönetim değişikliği
+- Makro veya sektörel etki
 
 ## Olay Tarihi
 
-Olay tarihi, bilginin kamuya acik hale geldigi ilk zaman olarak belirlenir. Eger bildirim seans kapandiktan sonra geldiyse ilk piyasa tepkisi bir sonraki islem gunu uzerinden degerlendirilir.
+Olay tarihi, bilginin kamuya açık hale geldiği ilk zaman olarak belirlenir. Bildirim seans kapandıktan sonra geldiyse ilk piyasa tepkisi bir sonraki işlem günü üzerinden değerlendirilebilir.
 
 ## Fiyat Tepkisi
 
-Her olay icin standart zaman pencereleri hesaplanir:
+Kısa tepki pencereleri:
 
-- Olay gunu
-- 1 islem gunu
-- 3 islem gunu
+- 1 işlem günü
+- 3 işlem günü
 - 1 hafta
 - 2 hafta
-- 30 takvim gunu veya en yakin islem gunu
+- 30 takvim günü veya en yakın işlem günü
+
+Uzun izleme pencereleri:
+
+- 90 takvim günü veya en yakın işlem günü
+- 180 takvim günü veya en yakın işlem günü
+- 365 takvim günü veya en yakın işlem günü
+
+Kısa tepki, yayın olgunluğunu belirleyen ana settir. Uzun izleme, olayın kalıcı etkisini ayrı katmanda göstermek için tutulur.
 
 Temel hesap:
 
 ```text
-Getiri = (Pencere sonu kapanis fiyati - baz kapanis fiyati) / baz kapanis fiyati
+Getiri = (Pencere sonu düzeltilmiş kapanış - baz düzeltilmiş kapanış) / baz düzeltilmiş kapanış
 ```
 
 Relatif getiri:
@@ -51,34 +58,29 @@ Relatif getiri:
 Relatif getiri = Hisse getirisi - BIST 100 getirisi
 ```
 
-Faz 4 hazirliginda bu hesaplar icin girdi sozlesmesi ayrica tanimlanmistir:
-
-- `data/calculation-inputs.json`
-- `data/trading-calendar-template.json`
-- `docs/price-reaction-input-standard.md`
-
 ## Hacim Tepkisi
 
-Hacim tepkisi, olay sonrasi islem hacminin onceki 20 islem gunu ortalamasina gore degisimiyle olculur.
+Hacim tepkisi, olay sonrası işlem hacminin önceki 20 işlem günü ortalamasına göre değişimiyle ölçülür.
 
 ```text
-Hacim carpani = Olay gunu hacmi / Onceki 20 gun ortalama hacim
+Hacim çarpanı = Olay günü hacmi / Önceki 20 gün ortalama hacim
 ```
 
-## Soylem Ozeti
+## Söylem Özeti
 
-Kamuya acik yorumlar yalnizca toplu egilim gostergesi olarak kullanilir. Tekil yorumlar yatirim sinyali gibi sunulmaz. Sistem pozitif, negatif ve notr soylem oranlarini gosterir; manipulasyon riski veya veri yetersizligi varsa bunu ayrica belirtir.
+Kamuya açık yorumlar yalnızca toplu eğilim göstergesi olarak kullanılır. Tekil yorumlar yatırım sinyali gibi sunulmaz. Sistem pozitif, negatif ve nötr söylem oranlarını gösterir; manipülasyon riski veya veri yetersizliği varsa bunu ayrıca belirtir.
 
-## Yayincilik Standardi
+## Yayıncılık Standardı
 
-Her olay sayfasinda su bilgiler bulunmalidir:
+Her olay sayfasında şu bilgiler bulunmalıdır:
 
 - Olay tarihi
 - Olay tipi
-- Ilgili hisse
+- İlgili hisse
 - Kaynaklar
-- Tarafsiz ozet
-- Fiyat tepkisi
-- Endeks karsilastirmasi
+- Tarafsız özet
+- Kısa fiyat tepkisi
+- Uzun izleme pencereleri
+- Endeks karşılaştırması
 - Hacim tepkisi
-- Veri siniri veya notlar
+- Veri sınırı veya notlar

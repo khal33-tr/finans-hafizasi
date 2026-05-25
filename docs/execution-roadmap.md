@@ -89,7 +89,7 @@ Isler:
 2. `data/calculation-inputs.json` ile ilk 10 candidate icin hesaplama girdileri standartlastirildi.
 3. `data/trading-calendar-template.json` ile BIST islem takvimi sablonu olusturuldu.
 4. Islem gunu takvimi mantigi icin saf hesaplayici fonksiyon eklendi.
-5. 1G, 3G, 1H, 2H ve 30G hesaplari yazildi.
+5. 1G, 3G, 1H, 2H ve 30G kisa tepki hesaplari yazildi.
 6. BIST 100 karsilastirmasi eklendi.
 7. Hacim carpani hesabi eklendi.
 8. THYAO icin gercek piyasa verisi olmayan ornek fiyat fixture dosyasi eklendi.
@@ -105,6 +105,8 @@ Isler:
 18. Public sitede veri operasyonu, veri durumu ve yayin oncesi kontrol hattini gosteren arayuz eklendi.
 19. Ilk 10 KAP kaynakli candidate kayit public olay akisina `Kaynak bulundu` durumuyla baglandi.
 20. `/olaylar` filtrelenebilir olay arsivi sayfasi eklendi.
+21. 90G, 180G ve 1Y uzun izleme pencereleri hesap modeline eklendi.
+22. Uzun izleme veri gereksinimi kisa tepki pilotundan ayrildi.
 
 Basari kriteri:
 
@@ -173,5 +175,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 4: Once TUPRS icin bugun tamamlanabilir fiyat ve BIST takvim verisini doldur; THYAO ve GARAN'i 1 Haziran 2026 sonrasi 30G penceresi olusunca tamamla.
+Faz 4: Once TUPRS icin bugun tamamlanabilir kisa tepki fiyat ve BIST takvim verisini doldur; THYAO ve GARAN'i 1 Haziran 2026 sonrasi 30G penceresi olusunca tamamla. 90G, 180G ve 1Y uzun izleme pencerelerini ayri takip et.
 ```

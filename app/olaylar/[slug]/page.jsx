@@ -6,12 +6,12 @@ import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import {
   events,
-  formatReturn,
   getCompany,
   getEventDataStatus,
   getEventBySlug,
   getEventStatus,
   getPrimarySource,
+  longMonitoringWindows,
   sourceTypeLabels
 } from "@/lib/market-data";
 
@@ -85,6 +85,16 @@ export default async function EventDetailPage({ params }) {
             <p className="panel-note">
               Bu kayıt {status.label.toLowerCase()} statüsündedir. Fiyatlar yayın öncesi
               lisanslı/veri kaynağı belli serilerle tekrar üretilebilir olmalıdır.
+            </p>
+          </article>
+
+          <article className="content-panel">
+            <p className="eyebrow">Uzun izleme</p>
+            <h2>90G, 180G ve 1Y</h2>
+            <ReturnGrid returns={event.returns} windowSet={longMonitoringWindows} />
+            <p className="panel-note">
+              Bu pencereler ilk piyasa tepkisini değil, olayın daha uzun vadeli izini göstermek
+              için ayrı tutulur.
             </p>
           </article>
 

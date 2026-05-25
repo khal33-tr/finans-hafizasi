@@ -61,6 +61,36 @@
           "stockReturnPct": 8.3597,
           "indexReturnPct": 3.7555,
           "relativeReturnPct": 4.6042
+        },
+        "d90": {
+          "label": "90G",
+          "baseDate": "2026-04-30",
+          "endDate": "2026-07-29",
+          "basePrice": 322.02,
+          "endPrice": 359.75,
+          "stockReturnPct": 11.7167,
+          "indexReturnPct": 7.0134,
+          "relativeReturnPct": 4.7033
+        },
+        "d180": {
+          "label": "180G",
+          "baseDate": "2026-04-30",
+          "endDate": "2026-10-27",
+          "basePrice": 322.02,
+          "endPrice": 371.2,
+          "stockReturnPct": 15.2723,
+          "indexReturnPct": 9.8442,
+          "relativeReturnPct": 5.4281
+        },
+        "y1": {
+          "label": "1Y",
+          "baseDate": "2026-04-30",
+          "endDate": "2027-04-30",
+          "basePrice": 322.02,
+          "endPrice": 389.65,
+          "stockReturnPct": 21.0018,
+          "indexReturnPct": 14.683,
+          "relativeReturnPct": 6.3188
         }
       },
       "volume": {

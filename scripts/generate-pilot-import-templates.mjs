@@ -13,7 +13,13 @@ const requirements = JSON.parse(fs.readFileSync(path.join(root, "data/price-data
 const selectedEvents = plan.selectedSlugs.map((slug) => {
   const event = requirements.events.find((item) => item.slug === slug);
   if (!event) throw new Error(`Pilot slug is not in price requirements: ${slug}`);
-  return event;
+  return {
+    ...event,
+    requiredRangeEnd: event.requiredShortReactionRangeEnd ?? event.requiredRangeEnd,
+    requiredPostBaseCalendarDays:
+      event.requiredShortReactionCalendarDays ?? requirements.coverageRule.shortReactionPostBaseCalendarDaysRequired,
+    windowScope: "short_reaction"
+  };
 });
 
 const dateStart = selectedEvents
@@ -63,6 +69,7 @@ const calendarHeaders = ["date", "isTradingDay", "sessionType", "note"];
 const manifest = {
   version: "2026-05-25",
   status: "awaiting_real_market_data",
+  windowScope: "short_reaction",
   planFile: "data/pilot-price-import-plan.json",
   sourcePolicy: plan.sourcePolicy,
   selectedSlugs: plan.selectedSlugs,
@@ -78,15 +85,29 @@ const manifest = {
     priceImport: "data/imports/pilot-prices.csv",
     tradingCalendarImport: "data/imports/pilot-trading-calendar.csv"
   },
-  nextCommandAfterDataEntry: "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json",
-  publicationGate: "Fiyat veri kaynağı lisans ve yeniden kullanım şartları doğrulanmadan public veri olarak yayımlanmaz."
+  nextCommandAfterDataEntry:
+    "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json",
+  publicationGate:
+    "Fiyat veri kaynağı lisans ve yeniden kullanım şartları doğrulanmadan public veri olarak yayımlanmaz.",
+  longMonitoringNote:
+    "90G, 180G ve 1Y pencereleri ayrı uzun izleme katmanıdır; kısa tepki pilotunun bugün tamamlanabilirliğini engellemez."
+};
+
+const shortCoverageRule = {
+  ...requirements.coverageRule,
+  afterBaseCalendarBufferDays: requirements.coverageRule.shortReactionAfterBaseCalendarBufferDays,
+  postBaseCalendarDaysRequired: requirements.coverageRule.shortReactionPostBaseCalendarDaysRequired,
+  windowKeys: requirements.coverageRule.shortReactionWindowKeys
 };
 
 const pilotRequirements = {
   ...requirements,
   status: "pilot_price_data_requirements",
+  windowScope: "short_reaction",
   sourceInput: "data/pilot-price-import-plan.json",
-  principle: "Bu dosya yalnızca ilk pilot kapsamındaki 3 candidate kaydın fiyat ve takvim verisini denetlemek için üretilmiştir.",
+  principle:
+    "Bu dosya yalnızca ilk pilot kapsamındaki 3 candidate kaydın kısa tepki fiyat ve takvim verisini denetlemek için üretilmiştir.",
+  coverageRule: shortCoverageRule,
   symbols,
   events: selectedEvents
 };

@@ -20,7 +20,7 @@ const steps = [
   {
     title: "Fiyat tepkisi",
     body:
-      "1G, 3G, 1H, 2H ve 30G pencereleri standart olarak gösterilir. Hisse getirisi BIST 100 ile karşılaştırılır."
+      "1G, 3G, 1H, 2H ve 30G kısa tepki pencereleri standart olarak gösterilir. 90G, 180G ve 1Y ayrı uzun izleme katmanıdır; kısa tepki yayın olgunluğunu geciktirmez."
   },
   {
     title: "Editör onayı",

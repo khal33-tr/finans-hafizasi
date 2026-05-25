@@ -2,11 +2,26 @@
   "version": "2026-05-25",
   "status": "pilot_window_maturity_report",
   "asOfDate": "2026-05-25",
-  "principle": "Bu rapor fiyat verisi üretmez; yalnızca pilot olayların hesap pencerelerinin takvim olarak olgunlaşıp olgunlaşmadığını gösterir.",
+  "principle": "Bu rapor fiyat verisi üretmez; kısa tepki pencerelerinin yayın için olgunluğunu ve uzun izleme pencerelerinin ayrı bekleme durumunu gösterir.",
   "calendarAssumption": "Hafta sonları kapalı, 2026-05-01 kapalı varsayılmıştır. Resmi BIST işlem takvimi yerine geçmez.",
+  "windowGroups": {
+    "shortReaction": [
+      "d1",
+      "d3",
+      "w1",
+      "w2",
+      "d30"
+    ],
+    "longMonitoring": [
+      "d90",
+      "d180",
+      "y1"
+    ]
+  },
   "summary": {
     "dateMaturedEvents": 1,
-    "awaitingFutureWindowEvents": 2
+    "awaitingFutureWindowEvents": 2,
+    "longMonitoringAwaitingEvents": 3
   },
   "events": [
     {
@@ -15,6 +30,7 @@
       "baseDate": "2026-04-30",
       "requiredRangeStart": "2026-03-16",
       "requiredRangeEnd": "2026-06-06",
+      "windowScope": "short_reaction",
       "windows": [
         {
           "key": "d1",
@@ -47,12 +63,82 @@
           "status": "future_window"
         }
       ],
+      "shortReactionWindows": [
+        {
+          "key": "d1",
+          "label": "1G",
+          "estimatedEndDate": "2026-05-04",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d3",
+          "label": "3G",
+          "estimatedEndDate": "2026-05-06",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w1",
+          "label": "1H",
+          "estimatedEndDate": "2026-05-07",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w2",
+          "label": "2H",
+          "estimatedEndDate": "2026-05-14",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-06-01",
+          "status": "future_window"
+        }
+      ],
+      "longMonitoringWindows": [
+        {
+          "key": "d90",
+          "label": "90G",
+          "estimatedEndDate": "2026-07-29",
+          "status": "future_window"
+        },
+        {
+          "key": "d180",
+          "label": "180G",
+          "estimatedEndDate": "2026-10-27",
+          "status": "future_window"
+        },
+        {
+          "key": "y1",
+          "label": "1Y",
+          "estimatedEndDate": "2027-04-30",
+          "status": "future_window"
+        }
+      ],
       "status": "awaiting_future_window",
       "blockingWindows": [
         {
           "key": "d30",
           "label": "30G",
           "estimatedEndDate": "2026-06-01"
+        }
+      ],
+      "longMonitoringStatus": "awaiting_future_window",
+      "longMonitoringBlockingWindows": [
+        {
+          "key": "d90",
+          "label": "90G",
+          "estimatedEndDate": "2026-07-29"
+        },
+        {
+          "key": "d180",
+          "label": "180G",
+          "estimatedEndDate": "2026-10-27"
+        },
+        {
+          "key": "y1",
+          "label": "1Y",
+          "estimatedEndDate": "2027-04-30"
         }
       ]
     },
@@ -62,6 +148,7 @@
       "baseDate": "2026-04-30",
       "requiredRangeStart": "2026-03-16",
       "requiredRangeEnd": "2026-06-06",
+      "windowScope": "short_reaction",
       "windows": [
         {
           "key": "d1",
@@ -94,12 +181,82 @@
           "status": "future_window"
         }
       ],
+      "shortReactionWindows": [
+        {
+          "key": "d1",
+          "label": "1G",
+          "estimatedEndDate": "2026-05-04",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d3",
+          "label": "3G",
+          "estimatedEndDate": "2026-05-06",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w1",
+          "label": "1H",
+          "estimatedEndDate": "2026-05-07",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w2",
+          "label": "2H",
+          "estimatedEndDate": "2026-05-14",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-06-01",
+          "status": "future_window"
+        }
+      ],
+      "longMonitoringWindows": [
+        {
+          "key": "d90",
+          "label": "90G",
+          "estimatedEndDate": "2026-07-29",
+          "status": "future_window"
+        },
+        {
+          "key": "d180",
+          "label": "180G",
+          "estimatedEndDate": "2026-10-27",
+          "status": "future_window"
+        },
+        {
+          "key": "y1",
+          "label": "1Y",
+          "estimatedEndDate": "2027-04-30",
+          "status": "future_window"
+        }
+      ],
       "status": "awaiting_future_window",
       "blockingWindows": [
         {
           "key": "d30",
           "label": "30G",
           "estimatedEndDate": "2026-06-01"
+        }
+      ],
+      "longMonitoringStatus": "awaiting_future_window",
+      "longMonitoringBlockingWindows": [
+        {
+          "key": "d90",
+          "label": "90G",
+          "estimatedEndDate": "2026-07-29"
+        },
+        {
+          "key": "d180",
+          "label": "180G",
+          "estimatedEndDate": "2026-10-27"
+        },
+        {
+          "key": "y1",
+          "label": "1Y",
+          "estimatedEndDate": "2027-04-30"
         }
       ]
     },
@@ -109,6 +266,7 @@
       "baseDate": "2026-03-12",
       "requiredRangeStart": "2026-01-26",
       "requiredRangeEnd": "2026-04-18",
+      "windowScope": "short_reaction",
       "windows": [
         {
           "key": "d1",
@@ -141,8 +299,78 @@
           "status": "available_by_date"
         }
       ],
+      "shortReactionWindows": [
+        {
+          "key": "d1",
+          "label": "1G",
+          "estimatedEndDate": "2026-03-13",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d3",
+          "label": "3G",
+          "estimatedEndDate": "2026-03-17",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w1",
+          "label": "1H",
+          "estimatedEndDate": "2026-03-19",
+          "status": "available_by_date"
+        },
+        {
+          "key": "w2",
+          "label": "2H",
+          "estimatedEndDate": "2026-03-26",
+          "status": "available_by_date"
+        },
+        {
+          "key": "d30",
+          "label": "30G",
+          "estimatedEndDate": "2026-04-13",
+          "status": "available_by_date"
+        }
+      ],
+      "longMonitoringWindows": [
+        {
+          "key": "d90",
+          "label": "90G",
+          "estimatedEndDate": "2026-06-10",
+          "status": "future_window"
+        },
+        {
+          "key": "d180",
+          "label": "180G",
+          "estimatedEndDate": "2026-09-08",
+          "status": "future_window"
+        },
+        {
+          "key": "y1",
+          "label": "1Y",
+          "estimatedEndDate": "2027-03-12",
+          "status": "future_window"
+        }
+      ],
       "status": "date_matured",
-      "blockingWindows": []
+      "blockingWindows": [],
+      "longMonitoringStatus": "awaiting_future_window",
+      "longMonitoringBlockingWindows": [
+        {
+          "key": "d90",
+          "label": "90G",
+          "estimatedEndDate": "2026-06-10"
+        },
+        {
+          "key": "d180",
+          "label": "180G",
+          "estimatedEndDate": "2026-09-08"
+        },
+        {
+          "key": "y1",
+          "label": "1Y",
+          "estimatedEndDate": "2027-03-12"
+        }
+      ]
     }
   ]
 }

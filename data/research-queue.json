@@ -31,12 +31,18 @@
       }
     ]
   },
-  "requiredWindows": ["d1", "d3", "w1", "w2", "d30"],
+  "requiredWindows": [
+    "d1",
+    "d3",
+    "w1",
+    "w2",
+    "d30"
+  ],
   "defaultValidation": [
     "Doğrudan kaynak linki bulunur.",
     "Olay tarihi ve açıklama saati kontrol edilir.",
     "Tepki başlangıç tarihi işlem takvimine göre belirlenir.",
-    "Düzeltilmiş fiyat serisiyle 1G, 3G, 1H, 2H ve 30G hesaplanır.",
+    "D?zeltilmi? fiyat serisiyle k?sa tepki i?in 1G, 3G, 1H, 2H ve 30G; uzun izleme i?in 90G, 180G ve 1Y ayr? hesaplan?r.",
     "BIST 100 göreli performansı ve hacim çarpanı hesaplanır.",
     "Yatırım tavsiyesi içermeyen tarafsız özet yazılır."
   ],
@@ -50,21 +56,34 @@
           "id": "THYAO-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "THYAO-02",
           "category": "macro_sector",
           "label": "Yolcu veya trafik verisi etkisi",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "THYAO-03",
           "category": "investment",
           "label": "Filo, kapasite veya yatırım açıklaması",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -78,21 +97,33 @@
           "id": "TUPRS-01",
           "category": "dividend",
           "label": "Temettü veya kar payı kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "TUPRS-02",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "TUPRS-03",
           "category": "macro_sector",
           "label": "Rafineri marjı veya enerji piyasası etkisi",
-          "sourcePriority": ["company_ir", "news", "bist"],
+          "sourcePriority": [
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -106,21 +137,34 @@
           "id": "ASELS-01",
           "category": "contract",
           "label": "Yeni sözleşme veya iş ilişkisi açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "ASELS-02",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "ASELS-03",
           "category": "investment",
           "label": "Ürün, teslimat veya stratejik yatırım duyurusu",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -134,21 +178,34 @@
           "id": "KCHOL-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "KCHOL-02",
           "category": "investment",
           "label": "İştirak, satın alma veya portföy değişimi",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "KCHOL-03",
           "category": "dividend",
           "label": "Temettü veya kar dağıtım kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -162,21 +219,34 @@
           "id": "SAHOL-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "SAHOL-02",
           "category": "investment",
           "label": "İştirak veya portföy gelişmesi",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "SAHOL-03",
           "category": "dividend",
           "label": "Temettü veya kar dağıtım kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -190,21 +260,33 @@
           "id": "EREGL-01",
           "category": "dividend",
           "label": "Temettü veya kar dağıtım kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "EREGL-02",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "EREGL-03",
           "category": "macro_sector",
           "label": "Çelik fiyatı veya sektör etkisi",
-          "sourcePriority": ["company_ir", "news", "bist"],
+          "sourcePriority": [
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -218,21 +300,33 @@
           "id": "SISE-01",
           "category": "investment",
           "label": "Kapasite veya yatırım açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "SISE-02",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "SISE-03",
           "category": "macro_sector",
           "label": "Enerji maliyeti veya küresel talep etkisi",
-          "sourcePriority": ["company_ir", "news", "bist"],
+          "sourcePriority": [
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -246,21 +340,34 @@
           "id": "BIMAS-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "BIMAS-02",
           "category": "regulation",
           "label": "Perakende veya fiyatlama regülasyonu",
-          "sourcePriority": ["spk", "news", "company_ir", "bist"],
+          "sourcePriority": [
+            "spk",
+            "news",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "BIMAS-03",
           "category": "investment",
           "label": "Mağaza büyümesi veya operasyonel güncelleme",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -274,21 +381,34 @@
           "id": "AKBNK-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "AKBNK-02",
           "category": "regulation",
           "label": "Bankacılık regülasyonu veya makro ihtiyati karar etkisi",
-          "sourcePriority": ["spk", "news", "company_ir", "bist"],
+          "sourcePriority": [
+            "spk",
+            "news",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "AKBNK-03",
           "category": "dividend",
           "label": "Temettü veya sermaye kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -302,21 +422,34 @@
           "id": "GARAN-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "GARAN-02",
           "category": "regulation",
           "label": "Bankacılık regülasyonu veya faiz beklentisi etkisi",
-          "sourcePriority": ["spk", "news", "company_ir", "bist"],
+          "sourcePriority": [
+            "spk",
+            "news",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "GARAN-03",
           "category": "dividend",
           "label": "Temettü veya sermaye kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -330,21 +463,34 @@
           "id": "YKBNK-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "YKBNK-02",
           "category": "regulation",
           "label": "Bankacılık regülasyonu veya makro ihtiyati karar etkisi",
-          "sourcePriority": ["spk", "news", "company_ir", "bist"],
+          "sourcePriority": [
+            "spk",
+            "news",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "YKBNK-03",
           "category": "capital_increase",
           "label": "Sermaye yeterliliği veya sermaye işlemi",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -358,21 +504,34 @@
           "id": "ISCTR-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "ISCTR-02",
           "category": "dividend",
           "label": "Temettü veya kar dağıtım kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "ISCTR-03",
           "category": "regulation",
           "label": "Bankacılık regülasyonu veya faiz beklentisi etkisi",
-          "sourcePriority": ["spk", "news", "company_ir", "bist"],
+          "sourcePriority": [
+            "spk",
+            "news",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -386,21 +545,34 @@
           "id": "TCELL-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "TCELL-02",
           "category": "dividend",
           "label": "Temettü veya kar dağıtım kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "TCELL-03",
           "category": "regulation",
           "label": "Telekom regülasyonu veya lisans gelişmesi",
-          "sourcePriority": ["spk", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "spk",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -414,21 +586,34 @@
           "id": "FROTO-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "FROTO-02",
           "category": "investment",
           "label": "Kapasite, üretim veya yatırım açıklaması",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "FROTO-03",
           "category": "macro_sector",
           "label": "İhracat veya otomotiv pazarı verisi etkisi",
-          "sourcePriority": ["company_ir", "news", "bist"],
+          "sourcePriority": [
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -442,21 +627,34 @@
           "id": "TOASO-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "TOASO-02",
           "category": "contract",
           "label": "Üretim anlaşması veya model gelişmesi",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "TOASO-03",
           "category": "dividend",
           "label": "Temettü veya kar dağıtım kararı",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -470,21 +668,34 @@
           "id": "SASA-01",
           "category": "capital_increase",
           "label": "Sermaye artırımı veya sermaye işlemi",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "SASA-02",
           "category": "investment",
           "label": "Kapasite veya yatırım açıklaması",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "SASA-03",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -498,21 +709,34 @@
           "id": "HEKTS-01",
           "category": "capital_increase",
           "label": "Sermaye artırımı veya sermaye işlemi",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "HEKTS-02",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "HEKTS-03",
           "category": "investment",
           "label": "Yatırım veya kapasite açıklaması",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -526,21 +750,34 @@
           "id": "KONTR-01",
           "category": "contract",
           "label": "Yeni sözleşme veya sipariş açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "KONTR-02",
           "category": "investment",
           "label": "Yatırım veya kapasite açıklaması",
-          "sourcePriority": ["kap", "company_ir", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "KONTR-03",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -554,21 +791,33 @@
           "id": "ASTOR-01",
           "category": "contract",
           "label": "Yeni sözleşme veya sipariş açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "ASTOR-02",
           "category": "macro_sector",
           "label": "İhracat veya enerji ekipmanı talebi etkisi",
-          "sourcePriority": ["company_ir", "news", "bist"],
+          "sourcePriority": [
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "ASTOR-03",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         }
       ]
@@ -582,24 +831,43 @@
           "id": "KOZAL-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
-          "sourcePriority": ["kap", "company_ir", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "KOZAL-02",
           "category": "macro_sector",
           "label": "Altın fiyatı veya madencilik sektörü etkisi",
-          "sourcePriority": ["company_ir", "news", "bist"],
+          "sourcePriority": [
+            "company_ir",
+            "news",
+            "bist"
+          ],
           "status": "research"
         },
         {
           "id": "KOZAL-03",
           "category": "legal_penalty",
           "label": "Hukuki süreç veya operasyonel açıklama",
-          "sourcePriority": ["kap", "company_ir", "spk", "news", "bist"],
+          "sourcePriority": [
+            "kap",
+            "company_ir",
+            "spk",
+            "news",
+            "bist"
+          ],
           "status": "research"
         }
       ]
     }
+  ],
+  "longMonitoringWindows": [
+    "d90",
+    "d180",
+    "y1"
   ]
 }

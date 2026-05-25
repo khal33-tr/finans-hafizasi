@@ -39,9 +39,9 @@ export default function DataOperationsPanel({ snapshot }) {
         </article>
 
         <article className="operation-item">
-          <span className="operation-label">Bekleyen pencere</span>
+          <span className="operation-label">Bekleyen kısa pencere</span>
           <strong>{futureTickers || "Yok"}</strong>
-          <p>30G penceresi henüz oluşmayan kayıtlar veri olgunlaşınca hesap akışına alınacak.</p>
+          <p>Kısa tepki penceresi henüz oluşmayan kayıtlar veri olgunlaşınca hesap akışına alınacak.</p>
         </article>
 
         <article className="operation-item">

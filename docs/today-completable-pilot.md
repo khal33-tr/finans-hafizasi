@@ -1,6 +1,6 @@
 # Bugün Tamamlanabilir Pilot
 
-Bu not, 25 Mayıs 2026 itibarıyla hangi pilot kayıtların gerçek fiyat verisiyle tamamen hesaplanabileceğini ayırır.
+Bu not, 25 Mayıs 2026 itibarıyla hangi pilot kayıtların kısa tepki verisiyle hesaplanabileceğini ayırır.
 
 ## Tarih Gerçeği
 
@@ -10,7 +10,9 @@ Pilot kapsamında üç olay vardır:
 - `thyao-2026-ilk-ceyrek-finansal-sonuclari`
 - `garan-2026-ilk-ceyrek-finansal-sonuc-sunumu`
 
-25 Mayıs 2026 itibarıyla yalnızca TUPRS kaydının 30G penceresi geçmiştedir. THYAO ve GARAN kayıtlarında 30G penceresi 1 Haziran 2026 civarında oluşur; bu yüzden bu iki kayıt bugün tam `ready` yapılamaz.
+25 Mayıs 2026 itibarıyla yalnızca TUPRS kaydının kısa tepki setindeki 30G penceresi geçmiştir. THYAO ve GARAN kayıtlarında 30G penceresi 1 Haziran 2026 civarında oluşur; bu yüzden bu iki kayıt bugün kısa tepki açısından tam `ready` yapılamaz.
+
+90G, 180G ve 1Y uzun izleme pencereleri ayrıca bekler. Bu pencereler kısa tepki yayına hazır olgunluğunu engellemez.
 
 ## Bugün Doldurulacak Dosyalar
 
@@ -21,7 +23,7 @@ Pilot kapsamında üç olay vardır:
 
 ## Gerekli Seri
 
-Bugün tamamlanabilir kayıt için şu seriler gerekir:
+Bugün tamamlanabilir kısa tepki kaydı için şu seriler gerekir:
 
 - `TUPRS`
 - `XU100`
@@ -43,4 +45,8 @@ Fiyat verisi Borsa İstanbul DataStore, Borsa İstanbul lisanslı veri dağıtı
 
 ## Bekleyen Pilot
 
-THYAO ve GARAN kayıtları için `data/imports/future-window-price-data-requirements.json` dosyası tutulur. Bu kayıtlar 1 Haziran 2026 sonrası 30G penceresi oluşunca tekrar ele alınmalıdır.
+THYAO ve GARAN kayıtları için `data/imports/future-window-price-data-requirements.json` dosyası tutulur. Bu kayıtlar 1 Haziran 2026 sonrası kısa tepki 30G penceresi oluşunca tekrar ele alınmalıdır.
+
+Uzun izleme için ayrı dosya:
+
+- `data/imports/long-monitoring-price-data-requirements.json`

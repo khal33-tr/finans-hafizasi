@@ -2,13 +2,36 @@
   "version": "2026-05-25",
   "status": "today_completable_price_data_requirements",
   "sourceInput": "data/pilot-price-import-plan.json",
-  "principle": "Bu dosya yalnızca asOfDate itibarıyla tüm pencereleri tarihsel olarak oluşmuş pilot kayıtları kapsar.",
+  "principle": "Bu dosya yalnızca asOfDate itibarıyla kısa tepki pencereleri tarihsel olarak oluşmuş pilot kayıtları kapsar.",
   "coverageRule": {
     "beforeBaseCalendarBufferDays": 45,
     "afterBaseCalendarBufferDays": 37,
+    "shortReactionAfterBaseCalendarBufferDays": 37,
+    "longMonitoringAfterBaseCalendarBufferDays": 379,
     "preBaseTradingDaysRequired": 20,
     "postBaseCalendarDaysRequired": 30,
-    "benchmark": "XU100"
+    "shortReactionPostBaseCalendarDaysRequired": 30,
+    "longMonitoringPostBaseCalendarDaysRequired": 365,
+    "shortReactionWindowKeys": [
+      "d1",
+      "d3",
+      "w1",
+      "w2",
+      "d30"
+    ],
+    "longMonitoringWindowKeys": [
+      "d90",
+      "d180",
+      "y1"
+    ],
+    "benchmark": "XU100",
+    "windowKeys": [
+      "d1",
+      "d3",
+      "w1",
+      "w2",
+      "d30"
+    ]
   },
   "symbols": [
     "TUPRS",
@@ -25,12 +48,18 @@
       ],
       "requiredRangeStart": "2026-01-26",
       "requiredRangeEnd": "2026-04-18",
+      "requiredShortReactionRangeEnd": "2026-04-18",
+      "requiredLongMonitoringRangeEnd": "2027-03-26",
       "requiredPreBaseTradingDays": 20,
       "requiredPostBaseCalendarDays": 30,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [
         "dividend_adjusted_price_required"
       ],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır.",
+      "windowScope": "short_reaction"
     }
-  ]
+  ],
+  "windowScope": "short_reaction"
 }

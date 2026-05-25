@@ -1,15 +1,15 @@
 {
   "version": "2026-05-25",
-  "status": "future_window_price_data_requirements",
-  "sourceInput": "data/pilot-price-import-plan.json",
-  "principle": "Bu dosya asOfDate itibarıyla kısa tepki penceresi henüz oluşmamış pilot kayıtları kapsar.",
+  "status": "long_monitoring_price_data_requirements",
+  "sourceInput": "data/calculation-inputs.json",
+  "principle": "Bu dosya 90G, 180G ve 1Y uzun izleme pencereleri için ayrıca toplanacak pilot veri aralığını kapsar.",
   "coverageRule": {
     "beforeBaseCalendarBufferDays": 45,
-    "afterBaseCalendarBufferDays": 37,
+    "afterBaseCalendarBufferDays": 379,
     "shortReactionAfterBaseCalendarBufferDays": 37,
     "longMonitoringAfterBaseCalendarBufferDays": 379,
     "preBaseTradingDaysRequired": 20,
-    "postBaseCalendarDaysRequired": 30,
+    "postBaseCalendarDaysRequired": 365,
     "shortReactionPostBaseCalendarDaysRequired": 30,
     "longMonitoringPostBaseCalendarDaysRequired": 365,
     "shortReactionWindowKeys": [
@@ -24,18 +24,12 @@
       "d180",
       "y1"
     ],
-    "benchmark": "XU100",
-    "windowKeys": [
-      "d1",
-      "d3",
-      "w1",
-      "w2",
-      "d30"
-    ]
+    "benchmark": "XU100"
   },
   "symbols": [
     "GARAN",
     "THYAO",
+    "TUPRS",
     "XU100"
   ],
   "events": [
@@ -48,16 +42,38 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-16",
-      "requiredRangeEnd": "2026-06-06",
+      "requiredRangeEnd": "2027-05-14",
       "requiredShortReactionRangeEnd": "2026-06-06",
       "requiredLongMonitoringRangeEnd": "2027-05-14",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
       "requiredShortReactionCalendarDays": 30,
       "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
       "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır.",
-      "windowScope": "short_reaction"
+      "windowScope": "long_monitoring"
+    },
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "baseDate": "2026-03-12",
+      "requiredSeries": [
+        "TUPRS",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-01-26",
+      "requiredRangeEnd": "2027-03-26",
+      "requiredShortReactionRangeEnd": "2026-04-18",
+      "requiredLongMonitoringRangeEnd": "2027-03-26",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
+      "specialHandling": [
+        "dividend_adjusted_price_required"
+      ],
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır.",
+      "windowScope": "long_monitoring"
     },
     {
       "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
@@ -68,17 +84,17 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-16",
-      "requiredRangeEnd": "2026-06-06",
+      "requiredRangeEnd": "2027-05-14",
       "requiredShortReactionRangeEnd": "2026-06-06",
       "requiredLongMonitoringRangeEnd": "2027-05-14",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
       "requiredShortReactionCalendarDays": 30,
       "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
       "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır.",
-      "windowScope": "short_reaction"
+      "windowScope": "long_monitoring"
     }
   ],
-  "windowScope": "short_reaction"
+  "windowScope": "long_monitoring"
 }

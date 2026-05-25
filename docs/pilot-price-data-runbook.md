@@ -18,16 +18,24 @@ Bu seçim üç şeyi aynı anda test eder:
 
 ## 25 Mayıs 2026 Durumu
 
-25 Mayıs 2026 itibarıyla üç pilot olayın tamamı aynı anda `ready` yapılamaz. THYAO ve GARAN kayıtlarının 30G penceresi henüz oluşmamıştır.
+25 Mayıs 2026 itibarıyla üç pilot olayın tamamı aynı anda kısa tepki açısından `ready` yapılamaz. THYAO ve GARAN kayıtlarının 30G penceresi henüz oluşmamıştır.
 
-Bugün tam hesaplanabilir kayıt:
+Bugün kısa tepki için tam hesaplanabilir kayıt:
 
 - `tuprs-2025-kar-dagitim-onerisi`
 
-Bekleyen kayıtlar:
+Bekleyen kısa tepki kayıtları:
 
 - `thyao-2026-ilk-ceyrek-finansal-sonuclari`
 - `garan-2026-ilk-ceyrek-finansal-sonuc-sunumu`
+
+Uzun izleme pencereleri:
+
+- 90G
+- 180G
+- 1Y
+
+Bu pencereler ayrı veri gereksinimi olarak tutulur ve kısa tepki pilotunu bekletmez.
 
 ## Kullanılacak Dosyalar
 
@@ -41,18 +49,13 @@ Bekleyen kayıtlar:
 - `data/imports/pilot-window-maturity-report.json`
 - `data/imports/today-completable-price-data-requirements.json`
 - `data/imports/future-window-price-data-requirements.json`
+- `data/imports/long-monitoring-price-data-requirements.json`
 
 ## Şablonları Yeniden Üretme
 
 ```bash
+node scripts/generate-price-data-requirements.mjs
 node scripts/generate-pilot-import-templates.mjs
-```
-
-Bu komut pilot sembolleri, gerekli tarih listesi ve boş CSV giriş dosyalarını üretir.
-
-Pencere olgunluk raporunu yeniden üret:
-
-```bash
 node scripts/generate-pilot-readiness.mjs
 ```
 
@@ -69,8 +72,6 @@ node scripts/generate-pilot-readiness.mjs
 ```bash
 node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json
 ```
-
-Kabul için raporda üç pilot olayın da `ready` görünmesi gerekir.
 
 Bugün tamamlanabilir TUPRS alt pilotunu doğrulama:
 

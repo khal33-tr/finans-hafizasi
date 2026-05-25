@@ -1,6 +1,7 @@
 {
   "version": "2026-05-25",
   "status": "awaiting_real_market_data",
+  "windowScope": "short_reaction",
   "planFile": "data/pilot-price-import-plan.json",
   "sourcePolicy": "data/market-data-source-policy.json",
   "selectedSlugs": [
@@ -26,5 +27,6 @@
     "tradingCalendarImport": "data/imports/pilot-trading-calendar.csv"
   },
   "nextCommandAfterDataEntry": "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json",
-  "publicationGate": "Fiyat veri kaynağı lisans ve yeniden kullanım şartları doğrulanmadan public veri olarak yayımlanmaz."
+  "publicationGate": "Fiyat veri kaynağı lisans ve yeniden kullanım şartları doğrulanmadan public veri olarak yayımlanmaz.",
+  "longMonitoringNote": "90G, 180G ve 1Y pencereleri ayrı uzun izleme katmanıdır; kısa tepki pilotunun bugün tamamlanabilirliğini engellemez."
 }

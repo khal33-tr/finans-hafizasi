@@ -2,17 +2,18 @@
 
 Bu doküman, candidate olayların fiyat, hacim ve BIST 100 kıyası hesaplanmadan önce hangi girdilere ihtiyaç duyduğunu tanımlar.
 
-## Amaç
-
-Finans Hafızası'nda bir olay `verified` statüsüne ancak hesapları tekrar üretilebilir hale geldiğinde geçebilir. Bunun için her olayda aynı girdi sözleşmesi kullanılmalıdır.
-
 Ana dosya:
 
 - `data/calculation-inputs.json`
 
-Takvim şablonu:
+## Temel İlke
 
-- `data/trading-calendar-template.json`
+Finans Hafızası'nda bir olay `verified` statüsüne ancak hesaplar tekrar üretilebilir hale geldiğinde geçebilir. Bu yüzden her olayda aynı girdi sözleşmesi kullanılır.
+
+Hesaplar iki gruba ayrılır:
+
+- Kısa tepki: olay sonrası ilk piyasa tepkisini gösterir ve MVP yayın olgunluğunu belirler.
+- Uzun izleme: olayın daha uzun vadeli izini gösterir; kısa tepki yayına hazırsa kaydı bekletmez.
 
 ## Zorunlu Seriler
 
@@ -23,7 +24,7 @@ Her olay için iki piyasa serisi gerekir:
 
 Hisse serisinde hacim zorunludur. Endeks serisinde hacim zorunlu değildir, fakat kapanış ve düzeltilmiş kapanış alanları gereklidir.
 
-## Zorunlu Alanlar
+## Zorunlu Fiyat Alanları
 
 Her günlük fiyat satırı şu alanları taşımalıdır:
 
@@ -37,7 +38,7 @@ Her günlük fiyat satırı şu alanları taşımalıdır:
 - `volume`
 - `source`
 
-Hesaplarda mümkünse `adjustedClose` kullanılmalıdır. Temettü, bölünme ve sermaye artırımı etkileri bu alana yansıtılmalıdır.
+Hesaplarda mümkünse `adjustedClose` kullanılır. Temettü, bölünme ve sermaye işlemi etkileri bu alana yansıtılmalıdır.
 
 ## Baz Tarih
 
@@ -47,9 +48,11 @@ Kural:
 
 - Bildirim seans içinde yayımlandıysa `reactionStartDate` aynı gün olabilir.
 - Bildirim seans kapanışı sonrasında yayımlandıysa `reactionStartDate` sonraki işlem günü olmalıdır.
-- Resmi tatil veya hafta sonu varsa BIST işlem günü takvimi kullanılmalıdır.
+- Resmi tatil veya hafta sonu varsa BIST işlem günü takvimi kullanılır.
 
 ## Zaman Pencereleri
+
+Kısa tepki pencereleri:
 
 | Anahtar | Etiket | Kural |
 |---|---|---|
@@ -59,7 +62,15 @@ Kural:
 | `w2` | 2H | Baz tarihten 14 takvim günü sonrası, işlem günü değilse sonraki işlem günü |
 | `d30` | 30G | Baz tarihten 30 takvim günü sonrası, işlem günü değilse sonraki işlem günü |
 
-Pencere bitiş tarihleri hesap motoru tarafından işlem takvimiyle çözülmelidir. Bu yüzden mevcut girdi dosyasında `windowStatus` alanı `pending_trading_calendar` olarak tutulur.
+Uzun izleme pencereleri:
+
+| Anahtar | Etiket | Kural |
+|---|---|---|
+| `d90` | 90G | Baz tarihten 90 takvim günü sonrası, işlem günü değilse sonraki işlem günü |
+| `d180` | 180G | Baz tarihten 180 takvim günü sonrası, işlem günü değilse sonraki işlem günü |
+| `y1` | 1Y | Baz tarihten 365 takvim günü sonrası, işlem günü değilse sonraki işlem günü |
+
+Pencere bitiş tarihleri hesap motoru tarafından işlem takvimiyle çözülür.
 
 ## Getiri Hesabı
 
@@ -75,37 +86,18 @@ göreli_getiri = hisse_getirisi - endeks_getirisi
 hacim_çarpanı = olay_günü_hacmi / önceki_20_işlem_günü_ortalama_hacim
 ```
 
-Notlar:
+Önceki 20 işlem günü hesabına `baseDate` dahil edilmez. Veri eksikse kayıt `verified` yapılmaz; `qualityNote` alanına eksik veri yazılır.
 
-- Önceki 20 işlem günü hesabına `baseDate` dahil edilmez.
-- Veri eksikse kayıt `verified` yapılmaz; `qualityNote` alanına eksik veri yazılır.
+## Pilot Ayrımı
 
-## Hesap Durumları
+Kısa tepki pilotu şu dosyaları kullanır:
 
-| Durum | Anlam |
-|---|---|
-| `pending_price_data` | Kaynak bulundu, fiyat ve hacim serisi bekleniyor |
-| `price_data_ready` | Gerekli hisse ve XU100 serileri yüklendi |
-| `calculated` | Pencere getirileri ve hacim çarpanı üretildi |
-| `review` | Editör hesap ve tarih kontrolü yapıyor |
-| `verified` | Kaynak, tarih ve hesap tekrar üretilebilir durumda |
+- `data/imports/pilot-price-data-requirements.json`
+- `data/imports/today-completable-price-data-requirements.json`
+- `data/imports/future-window-price-data-requirements.json`
 
-## İlk 10 Candidate İçin Durum
+Uzun izleme pilotu ayrı tutulur:
 
-İlk 10 candidate kaydın tamamı şu anda `pending_price_data` durumundadır.
+- `data/imports/long-monitoring-price-data-requirements.json`
 
-Hesap motorunun ilk tekrar üretilebilir sürümü şu dosyalarla eklenmiştir:
-
-- `lib/price-reaction-calculator.js`
-- `scripts/generate-sample-calculation.mjs`
-- `data/sample-price-bars.json`
-- `data/sample-calculation-output.json`
-- `docs/price-reaction-calculator.md`
-
-`data/sample-price-bars.json` gerçek piyasa verisi değildir; yalnızca hesap mantığını test etmek için kullanılan örnek fixture dosyasıdır. Bir sonraki teknik çıktı, gerçek fiyat veri kaynağı veya CSV içe aktarma akışını seçip ilk 10 candidate kaydı gerçek fiyat serisine bağlamak olmalıdır.
-
-CSV içe aktarma akışı şu dosyada tanımlanmıştır:
-
-- `docs/price-data-import-workflow.md`
-
-Gerçek fiyat verisi gelmeden önce `data/price-import-validation-report.json` raporunun kapsam boşlukları göstermesi beklenir.
+Bu ayrım sayesinde 90G, 180G ve 1Y pencereleri ürünün değerini büyütür; fakat ilk yayın için gerekli kısa tepki akışını gereksiz yere bekletmez.

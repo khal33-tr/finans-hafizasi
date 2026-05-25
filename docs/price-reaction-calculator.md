@@ -1,17 +1,34 @@
 # Fiyat Tepkisi Hesaplayıcı
 
-Bu doküman, Finans Hafızası'nın olay sonrası fiyat tepkisi hesaplama motorunun ilk tekrar üretilebilir sürümünü tanımlar.
+Bu doküman, Finans Hafızası'nın olay sonrası fiyat tepkisi hesaplama motorunun tekrar üretilebilir sürümünü tanımlar.
 
 ## Amaç
 
-Hesaplayıcı, bir olayın baz işlem tarihinden sonra hisse fiyatının ve BIST 100 kıyasının 1G, 3G, 1H, 2H ve 30G pencerelerinde nasıl değiştiğini üretir.
+Hesaplayıcı, bir olayın baz işlem tarihinden sonra hisse fiyatının ve BIST 100 kıyasının nasıl değiştiğini üretir.
 
-Ana dosyalar:
+Kısa tepki pencereleri:
+
+- 1G
+- 3G
+- 1H
+- 2H
+- 30G
+
+Uzun izleme pencereleri:
+
+- 90G
+- 180G
+- 1Y
+
+Uzun izleme, ilk piyasa tepkisini değil olayın daha sonra bıraktığı izi okumak için kullanılır.
+
+## Ana Dosyalar
 
 - `lib/price-reaction-calculator.js`
 - `scripts/generate-sample-calculation.mjs`
 - `data/sample-price-bars.json`
 - `data/sample-calculation-output.json`
+- `data/calculation-inputs.json`
 
 ## Önemli Not
 
@@ -48,8 +65,6 @@ Hacim için şu alanlar üretilir:
 
 ## Örnek Hesabı Üretme
 
-Yerel makinede Node varsa:
-
 ```bash
 node scripts/generate-sample-calculation.mjs
 ```
@@ -64,9 +79,8 @@ Komut, `data/sample-calculation-output.json` dosyasını yeniden üretir.
 
 ## Yayına Geçmeden Önce
 
-Bu aşama hesap mantığını doğrular; gerçek yayın için sıradaki işler şunlardır:
-
-- BIST işlem takviminin resmi veya güvenilir bir kaynakla doldurulması.
-- Hisse ve XU100 fiyat serilerinin gerçek veriye bağlanması.
-- Temettü ve sermaye işlemleri için `adjustedClose` alanının doğrulanması.
-- Her hesap sonucunun editör kontrolüne alınması.
+- BIST işlem takvimi resmi veya güvenilir bir kaynakla doldurulmalıdır.
+- Hisse ve XU100 fiyat serileri gerçek veriye bağlanmalıdır.
+- Temettü ve sermaye işlemleri için `adjustedClose` alanı doğrulanmalıdır.
+- Kısa tepki pencereleri yayın olgunluğunu belirler.
+- 90G, 180G ve 1Y pencereleri uzun izleme için ayrıca tamamlanır.

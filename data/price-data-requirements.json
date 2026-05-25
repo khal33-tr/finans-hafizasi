@@ -2,12 +2,28 @@
   "version": "2026-05-25",
   "status": "price_data_requirements",
   "sourceInput": "data/calculation-inputs.json",
-  "principle": "Bu dosya ilk 10 candidate kaydın fiyat ve takvim verisi için gereken minimum kapsamı denetlemek amacıyla üretilmiştir.",
+  "principle": "Bu dosya ilk 10 candidate kaydın kısa tepki ve uzun izleme fiyat/takvim verisi kapsamını denetlemek amacıyla üretilmiştir.",
   "coverageRule": {
     "beforeBaseCalendarBufferDays": 45,
-    "afterBaseCalendarBufferDays": 37,
+    "afterBaseCalendarBufferDays": 379,
+    "shortReactionAfterBaseCalendarBufferDays": 37,
+    "longMonitoringAfterBaseCalendarBufferDays": 379,
     "preBaseTradingDaysRequired": 20,
-    "postBaseCalendarDaysRequired": 30,
+    "postBaseCalendarDaysRequired": 365,
+    "shortReactionPostBaseCalendarDaysRequired": 30,
+    "longMonitoringPostBaseCalendarDaysRequired": 365,
+    "shortReactionWindowKeys": [
+      "d1",
+      "d3",
+      "w1",
+      "w2",
+      "d30"
+    ],
+    "longMonitoringWindowKeys": [
+      "d90",
+      "d180",
+      "y1"
+    ],
     "benchmark": "XU100"
   },
   "symbols": [
@@ -33,11 +49,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-16",
-      "requiredRangeEnd": "2026-06-06",
+      "requiredRangeEnd": "2027-05-14",
+      "requiredShortReactionRangeEnd": "2026-06-06",
+      "requiredLongMonitoringRangeEnd": "2027-05-14",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "tuprs-2025-kar-dagitim-onerisi",
@@ -48,13 +68,17 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-01-26",
-      "requiredRangeEnd": "2026-04-18",
+      "requiredRangeEnd": "2027-03-26",
+      "requiredShortReactionRangeEnd": "2026-04-18",
+      "requiredLongMonitoringRangeEnd": "2027-03-26",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [
         "dividend_adjusted_price_required"
       ],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "asels-2026-sozlesme-imzalanmasi",
@@ -65,11 +89,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-04-06",
-      "requiredRangeEnd": "2026-06-27",
+      "requiredRangeEnd": "2027-06-04",
+      "requiredShortReactionRangeEnd": "2026-06-27",
+      "requiredLongMonitoringRangeEnd": "2027-06-04",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "kchol-2026-ilk-ceyrek-finansal-raporlar",
@@ -80,11 +108,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-27",
-      "requiredRangeEnd": "2026-06-17",
+      "requiredRangeEnd": "2027-05-25",
+      "requiredShortReactionRangeEnd": "2026-06-17",
+      "requiredLongMonitoringRangeEnd": "2027-05-25",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "sahol-akcansa-pay-devri-rekabet-kurumu-izni",
@@ -95,11 +127,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-04-10",
-      "requiredRangeEnd": "2026-07-01",
+      "requiredRangeEnd": "2027-06-08",
+      "requiredShortReactionRangeEnd": "2026-07-01",
+      "requiredLongMonitoringRangeEnd": "2027-06-08",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "eregl-2026-nakit-kar-payi-odeme-tarihi",
@@ -110,13 +146,17 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-15",
-      "requiredRangeEnd": "2026-06-05",
+      "requiredRangeEnd": "2027-05-13",
+      "requiredShortReactionRangeEnd": "2026-06-05",
+      "requiredLongMonitoringRangeEnd": "2027-05-13",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [
         "dividend_adjusted_price_required"
       ],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "sise-abd-stockton-liman-projesi-sonlandirilmasi",
@@ -127,11 +167,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-04-10",
-      "requiredRangeEnd": "2026-07-01",
+      "requiredRangeEnd": "2027-06-08",
+      "requiredShortReactionRangeEnd": "2026-07-01",
+      "requiredLongMonitoringRangeEnd": "2027-06-08",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "bimas-2026-ilk-ceyrek-faaliyet-raporu",
@@ -142,11 +186,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-28",
-      "requiredRangeEnd": "2026-06-18",
+      "requiredRangeEnd": "2027-05-26",
+      "requiredShortReactionRangeEnd": "2026-06-18",
+      "requiredLongMonitoringRangeEnd": "2027-05-26",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "akbnk-2026-ilk-ceyrek-konsolide-sorumluluk-beyani",
@@ -157,11 +205,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-15",
-      "requiredRangeEnd": "2026-06-05",
+      "requiredRangeEnd": "2027-05-13",
+      "requiredShortReactionRangeEnd": "2026-06-05",
+      "requiredLongMonitoringRangeEnd": "2027-05-13",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     },
     {
       "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
@@ -172,11 +224,15 @@
         "XU100"
       ],
       "requiredRangeStart": "2026-03-16",
-      "requiredRangeEnd": "2026-06-06",
+      "requiredRangeEnd": "2027-05-14",
+      "requiredShortReactionRangeEnd": "2026-06-06",
+      "requiredLongMonitoringRangeEnd": "2027-05-14",
       "requiredPreBaseTradingDays": 20,
-      "requiredPostBaseCalendarDays": 30,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
       "specialHandling": [],
-      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
     }
   ]
 }

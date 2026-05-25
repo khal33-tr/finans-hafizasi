@@ -25,41 +25,73 @@
       "label": "1G",
       "type": "trading_day_offset",
       "offset": 1,
-      "description": "Baz işlem tarihinden sonraki 1. uygun işlem günü"
+      "description": "Baz işlem tarihinden sonraki 1. uygun işlem günü",
+      "group": "short_reaction"
     },
     {
       "key": "d3",
       "label": "3G",
       "type": "trading_day_offset",
       "offset": 3,
-      "description": "Baz işlem tarihinden sonraki 3. uygun işlem günü"
+      "description": "Baz işlem tarihinden sonraki 3. uygun işlem günü",
+      "group": "short_reaction"
     },
     {
       "key": "w1",
       "label": "1H",
       "type": "calendar_day_then_next_trading_day",
       "calendarDays": 7,
-      "description": "Baz tarihten 7 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
+      "description": "Baz tarihten 7 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü",
+      "group": "short_reaction"
     },
     {
       "key": "w2",
       "label": "2H",
       "type": "calendar_day_then_next_trading_day",
       "calendarDays": 14,
-      "description": "Baz tarihten 14 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
+      "description": "Baz tarihten 14 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü",
+      "group": "short_reaction"
     },
     {
       "key": "d30",
       "label": "30G",
       "type": "calendar_day_then_next_trading_day",
       "calendarDays": 30,
-      "description": "Baz tarihten 30 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
+      "description": "Baz tarihten 30 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü",
+      "group": "short_reaction"
+    },
+    {
+      "key": "d90",
+      "label": "90G",
+      "group": "long_monitoring",
+      "type": "calendar_day_then_next_trading_day",
+      "calendarDays": 90,
+      "description": "Baz tarihten 90 takvim g?n? sonras?; i?lem g?n? de?ilse en yak?n sonraki i?lem g?n?"
+    },
+    {
+      "key": "d180",
+      "label": "180G",
+      "group": "long_monitoring",
+      "type": "calendar_day_then_next_trading_day",
+      "calendarDays": 180,
+      "description": "Baz tarihten 180 takvim g?n? sonras?; i?lem g?n? de?ilse en yak?n sonraki i?lem g?n?"
+    },
+    {
+      "key": "y1",
+      "label": "1Y",
+      "group": "long_monitoring",
+      "type": "calendar_day_then_next_trading_day",
+      "calendarDays": 365,
+      "description": "Baz tarihten 365 takvim g?n? sonras?; i?lem g?n? de?ilse en yak?n sonraki i?lem g?n?"
     }
   ],
   "volumeDefinition": {
     "baseline": "previous_20_trading_days",
     "formula": "event_day_volume / average_previous_20_trading_day_volume",
-    "requires": ["eventDayVolume", "previous20TradingDayAverageVolume"]
+    "requires": [
+      "eventDayVolume",
+      "previous20TradingDayAverageVolume"
+    ]
   },
   "calculationRequirements": [
     "BIST işlem günü takvimi yüklenmeli.",
@@ -78,9 +110,12 @@
       "publishDateTime": "2026-04-29T18:21:33+03:00",
       "baseDate": "2026-04-30",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["THYAO", "XU100"],
+      "requiredSeries": [
+        "THYAO",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     },
@@ -93,12 +128,17 @@
       "publishDateTime": "2026-03-11T18:58:50+03:00",
       "baseDate": "2026-03-12",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["TUPRS", "XU100"],
+      "requiredSeries": [
+        "TUPRS",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data",
-      "specialHandling": ["dividend_adjusted_price_required"]
+      "specialHandling": [
+        "dividend_adjusted_price_required"
+      ]
     },
     {
       "slug": "asels-2026-sozlesme-imzalanmasi",
@@ -109,9 +149,12 @@
       "publishDateTime": "2026-05-21T09:17:15+03:00",
       "baseDate": "2026-05-21",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["ASELS", "XU100"],
+      "requiredSeries": [
+        "ASELS",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     },
@@ -124,9 +167,12 @@
       "publishDateTime": "2026-05-08T18:30:04+03:00",
       "baseDate": "2026-05-11",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["KCHOL", "XU100"],
+      "requiredSeries": [
+        "KCHOL",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     },
@@ -139,9 +185,12 @@
       "publishDateTime": "2026-05-22T19:30:11+03:00",
       "baseDate": "2026-05-25",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["SAHOL", "XU100"],
+      "requiredSeries": [
+        "SAHOL",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     },
@@ -154,12 +203,17 @@
       "publishDateTime": "2026-04-28T20:12:55+03:00",
       "baseDate": "2026-04-29",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["EREGL", "XU100"],
+      "requiredSeries": [
+        "EREGL",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data",
-      "specialHandling": ["dividend_adjusted_price_required"]
+      "specialHandling": [
+        "dividend_adjusted_price_required"
+      ]
     },
     {
       "slug": "sise-abd-stockton-liman-projesi-sonlandirilmasi",
@@ -170,9 +224,12 @@
       "publishDateTime": "2026-05-22T18:32:55+03:00",
       "baseDate": "2026-05-25",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["SISE", "XU100"],
+      "requiredSeries": [
+        "SISE",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     },
@@ -185,9 +242,12 @@
       "publishDateTime": "2026-05-11T22:34:46+03:00",
       "baseDate": "2026-05-12",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["BIMAS", "XU100"],
+      "requiredSeries": [
+        "BIMAS",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     },
@@ -200,9 +260,12 @@
       "publishDateTime": "2026-04-28T18:16:05+03:00",
       "baseDate": "2026-04-29",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["AKBNK", "XU100"],
+      "requiredSeries": [
+        "AKBNK",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     },
@@ -215,11 +278,28 @@
       "publishDateTime": "2026-04-29T18:24:21+03:00",
       "baseDate": "2026-04-30",
       "baseDateSource": "reactionStartDate",
-      "requiredSeries": ["GARAN", "XU100"],
+      "requiredSeries": [
+        "GARAN",
+        "XU100"
+      ],
       "priceRangeStart": "previous_20_trading_days_before_baseDate",
-      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
     }
-  ]
+  ],
+  "windowGroups": {
+    "short_reaction": [
+      "d1",
+      "d3",
+      "w1",
+      "w2",
+      "d30"
+    ],
+    "long_monitoring": [
+      "d90",
+      "d180",
+      "y1"
+    ]
+  }
 }

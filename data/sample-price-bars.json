@@ -1299,6 +1299,72 @@
       "adjustedClose": 10757.61,
       "volume": null,
       "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-07-29",
+      "open": 357.59,
+      "high": 366.23,
+      "low": 353.27,
+      "close": 359.75,
+      "adjustedClose": 359.75,
+      "volume": 1750000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-07-29",
+      "open": 11051.02,
+      "high": 11206.35,
+      "low": 10984.45,
+      "close": 11095.4,
+      "adjustedClose": 11095.4,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-10-27",
+      "open": 368.97,
+      "high": 377.88,
+      "low": 364.52,
+      "close": 371.2,
+      "adjustedClose": 371.2,
+      "volume": 1835000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-10-27",
+      "open": 11343.34,
+      "high": 11502.79,
+      "low": 11275.01,
+      "close": 11388.9,
+      "adjustedClose": 11388.9,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2027-04-30",
+      "open": 387.31,
+      "high": 396.66,
+      "low": 382.64,
+      "close": 389.65,
+      "adjustedClose": 389.65,
+      "volume": 1920000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2027-04-30",
+      "open": 11843.04,
+      "high": 12009.51,
+      "low": 11771.69,
+      "close": 11890.6,
+      "adjustedClose": 11890.6,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
     }
   ]
 }
