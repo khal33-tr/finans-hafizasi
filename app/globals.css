@@ -711,6 +711,42 @@ h3 {
   font-size: 13px;
 }
 
+.data-status-note {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-left-width: 3px;
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.data-status-note.muted {
+  border-left-color: var(--muted);
+}
+
+.data-status-note.amber {
+  border-left-color: var(--amber);
+}
+
+.data-status-note.green {
+  border-left-color: var(--green);
+}
+
+.data-status-note span,
+.operation-label,
+.readiness-step span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.data-status-note p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .event-actions {
   display: flex;
   flex-wrap: wrap;
@@ -877,6 +913,46 @@ h3 {
   gap: 24px;
 }
 
+.data-operations {
+  padding: 28px 0;
+}
+
+.operations-grid,
+.readiness-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.operations-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.operation-item,
+.readiness-step {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.operation-item strong,
+.readiness-step strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--navy);
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.operation-item p,
+.readiness-step p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .method-steps {
   display: grid;
   gap: 10px;
@@ -917,6 +993,7 @@ h3 {
   .workspace,
   .section-row,
   .method,
+  .operations-grid,
   .event-card,
   .detail-hero,
   .page-grid,

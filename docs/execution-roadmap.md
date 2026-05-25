@@ -102,6 +102,7 @@ Isler:
 15. Pilot fiyat ve takvim CSV dosya yapisi uretildi.
 16. 25 Mayis 2026 itibariyla pilot pencere olgunlugu ayrildi.
 17. Bugun tamamlanabilir TUPRS pilotu icin ayri gereksinim dosyalari olusturuldu.
+18. Public sitede veri operasyonu, veri durumu ve yayin oncesi kontrol hattini gosteren arayuz eklendi.
 
 Basari kriteri:
 

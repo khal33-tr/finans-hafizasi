@@ -64,6 +64,10 @@ Faz 4 hazırlık çıktıları:
 - `data/imports/pilot-window-maturity-report.json`: 25 Mayıs 2026 itibarıyla pilot olgunluk raporu
 - `data/imports/today-completable-price-data-requirements.json`: bugün tamamlanabilir TUPRS pilot gereksinimi
 - `docs/today-completable-pilot.md`: bugün doldurulacak gerçek veri kapsamı
+- `lib/data-operations.js`: public arayüz için veri operasyon özetini üretir
+- `components/data-operations-panel.jsx`: ana sayfadaki veri durumu paneli
+- `components/record-readiness.jsx`: olay detayındaki yayın öncesi kontrol hattı
+- `docs/public-readiness-ui.md`: veri beklerken public sitede gösterilecek durumlar
 - `docs/market-data-source-plan.md`: resmi kaynak ve veri sağlayıcı karar planı
 - `docs/pilot-price-data-runbook.md`: pilot fiyat verisi giriş ve doğrulama adımları
 

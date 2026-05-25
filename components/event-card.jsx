@@ -1,9 +1,10 @@
-import { formatReturn, getEventStatus, getPrimarySource } from "@/lib/market-data";
+import { formatReturn, getEventDataStatus, getEventStatus, getPrimarySource } from "@/lib/market-data";
 import ReturnGrid from "@/components/return-grid";
 import SentimentSummary from "@/components/sentiment-summary";
 
 export default function EventCard({ event, linked = true }) {
   const status = getEventStatus(event);
+  const dataStatus = getEventDataStatus(event);
   const primarySource = getPrimarySource(event);
   const title = linked ? (
     <a className="event-title-link" href={`/olaylar/${event.slug}`}>
@@ -39,8 +40,13 @@ export default function EventCard({ event, linked = true }) {
           </div>
           <div>
             <span>Veri durumu</span>
-            <strong>{event.dataStatus === "sample" ? "Örnek" : "Hazır"}</strong>
+            <strong>{dataStatus.label}</strong>
           </div>
+        </div>
+
+        <div className={`data-status-note ${dataStatus.tone}`}>
+          <span>Yayın kontrolü</span>
+          <p>{dataStatus.description}</p>
         </div>
 
         <a className="event-source" href={primarySource.url}>

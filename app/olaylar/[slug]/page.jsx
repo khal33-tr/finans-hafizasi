@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import ReturnGrid from "@/components/return-grid";
+import RecordReadiness from "@/components/record-readiness";
 import SentimentSummary from "@/components/sentiment-summary";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -7,6 +8,7 @@ import {
   events,
   formatReturn,
   getCompany,
+  getEventDataStatus,
   getEventBySlug,
   getEventStatus,
   getPrimarySource,
@@ -35,6 +37,7 @@ export default async function EventDetailPage({ params }) {
 
   const company = getCompany(event.ticker);
   const status = getEventStatus(event);
+  const dataStatus = getEventDataStatus(event);
   const primarySource = getPrimarySource(event);
 
   return (
@@ -64,12 +67,12 @@ export default async function EventDetailPage({ params }) {
               <span>olay tarihi</span>
             </div>
             <div>
-              <strong>{formatReturn(event.bistRelative)}</strong>
-              <span>BIST 100'e göre</span>
+              <strong>{dataStatus.label}</strong>
+              <span>veri durumu</span>
             </div>
             <div>
-              <strong>{event.volumeMultiple.toFixed(1)}x</strong>
-              <span>hacim tepkisi</span>
+              <strong>{status.label}</strong>
+              <span>kayıt statüsü</span>
             </div>
           </div>
         </section>
@@ -80,20 +83,26 @@ export default async function EventDetailPage({ params }) {
             <h2>Standart zaman pencereleri</h2>
             <ReturnGrid returns={event.returns} />
             <p className="panel-note">
-              Bu kayıt {status.label.toLowerCase()} statüsündedir. Yayın öncesi düzeltilmiş fiyat,
-              işlem günü takvimi ve endeks kıyası tekrar üretilebilir olmalıdır.
+              Bu kayıt {status.label.toLowerCase()} statüsündedir. Fiyatlar yayın öncesi
+              lisanslı/veri kaynağı belli serilerle tekrar üretilebilir olmalıdır.
             </p>
           </article>
 
           <article className="content-panel">
-            <p className="eyebrow">Söylem özeti</p>
-            <h2>Kamuya açık yorum eğilimi</h2>
-            <SentimentSummary sentiment={event.sentiment} />
-            <p className="panel-note">
-              Söylem özeti yatırım sinyali değildir; yalnızca kamuya açık kaynaklardaki genel tonu
-              düzenlemek için kullanılır.
-            </p>
+            <p className="eyebrow">Kayıt hazırlığı</p>
+            <h2>Yayın öncesi kontrol hattı</h2>
+            <RecordReadiness event={event} dataStatus={dataStatus} />
           </article>
+        </section>
+
+        <section className="content-panel wide-panel">
+          <p className="eyebrow">Söylem özeti</p>
+          <h2>Kamuya açık yorum eğilimi</h2>
+          <SentimentSummary sentiment={event.sentiment} />
+          <p className="panel-note">
+            Söylem özeti yatırım sinyali değildir; yalnızca kamuya açık kaynaklardaki genel tonu
+            düzenlemek için kullanılır.
+          </p>
         </section>
 
         <section className="content-panel wide-panel">
@@ -109,8 +118,8 @@ export default async function EventDetailPage({ params }) {
               <strong>{event.reactionStartDate}</strong>
             </div>
             <div>
-              <span>Durum</span>
-              <strong>{status.label}</strong>
+              <span>Veri durumu</span>
+              <strong>{dataStatus.label}</strong>
             </div>
           </div>
 

@@ -1,11 +1,12 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import DataOperationsPanel from "@/components/data-operations-panel";
 import EventCard from "@/components/event-card";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 
-export default function HomeClient({ events, tickers }) {
+export default function HomeClient({ events, tickers, operationSnapshot }) {
   const [query, setQuery] = useState("");
 
   const filteredEvents = useMemo(() => {
@@ -78,6 +79,8 @@ export default function HomeClient({ events, tickers }) {
             </div>
           </aside>
         </section>
+
+        <DataOperationsPanel snapshot={operationSnapshot} />
 
         <section className="section-row" id="hisseler">
           <div>
