@@ -66,7 +66,7 @@
       "group": "long_monitoring",
       "type": "calendar_day_then_next_trading_day",
       "calendarDays": 90,
-      "description": "Baz tarihten 90 takvim g?n? sonras?; i?lem g?n? de?ilse en yak?n sonraki i?lem g?n?"
+      "description": "Baz tarihten 90 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
     },
     {
       "key": "d180",
@@ -74,7 +74,7 @@
       "group": "long_monitoring",
       "type": "calendar_day_then_next_trading_day",
       "calendarDays": 180,
-      "description": "Baz tarihten 180 takvim g?n? sonras?; i?lem g?n? de?ilse en yak?n sonraki i?lem g?n?"
+      "description": "Baz tarihten 180 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
     },
     {
       "key": "y1",
@@ -82,7 +82,7 @@
       "group": "long_monitoring",
       "type": "calendar_day_then_next_trading_day",
       "calendarDays": 365,
-      "description": "Baz tarihten 365 takvim g?n? sonras?; i?lem g?n? de?ilse en yak?n sonraki i?lem g?n?"
+      "description": "Baz tarihten 365 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
     }
   ],
   "volumeDefinition": {
