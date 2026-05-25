@@ -9,6 +9,7 @@ export default function SiteHeader() {
         <a href="/">Gündem</a>
         <a href="/olaylar">Olaylar</a>
         <a href="/hisseler">Hisseler</a>
+        <a href="/veri-operasyonu">Veri</a>
         <a href="/metodoloji">Metodoloji</a>
         <a href="/yasal-uyari">Yasal</a>
       </nav>

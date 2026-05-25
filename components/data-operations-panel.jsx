@@ -20,8 +20,8 @@ export default function DataOperationsPanel({ snapshot }) {
             kontrolünden geçmeden doğrulanmış sayılmaz.
           </p>
         </div>
-        <a className="secondary-link" href="/metodoloji">
-          Kontrol standardı
+        <a className="secondary-link" href="/veri-operasyonu">
+          Import kontrolü
         </a>
       </div>
 

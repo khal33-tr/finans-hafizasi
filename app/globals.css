@@ -1156,6 +1156,118 @@ h3 {
   font-weight: 900;
 }
 
+.operations-hero {
+  margin-bottom: 14px;
+}
+
+.operation-control-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.control-card {
+  min-height: 160px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.control-card strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--navy);
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.control-card p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.inline-status {
+  font-size: 20px;
+}
+
+.inline-status.amber {
+  color: var(--amber);
+}
+
+.inline-status.green {
+  color: var(--green);
+}
+
+.inline-status.red {
+  color: var(--red);
+}
+
+.operation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.coverage-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.coverage-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px 160px;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.coverage-row h3 {
+  margin: 10px 0 6px;
+  font-size: 16px;
+  word-break: break-word;
+}
+
+.coverage-row p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.coverage-meta {
+  display: grid;
+  gap: 4px;
+}
+
+.coverage-meta span,
+.coverage-meta small {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.coverage-meta strong {
+  color: var(--navy);
+  font-size: 18px;
+}
+
+.side-divider {
+  height: 1px;
+  margin: 18px 0;
+  background: var(--line);
+}
+
 .method-steps {
   display: grid;
   gap: 10px;
@@ -1199,6 +1311,9 @@ h3 {
   .operations-grid,
   .import-summary-grid,
   .import-columns,
+  .operation-control-grid,
+  .operation-layout,
+  .coverage-row,
   .archive-toolbar,
   .event-card,
   .detail-hero,

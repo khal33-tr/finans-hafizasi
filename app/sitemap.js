@@ -3,7 +3,7 @@ import { companies, events } from "@/lib/market-data";
 const baseUrl = "https://www.finanshafizasi.com";
 
 export default function sitemap() {
-  const staticRoutes = ["", "/olaylar", "/hisseler", "/metodoloji", "/yasal-uyari"].map((path) => ({
+  const staticRoutes = ["", "/olaylar", "/hisseler", "/veri-operasyonu", "/metodoloji", "/yasal-uyari"].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
