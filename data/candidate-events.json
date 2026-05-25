@@ -1050,5 +1050,60 @@
       "Düzeltilmiş fiyat serisi",
       "BIST 100 kıyası"
     ]
+  },
+  {
+    "slug": "petkm-2026-ilk-ceyrek-faaliyet-raporu",
+    "researchTargetId": "PETKM-01",
+    "ticker": "PETKM",
+    "date": "2026-05-07",
+    "publishDateTime": "2026-05-07T07:26:01+03:00",
+    "reactionStartDate": "2026-05-07",
+    "category": "earnings",
+    "title": "PETKM 2026 ilk çeyrek faaliyet raporu",
+    "summary": "Petkim’in 2026 ilk çeyrek ara dönem faaliyet raporu KAP’ta kaynak olarak bulundu. Petrokimya marjı, emtia ve döviz etkisi fiyat tepkisi notlarında ayrıca izlenmelidir.",
+    "verificationStatus": "candidate",
+    "dataStatus": "source_found",
+    "kapDisclosureId": 1602153,
+    "sources": [
+      {
+        "type": "kap",
+        "label": "KAP bildirimi: 2026 1. Çeyrek Faaliyet Raporu",
+        "publisher": "Kamuyu Aydınlatma Platformu",
+        "url": "https://www.kap.org.tr/tr/Bildirim/1602153",
+        "isPrimary": true
+      },
+      {
+        "type": "data_provider",
+        "label": "BIST piyasa verisi",
+        "publisher": "Borsa İstanbul",
+        "url": "https://www.borsaistanbul.com/veriler",
+        "isPrimary": false
+      }
+    ],
+    "returns": {
+      "d1": null,
+      "d3": null,
+      "w1": null,
+      "w2": null,
+      "d30": null,
+      "d90": null,
+      "d180": null,
+      "y1": null
+    },
+    "bistRelative": null,
+    "volumeMultiple": null,
+    "sentiment": {
+      "positive": null,
+      "neutral": null,
+      "negative": null
+    },
+    "qualityNote": "Kaynak bulundu. Bildirim seans öncesinde geldiği için tepki başlangıcı aynı işlem günü olarak adaylandı. Fiyat ve hacim hesapları tamamlanmadan verified yapılmamalıdır.",
+    "editorChecklist": [
+      "KAP linki",
+      "Finansal dönem",
+      "Açıklama saati",
+      "Düzeltilmiş fiyat serisi",
+      "BIST 100 kıyası"
+    ]
   }
 ]

@@ -452,6 +452,24 @@
       "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
       "windowStatus": "pending_trading_calendar",
       "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "petkm-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "PETKM",
+      "kapDisclosureId": 1602153,
+      "category": "earnings",
+      "eventDate": "2026-05-07",
+      "publishDateTime": "2026-05-07T07:26:01+03:00",
+      "baseDate": "2026-05-07",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": [
+        "PETKM",
+        "XU100"
+      ],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_365_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
     }
   ],
   "windowGroups": {

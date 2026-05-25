@@ -4,8 +4,8 @@ Bu dosya, ilk araştırma kuyruğundan gerçek kaynak linki bulunan olay adaylar
 
 ## Durum Özeti
 
-- Kaynak bulunan candidate kayıt: 19
-- Kapsanan hisse: 19
+- Kaynak bulunan candidate kayıt: 20
+- Kapsanan hisse: 20
 - Ana kaynak: KAP bildirimleri
 - Piyasa verisi kaynağı: Borsa İstanbul veri sayfaları
 - Sonraki iş: 1G, 3G, 1H, 2H, 30G hesaplarını ve 90G, 180G, 1Y uzun izleme pencerelerini üretmek
@@ -33,6 +33,7 @@ Bu dosya, ilk araştırma kuyruğundan gerçek kaynak linki bulunan olay adaylar
 | 17 | HEKTS | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1601441](https://www.kap.org.tr/tr/Bildirim/1601441) | 2026-05-06 | Seans sonrası açıklama |
 | 18 | KONTR | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1605582](https://www.kap.org.tr/tr/Bildirim/1605582) | 2026-05-12 | Seans sonrası açıklama |
 | 19 | ASTOR | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1605801](https://www.kap.org.tr/tr/Bildirim/1605801) | 2026-05-12 | Seans sonrası açıklama |
+| 20 | PETKM | Bilanço | 2026 ilk çeyrek faaliyet raporu | [1602153](https://www.kap.org.tr/tr/Bildirim/1602153) | 2026-05-07 | Seans öncesi açıklama |
 
 ## Doğrulama Notları
 

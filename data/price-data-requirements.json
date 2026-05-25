@@ -2,7 +2,7 @@
   "version": "2026-05-25",
   "status": "price_data_requirements",
   "sourceInput": "data/calculation-inputs.json",
-  "principle": "Bu dosya 19 candidate kaydın kısa tepki ve uzun izleme fiyat/takvim verisi kapsamını denetlemek amacıyla üretilmiştir.",
+  "principle": "Bu dosya 20 candidate kaydın kısa tepki ve uzun izleme fiyat/takvim verisi kapsamını denetlemek amacıyla üretilmiştir.",
   "coverageRule": {
     "beforeBaseCalendarBufferDays": 45,
     "afterBaseCalendarBufferDays": 379,
@@ -38,6 +38,7 @@
     "ISCTR",
     "KCHOL",
     "KONTR",
+    "PETKM",
     "SAHOL",
     "SASA",
     "SISE",
@@ -410,6 +411,25 @@
       "requiredRangeEnd": "2027-05-26",
       "requiredShortReactionRangeEnd": "2026-06-18",
       "requiredLongMonitoringRangeEnd": "2027-05-26",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 365,
+      "requiredShortReactionCalendarDays": 30,
+      "requiredLongMonitoringCalendarDays": 365,
+      "specialHandling": [],
+      "note": "Bu aralık uzun izleme dahil tamponlu veri toplama aralığıdır; kısa tepki pilotu requiredShortReactionRangeEnd alanını kullanır."
+    },
+    {
+      "slug": "petkm-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "PETKM",
+      "baseDate": "2026-05-07",
+      "requiredSeries": [
+        "PETKM",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-23",
+      "requiredRangeEnd": "2027-05-21",
+      "requiredShortReactionRangeEnd": "2026-06-13",
+      "requiredLongMonitoringRangeEnd": "2027-05-21",
       "requiredPreBaseTradingDays": 20,
       "requiredPostBaseCalendarDays": 365,
       "requiredShortReactionCalendarDays": 30,

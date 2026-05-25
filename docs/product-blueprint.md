@@ -42,7 +42,7 @@ MVP icin onerilen ilk hisse havuzu:
 - TOASO
 - KONTR
 - ASTOR
-- KOZAL
+- PETKM
 
 ## MVP Sayfalari
 

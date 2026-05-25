@@ -823,12 +823,12 @@
       ]
     },
     {
-      "ticker": "KOZAL",
+      "ticker": "PETKM",
       "priority": 20,
-      "researchReason": "Altın fiyatı, operasyonel gelişmeler ve hukuki haberler birlikte izlenebildiği için arşiv değeri taşır.",
+      "researchReason": "Petrokimya marjı, döviz etkisi ve emtia döngüsü birlikte izlenebildiği için yüksek arşiv değeri taşır.",
       "targets": [
         {
-          "id": "KOZAL-01",
+          "id": "PETKM-01",
           "category": "earnings",
           "label": "Finansal sonuç açıklaması",
           "sourcePriority": [
@@ -839,9 +839,9 @@
           "status": "research"
         },
         {
-          "id": "KOZAL-02",
+          "id": "PETKM-02",
           "category": "macro_sector",
-          "label": "Altın fiyatı veya madencilik sektörü etkisi",
+          "label": "Petrokimya marjı, emtia veya döviz etkisi",
           "sourcePriority": [
             "company_ir",
             "news",
@@ -850,13 +850,12 @@
           "status": "research"
         },
         {
-          "id": "KOZAL-03",
-          "category": "legal_penalty",
-          "label": "Hukuki süreç veya operasyonel açıklama",
+          "id": "PETKM-03",
+          "category": "investment",
+          "label": "Operasyonel gelişme, bakım veya kapasite açıklaması",
           "sourcePriority": [
             "kap",
             "company_ir",
-            "spk",
             "news",
             "bist"
           ],
