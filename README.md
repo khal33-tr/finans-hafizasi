@@ -50,6 +50,11 @@ Faz 4 hazırlık çıktıları:
 - `data/sample-price-bars.json`: gerçek piyasa verisi olmayan örnek fiyat fixture dosyası
 - `data/sample-calculation-output.json`: THYAO örneği için üretilmiş hesap çıktısı
 - `docs/price-reaction-calculator.md`: hesaplayıcı kullanım ve kontrol notları
+- `data/price-import-template.csv`: gerçek fiyat verisi için CSV içe aktarma şablonu
+- `data/trading-calendar-import-template.csv`: BIST takvim içe aktarma şablonu
+- `data/price-data-requirements.json`: ilk 10 candidate için gerekli fiyat aralıkları
+- `scripts/validate-price-import.mjs`: fiyat ve takvim CSV doğrulama scripti
+- `docs/price-data-import-workflow.md`: gerçek fiyat verisine geçiş akışı
 
 ## İlk Yayın Kriterleri
 

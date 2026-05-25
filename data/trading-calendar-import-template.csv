@@ -1,0 +1,4 @@
+date,isTradingDay,sessionType,note
+2026-04-30,true,full,Örnek işlem günü; resmi takvim değildir.
+2026-05-01,false,closed,Örnek kapalı gün; resmi takvim değildir.
+2026-05-04,true,full,Örnek işlem günü; resmi takvim değildir.

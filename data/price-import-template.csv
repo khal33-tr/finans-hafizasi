@@ -1,0 +1,5 @@
+symbol,date,open,high,low,close,adjustedClose,volume,source
+THYAO,2026-04-30,322.10,326.40,318.80,322.02,322.02,1300000,sample_template_not_market_data
+XU100,2026-04-30,10361.12,10431.44,10298.31,10380.42,10380.42,,sample_template_not_market_data
+THYAO,2026-05-04,322.40,328.20,319.30,322.57,322.57,1359500,sample_template_not_market_data
+XU100,2026-05-04,10382.02,10458.51,10320.16,10404.66,10404.66,,sample_template_not_market_data

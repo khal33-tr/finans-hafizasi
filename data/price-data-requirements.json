@@ -1,0 +1,182 @@
+{
+  "version": "2026-05-25",
+  "status": "price_data_requirements",
+  "sourceInput": "data/calculation-inputs.json",
+  "principle": "Bu dosya ilk 10 candidate kaydın fiyat ve takvim verisi için gereken minimum kapsamı denetlemek amacıyla üretilmiştir.",
+  "coverageRule": {
+    "beforeBaseCalendarBufferDays": 45,
+    "afterBaseCalendarBufferDays": 37,
+    "preBaseTradingDaysRequired": 20,
+    "postBaseCalendarDaysRequired": 30,
+    "benchmark": "XU100"
+  },
+  "symbols": [
+    "AKBNK",
+    "ASELS",
+    "BIMAS",
+    "EREGL",
+    "GARAN",
+    "KCHOL",
+    "SAHOL",
+    "SISE",
+    "THYAO",
+    "TUPRS",
+    "XU100"
+  ],
+  "events": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "baseDate": "2026-04-30",
+      "requiredSeries": [
+        "THYAO",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "baseDate": "2026-03-12",
+      "requiredSeries": [
+        "TUPRS",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-01-26",
+      "requiredRangeEnd": "2026-04-18",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [
+        "dividend_adjusted_price_required"
+      ],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "asels-2026-sozlesme-imzalanmasi",
+      "ticker": "ASELS",
+      "baseDate": "2026-05-21",
+      "requiredSeries": [
+        "ASELS",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-04-06",
+      "requiredRangeEnd": "2026-06-27",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "kchol-2026-ilk-ceyrek-finansal-raporlar",
+      "ticker": "KCHOL",
+      "baseDate": "2026-05-11",
+      "requiredSeries": [
+        "KCHOL",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-27",
+      "requiredRangeEnd": "2026-06-17",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "sahol-akcansa-pay-devri-rekabet-kurumu-izni",
+      "ticker": "SAHOL",
+      "baseDate": "2026-05-25",
+      "requiredSeries": [
+        "SAHOL",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-04-10",
+      "requiredRangeEnd": "2026-07-01",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "eregl-2026-nakit-kar-payi-odeme-tarihi",
+      "ticker": "EREGL",
+      "baseDate": "2026-04-29",
+      "requiredSeries": [
+        "EREGL",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-15",
+      "requiredRangeEnd": "2026-06-05",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [
+        "dividend_adjusted_price_required"
+      ],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "sise-abd-stockton-liman-projesi-sonlandirilmasi",
+      "ticker": "SISE",
+      "baseDate": "2026-05-25",
+      "requiredSeries": [
+        "SISE",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-04-10",
+      "requiredRangeEnd": "2026-07-01",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "bimas-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "BIMAS",
+      "baseDate": "2026-05-12",
+      "requiredSeries": [
+        "BIMAS",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-28",
+      "requiredRangeEnd": "2026-06-18",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "akbnk-2026-ilk-ceyrek-konsolide-sorumluluk-beyani",
+      "ticker": "AKBNK",
+      "baseDate": "2026-04-29",
+      "requiredSeries": [
+        "AKBNK",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-15",
+      "requiredRangeEnd": "2026-06-05",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    },
+    {
+      "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+      "ticker": "GARAN",
+      "baseDate": "2026-04-30",
+      "requiredSeries": [
+        "GARAN",
+        "XU100"
+      ],
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "requiredPreBaseTradingDays": 20,
+      "requiredPostBaseCalendarDays": 30,
+      "specialHandling": [],
+      "note": "Bu aralık doğrulama için tamponlu minimum veri toplama aralığıdır; kesin pencereler işlem takvimiyle çözülür."
+    }
+  ]
+}

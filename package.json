@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "generate:sample-calculation": "node scripts/generate-sample-calculation.mjs",
+    "generate:price-requirements": "node scripts/generate-price-data-requirements.mjs",
+    "validate:price-import": "node scripts/validate-price-import.mjs"
   },
   "dependencies": {
     "next": "latest",

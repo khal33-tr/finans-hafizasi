@@ -103,3 +103,9 @@ Hesap motorunun ilk tekrar üretilebilir sürümü şu dosyalarla eklenmiştir:
 - `docs/price-reaction-calculator.md`
 
 `data/sample-price-bars.json` gerçek piyasa verisi değildir; yalnızca hesap mantığını test etmek için kullanılan örnek fixture dosyasıdır. Bir sonraki teknik çıktı, gerçek fiyat veri kaynağı veya CSV içe aktarma akışını seçip ilk 10 candidate kaydı gerçek fiyat serisine bağlamak olmalıdır.
+
+CSV içe aktarma akışı şu dosyada tanımlanmıştır:
+
+- `docs/price-data-import-workflow.md`
+
+Gerçek fiyat verisi gelmeden önce `data/price-import-validation-report.json` raporunun kapsam boşlukları göstermesi beklenir.

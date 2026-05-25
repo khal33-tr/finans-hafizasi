@@ -1,0 +1,306 @@
+{
+  "version": "2026-05-25",
+  "status": "valid_schema_with_coverage_gaps",
+  "inputs": {
+    "prices": "data/price-import-template.csv",
+    "calendar": "data/trading-calendar-import-template.csv",
+    "requirements": "data/price-data-requirements.json"
+  },
+  "summary": {
+    "priceRows": 4,
+    "calendarRows": 3,
+    "symbols": [
+      "THYAO",
+      "XU100"
+    ],
+    "coverageReadyEvents": 0,
+    "coverageIncompleteEvents": 10
+  },
+  "errors": [],
+  "coverage": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "THYAO",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "requiredRangeStart": "2026-01-26",
+      "requiredRangeEnd": "2026-04-18",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "TUPRS",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "asels-2026-sozlesme-imzalanmasi",
+      "ticker": "ASELS",
+      "requiredRangeStart": "2026-04-06",
+      "requiredRangeEnd": "2026-06-27",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "ASELS",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "kchol-2026-ilk-ceyrek-finansal-raporlar",
+      "ticker": "KCHOL",
+      "requiredRangeStart": "2026-03-27",
+      "requiredRangeEnd": "2026-06-17",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "KCHOL",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "sahol-akcansa-pay-devri-rekabet-kurumu-izni",
+      "ticker": "SAHOL",
+      "requiredRangeStart": "2026-04-10",
+      "requiredRangeEnd": "2026-07-01",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "SAHOL",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "eregl-2026-nakit-kar-payi-odeme-tarihi",
+      "ticker": "EREGL",
+      "requiredRangeStart": "2026-03-15",
+      "requiredRangeEnd": "2026-06-05",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "EREGL",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "sise-abd-stockton-liman-projesi-sonlandirilmasi",
+      "ticker": "SISE",
+      "requiredRangeStart": "2026-04-10",
+      "requiredRangeEnd": "2026-07-01",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "SISE",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "bimas-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "BIMAS",
+      "requiredRangeStart": "2026-03-28",
+      "requiredRangeEnd": "2026-06-18",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "BIMAS",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "akbnk-2026-ilk-ceyrek-konsolide-sorumluluk-beyani",
+      "ticker": "AKBNK",
+      "requiredRangeStart": "2026-03-15",
+      "requiredRangeEnd": "2026-06-05",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "AKBNK",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+      "ticker": "GARAN",
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "calendarAvailableStart": "2026-04-30",
+      "calendarAvailableEnd": "2026-05-04",
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "GARAN",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 2,
+          "sampleMissingDates": [
+            "2026-04-30",
+            "2026-05-04"
+          ],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 2,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    }
+  ]
+}

@@ -94,6 +94,9 @@ Isler:
 7. Hacim carpani hesabi eklendi.
 8. THYAO icin gercek piyasa verisi olmayan ornek fiyat fixture dosyasi eklendi.
 9. Ornek hesap ciktisi tekrar uretilebilir script ile olusturuldu.
+10. CSV tabanli fiyat ve islem takvimi ice aktarma standardi eklendi.
+11. Ilk 10 candidate icin gerekli fiyat veri araliklari uretildi.
+12. Fiyat ve takvim CSV dogrulama raporu eklendi.
 
 Basari kriteri:
 
@@ -162,5 +165,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 4: Gercek fiyat veri kaynagi veya CSV ice aktarma akisini sec, ilk 10 candidate kaydi gercek fiyat serisine bagla.
+Faz 4: CSV sablonlarini gercek fiyat ve BIST takvim verisiyle doldur, dogrulama raporunda ilk 10 candidate kaydi ready durumuna getir.
 ```
