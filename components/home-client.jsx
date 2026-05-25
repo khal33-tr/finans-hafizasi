@@ -109,8 +109,8 @@ export default function HomeClient({ events, tickers, operationSnapshot }) {
               <p className="eyebrow">Son eklenen olaylar</p>
               <h2>Olay sonrası tepki kartları</h2>
               <p className="section-copy">
-                Kartlar şu an örnek veriyle çalışır; gerçek kaynak ve fiyat serisi editör onayından
-                sonra yayın standardına alınacaktır.
+                Liste KAP kaynaklı aday kayıtları ve arayüz örneklerini birlikte gösterir; fiyat
+                serisi tamamlanmayan kayıtlar açık veri durumuyla tutulur.
               </p>
             </div>
             <div className="window-tabs" aria-label="Zaman pencereleri">

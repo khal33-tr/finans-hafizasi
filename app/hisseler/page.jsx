@@ -32,7 +32,7 @@ export default function StocksPage() {
           </div>
           <div className="compact-stat">
             <strong>KAP</strong>
-            <span>öncelikli kaynak standardı</span>
+            <span>aday kayıt standardı</span>
           </div>
         </section>
 

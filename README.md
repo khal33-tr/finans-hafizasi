@@ -68,6 +68,8 @@ Faz 4 hazırlık çıktıları:
 - `components/data-operations-panel.jsx`: ana sayfadaki veri durumu paneli
 - `components/record-readiness.jsx`: olay detayındaki yayın öncesi kontrol hattı
 - `docs/public-readiness-ui.md`: veri beklerken public sitede gösterilecek durumlar
+- `data/candidate-events.json`: public akışa bağlanan ilk 10 KAP kaynaklı aday olay
+- `docs/public-candidate-events.md`: candidate kayıtların public görünüm ilkesi
 - `docs/market-data-source-plan.md`: resmi kaynak ve veri sağlayıcı karar planı
 - `docs/pilot-price-data-runbook.md`: pilot fiyat verisi giriş ve doğrulama adımları
 

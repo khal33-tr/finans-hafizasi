@@ -53,7 +53,7 @@ export default async function StockDetailPage({ params }) {
           <div className="detail-stats" aria-label="Hisse özeti">
             <div>
               <strong>{companyEvents.length}</strong>
-              <span>örnek olay kaydı</span>
+              <span>olay kaydı</span>
             </div>
             <div>
               <strong>{company.priority}</strong>
@@ -69,7 +69,7 @@ export default async function StockDetailPage({ params }) {
         <section className="info-strip" aria-label="Hisse kayıt kapsamı">
           <div className="compact-stat">
             <strong>{eventTypes.length || "-"}</strong>
-            <span>örnek olay tipi</span>
+            <span>olay tipi</span>
           </div>
           <div className="compact-stat">
             <strong>{company.sector}</strong>

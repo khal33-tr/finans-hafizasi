@@ -1,11 +1,13 @@
 function SentimentRow({ label, value, tone = "positive" }) {
+  const numericValue = typeof value === "number" ? value : null;
+
   return (
     <div className="sentiment-row">
       <span>{label}</span>
       <div className={`bar ${tone}`}>
-        <span style={{ width: `${value}%` }} />
+        <span style={{ width: `${numericValue ?? 0}%` }} />
       </div>
-      <strong>{value}%</strong>
+      <strong>{numericValue === null ? "Yok" : `${numericValue}%`}</strong>
     </div>
   );
 }

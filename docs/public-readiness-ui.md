@@ -18,6 +18,7 @@ Finans Hafızası, veri tamamlanmadan kayıtları doğrulanmış gibi göstermem
 | Durum | Anlam |
 |---|---|
 | `Örnek oranlar` | Arayüz ve ürün akışı gösterilir; gerçek fiyat serisi beklenir |
+| `Kaynak bulundu` | Birincil KAP kaynağı bulundu; fiyat, hacim ve BIST 100 kıyası beklenir |
 | `Fiyat verisi bekleniyor` | Lisanslı/kaynağı belli fiyat, hacim ve düzeltilmiş kapanış serisi beklenir |
 | `Pencere oluşmadı` | 30G gibi ileri pencere tarihi henüz oluşmamıştır |
 | `Hesaplandı` | Hesap çıktı; editör kontrolü beklenir |
@@ -35,3 +36,7 @@ Ana sayfadaki veri operasyonu paneli şu bilgileri gösterir:
 ## İlke
 
 Bu arayüz yatırım sinyali üretmez. Tam tersine, kullanıcıya verinin hangi aşamada olduğunu söyleyerek ürünün kaynak ve hesap disiplinini görünür kılar.
+
+## Candidate Kayıtlar
+
+`data/candidate-events.json` içindeki ilk 10 KAP kaynaklı aday kayıt public olay akışına bağlanmıştır. Bu kayıtlar fiyat tepkisi üretmez; fiyat alanları `Yok` veya `Bekliyor` olarak görünür ve `Kaynak bulundu` veri durumuyla tutulur.

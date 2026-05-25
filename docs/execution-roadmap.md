@@ -103,6 +103,7 @@ Isler:
 16. 25 Mayis 2026 itibariyla pilot pencere olgunlugu ayrildi.
 17. Bugun tamamlanabilir TUPRS pilotu icin ayri gereksinim dosyalari olusturuldu.
 18. Public sitede veri operasyonu, veri durumu ve yayin oncesi kontrol hattini gosteren arayuz eklendi.
+19. Ilk 10 KAP kaynakli candidate kayit public olay akisina `Kaynak bulundu` durumuyla baglandi.
 
 Basari kriteri:
 
