@@ -7,6 +7,7 @@ export default function SiteHeader() {
       </a>
       <nav className="nav" aria-label="Ana menü">
         <a href="/">Gündem</a>
+        <a href="/olaylar">Olaylar</a>
         <a href="/hisseler">Hisseler</a>
         <a href="/metodoloji">Metodoloji</a>
         <a href="/yasal-uyari">Yasal</a>

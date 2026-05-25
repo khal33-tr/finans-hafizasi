@@ -34,6 +34,10 @@ input {
   font: inherit;
 }
 
+select {
+  font: inherit;
+}
+
 .topbar {
   position: sticky;
   top: 0;
@@ -542,6 +546,7 @@ h3 {
 .text-link {
   display: inline-flex;
   margin-top: 14px;
+  margin-right: 14px;
   color: var(--teal);
   font-weight: 800;
 }
@@ -586,6 +591,58 @@ h3 {
 .event-list {
   display: grid;
   gap: 14px;
+}
+
+.archive-section {
+  padding-top: 10px;
+}
+
+.archive-toolbar {
+  display: grid;
+  grid-template-columns: 160px 200px 220px minmax(260px, 1fr);
+  gap: 10px;
+  margin-bottom: 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.archive-toolbar label {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.archive-toolbar span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.archive-toolbar select,
+.archive-toolbar input {
+  width: 100%;
+  min-height: 42px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fbfcfd;
+  color: var(--ink);
+}
+
+.archive-result-count {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 0 0 14px;
+  color: var(--muted);
+}
+
+.archive-result-count strong {
+  color: var(--navy);
+  font-size: 22px;
 }
 
 .event-card {
@@ -994,6 +1051,7 @@ h3 {
   .section-row,
   .method,
   .operations-grid,
+  .archive-toolbar,
   .event-card,
   .detail-hero,
   .page-grid,

@@ -67,6 +67,8 @@ Faz 4 hazırlık çıktıları:
 - `lib/data-operations.js`: public arayüz için veri operasyon özetini üretir
 - `components/data-operations-panel.jsx`: ana sayfadaki veri durumu paneli
 - `components/record-readiness.jsx`: olay detayındaki yayın öncesi kontrol hattı
+- `app/olaylar/page.jsx`: filtrelenebilir olay arşivi sayfası
+- `components/events-archive-client.jsx`: olay arşivi filtreleri ve liste görünümü
 - `docs/public-readiness-ui.md`: veri beklerken public sitede gösterilecek durumlar
 - `data/candidate-events.json`: public akışa bağlanan ilk 10 KAP kaynaklı aday olay
 - `docs/public-candidate-events.md`: candidate kayıtların public görünüm ilkesi

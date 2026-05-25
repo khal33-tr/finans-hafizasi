@@ -54,6 +54,9 @@ export default function HomeClient({ events, tickers, operationSnapshot }) {
               <span>Kaynağı belirtir</span>
             </div>
             <div className="hero-actions">
+              <a className="primary-link" href="/olaylar">
+                Olay arşivi
+              </a>
               <a className="primary-link" href="/hisseler">
                 Hisseleri görüntüle
               </a>
@@ -92,6 +95,9 @@ export default function HomeClient({ events, tickers, operationSnapshot }) {
             </p>
             <a className="text-link" href="/hisseler">
               Tüm hisseler
+            </a>
+            <a className="text-link" href="/olaylar">
+              Tüm olaylar
             </a>
           </div>
           <div className="ticker-grid" aria-label="İlk hisse listesi">
