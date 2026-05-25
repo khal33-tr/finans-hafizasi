@@ -43,6 +43,9 @@ Bu pencereler ayrı veri gereksinimi olarak tutulur ve kısa tepki pilotunu bekl
 - `data/imports/pilot-price-data-requirements.json`
 - `data/imports/pilot-required-series.csv`
 - `data/imports/pilot-required-dates.csv`
+- `data/imports/pilot-price-field-guide.csv`
+- `data/imports/pilot-calendar-field-guide.csv`
+- `data/imports/pilot-import-operator-checklist.md`
 - `data/imports/pilot-prices.csv`
 - `data/imports/pilot-trading-calendar.csv`
 - `data/imports/pilot-import-manifest.json`
@@ -61,11 +64,13 @@ node scripts/generate-pilot-readiness.mjs
 
 ## Veri Girişi
 
-1. `data/imports/pilot-required-series.csv` dosyasındaki sembolleri ve tarih aralıklarını kontrol et.
-2. `data/imports/pilot-required-dates.csv` dosyasındaki tarihleri resmi veya lisanslı işlem takvimiyle doldur.
-3. `data/imports/pilot-trading-calendar.csv` dosyasına yalnızca doğrulanmış takvim satırlarını yaz.
-4. `data/imports/pilot-prices.csv` dosyasına THYAO, GARAN, TUPRS ve XU100 fiyat satırlarını ekle.
-5. Her fiyat satırında `source` alanını doldur.
+1. `data/imports/pilot-import-operator-checklist.md` dosyasını aç ve kapsamı kontrol et.
+2. `data/imports/pilot-price-field-guide.csv` ve `data/imports/pilot-calendar-field-guide.csv` dosyalarındaki format kurallarını oku.
+3. `data/imports/pilot-required-series.csv` dosyasındaki sembolleri ve tarih aralıklarını kontrol et.
+4. `data/imports/pilot-required-dates.csv` dosyasındaki tarihleri resmi veya lisanslı işlem takvimiyle doldur.
+5. `data/imports/pilot-trading-calendar.csv` dosyasına yalnızca doğrulanmış takvim satırlarını yaz.
+6. `data/imports/pilot-prices.csv` dosyasına THYAO, GARAN, TUPRS ve XU100 fiyat satırlarını ekle.
+7. Her fiyat satırında `source` alanını doldur.
 
 ## Doğrulama
 
@@ -78,6 +83,8 @@ Bugün tamamlanabilir TUPRS alt pilotunu doğrulama:
 ```bash
 node scripts/validate-price-import.mjs --prices=data/imports/today-completable-prices.csv --calendar=data/imports/today-completable-trading-calendar.csv --requirements=data/imports/today-completable-price-data-requirements.json --out=data/imports/today-completable-validation-report.json
 ```
+
+Raporun `status`, `warnings`, `nextActions` ve `coverage` alanları birlikte okunmalıdır. `ready` dışındaki durumlarda public veri yayını yapılmaz; `ready_with_warnings` durumunda ise uyarılar editör tarafından ayrıca onaylanmalıdır.
 
 ## Editör Kontrolü
 

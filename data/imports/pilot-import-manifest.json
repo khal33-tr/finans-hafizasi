@@ -23,8 +23,12 @@
     "requirements": "data/imports/pilot-price-data-requirements.json",
     "requiredSeries": "data/imports/pilot-required-series.csv",
     "requiredDates": "data/imports/pilot-required-dates.csv",
+    "priceFieldGuide": "data/imports/pilot-price-field-guide.csv",
+    "calendarFieldGuide": "data/imports/pilot-calendar-field-guide.csv",
+    "operatorChecklist": "data/imports/pilot-import-operator-checklist.md",
     "priceImport": "data/imports/pilot-prices.csv",
-    "tradingCalendarImport": "data/imports/pilot-trading-calendar.csv"
+    "tradingCalendarImport": "data/imports/pilot-trading-calendar.csv",
+    "validationReport": "data/imports/pilot-validation-report.json"
   },
   "nextCommandAfterDataEntry": "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json",
   "publicationGate": "Fiyat veri kaynağı lisans ve yeniden kullanım şartları doğrulanmadan public veri olarak yayımlanmaz.",

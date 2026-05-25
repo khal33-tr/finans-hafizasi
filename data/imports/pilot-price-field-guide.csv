@@ -1,0 +1,10 @@
+file,field,required,formatOrAllowedValue,example,validationRule
+pilot-prices.csv,symbol,yes,GARAN|THYAO|TUPRS|XU100,GARAN,Büyük/küçük harf fark etmez; sistem büyük harfe çevirir.
+pilot-prices.csv,date,yes,YYYY-MM-DD,2026-01-26,Takvim dosyasında aynı tarih bulunmalı ve işlem günü olmalı.
+pilot-prices.csv,open,yes,positive_number_dot_decimal,123.45,Sıfırdan büyük olmalı; high değerinden büyük olamaz.
+pilot-prices.csv,high,yes,positive_number_dot_decimal,125.10,"open, low ve close değerlerinden düşük olamaz."
+pilot-prices.csv,low,yes,positive_number_dot_decimal,121.80,"open, high ve close değerlerinden yüksek olamaz."
+pilot-prices.csv,close,yes,positive_number_dot_decimal,124.00,Sıfırdan büyük olmalı; high/low aralığında kalmalı.
+pilot-prices.csv,adjustedClose,yes,positive_number_dot_decimal,123.20,Temettü ve sermaye işlemleri etkisi bu alana yansıtılmalı.
+pilot-prices.csv,volume,stock_yes_xu100_optional,integer_or_blank_for_xu100,1250000,Hisse satırında boş olamaz; XU100 satırında boş kalabilir.
+pilot-prices.csv,source,yes,provider_or_import_note,Borsa Istanbul DataStore 2026-05-25 export,Her satırda veri kaynağı izlenebilir olmalı.

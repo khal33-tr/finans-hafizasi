@@ -11,9 +11,25 @@
     "calendarRows": 0,
     "symbols": [],
     "coverageReadyEvents": 0,
-    "coverageIncompleteEvents": 1
+    "coverageIncompleteEvents": 1,
+    "warnings": 2
   },
   "errors": [],
+  "warnings": [
+    {
+      "code": "required_symbol_missing",
+      "message": "TUPRS için fiyat satırı bulunamadı."
+    },
+    {
+      "code": "required_symbol_missing",
+      "message": "XU100 için fiyat satırı bulunamadı."
+    }
+  ],
+  "nextActions": [
+    "1 olay için fiyat veya takvim kapsamı eksik. coverage bölümündeki sampleMissingDates alanlarını doldur.",
+    "Takvim dosyasının requiredRangeStart ve requiredRangeEnd aralığını eksiksiz kapsadığını kontrol et.",
+    "Her hisse ve XU100 için aynı işlem günlerinde adjustedClose satırı bulunduğundan emin ol."
+  ],
   "coverage": [
     {
       "slug": "tuprs-2025-kar-dagitim-onerisi",

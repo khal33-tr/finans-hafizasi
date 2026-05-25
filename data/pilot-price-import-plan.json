@@ -25,8 +25,12 @@
     "data/imports/pilot-price-data-requirements.json",
     "data/imports/pilot-required-series.csv",
     "data/imports/pilot-required-dates.csv",
+    "data/imports/pilot-price-field-guide.csv",
+    "data/imports/pilot-calendar-field-guide.csv",
+    "data/imports/pilot-import-operator-checklist.md",
     "data/imports/pilot-prices.csv",
     "data/imports/pilot-trading-calendar.csv",
+    "data/imports/pilot-validation-report.json",
     "data/imports/pilot-import-manifest.json"
   ]
 }

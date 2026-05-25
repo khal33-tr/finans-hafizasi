@@ -11,9 +11,33 @@
     "calendarRows": 0,
     "symbols": [],
     "coverageReadyEvents": 0,
-    "coverageIncompleteEvents": 3
+    "coverageIncompleteEvents": 3,
+    "warnings": 4
   },
   "errors": [],
+  "warnings": [
+    {
+      "code": "required_symbol_missing",
+      "message": "GARAN için fiyat satırı bulunamadı."
+    },
+    {
+      "code": "required_symbol_missing",
+      "message": "THYAO için fiyat satırı bulunamadı."
+    },
+    {
+      "code": "required_symbol_missing",
+      "message": "TUPRS için fiyat satırı bulunamadı."
+    },
+    {
+      "code": "required_symbol_missing",
+      "message": "XU100 için fiyat satırı bulunamadı."
+    }
+  ],
+  "nextActions": [
+    "3 olay için fiyat veya takvim kapsamı eksik. coverage bölümündeki sampleMissingDates alanlarını doldur.",
+    "Takvim dosyasının requiredRangeStart ve requiredRangeEnd aralığını eksiksiz kapsadığını kontrol et.",
+    "Her hisse ve XU100 için aynı işlem günlerinde adjustedClose satırı bulunduğundan emin ol."
+  ],
   "coverage": [
     {
       "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",

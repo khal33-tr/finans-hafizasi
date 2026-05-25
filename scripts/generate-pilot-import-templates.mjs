@@ -65,6 +65,117 @@ const dateRows = dateRange(dateStart, dateEnd).map((date) => ({
 
 const priceHeaders = ["symbol", "date", "open", "high", "low", "close", "adjustedClose", "volume", "source"];
 const calendarHeaders = ["date", "isTradingDay", "sessionType", "note"];
+const fieldGuideHeaders = ["file", "field", "required", "formatOrAllowedValue", "example", "validationRule"];
+
+const priceFieldGuideRows = [
+  {
+    file: "pilot-prices.csv",
+    field: "symbol",
+    required: "yes",
+    formatOrAllowedValue: symbols.join("|"),
+    example: symbols[0],
+    validationRule: "Büyük/küçük harf fark etmez; sistem büyük harfe çevirir."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "date",
+    required: "yes",
+    formatOrAllowedValue: "YYYY-MM-DD",
+    example: dateStart,
+    validationRule: "Takvim dosyasında aynı tarih bulunmalı ve işlem günü olmalı."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "open",
+    required: "yes",
+    formatOrAllowedValue: "positive_number_dot_decimal",
+    example: "123.45",
+    validationRule: "Sıfırdan büyük olmalı; high değerinden büyük olamaz."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "high",
+    required: "yes",
+    formatOrAllowedValue: "positive_number_dot_decimal",
+    example: "125.10",
+    validationRule: "open, low ve close değerlerinden düşük olamaz."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "low",
+    required: "yes",
+    formatOrAllowedValue: "positive_number_dot_decimal",
+    example: "121.80",
+    validationRule: "open, high ve close değerlerinden yüksek olamaz."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "close",
+    required: "yes",
+    formatOrAllowedValue: "positive_number_dot_decimal",
+    example: "124.00",
+    validationRule: "Sıfırdan büyük olmalı; high/low aralığında kalmalı."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "adjustedClose",
+    required: "yes",
+    formatOrAllowedValue: "positive_number_dot_decimal",
+    example: "123.20",
+    validationRule: "Temettü ve sermaye işlemleri etkisi bu alana yansıtılmalı."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "volume",
+    required: "stock_yes_xu100_optional",
+    formatOrAllowedValue: "integer_or_blank_for_xu100",
+    example: "1250000",
+    validationRule: "Hisse satırında boş olamaz; XU100 satırında boş kalabilir."
+  },
+  {
+    file: "pilot-prices.csv",
+    field: "source",
+    required: "yes",
+    formatOrAllowedValue: "provider_or_import_note",
+    example: "Borsa Istanbul DataStore 2026-05-25 export",
+    validationRule: "Her satırda veri kaynağı izlenebilir olmalı."
+  }
+];
+
+const calendarFieldGuideRows = [
+  {
+    file: "pilot-trading-calendar.csv",
+    field: "date",
+    required: "yes",
+    formatOrAllowedValue: "YYYY-MM-DD",
+    example: dateStart,
+    validationRule: "Tekrar eden tarih olamaz."
+  },
+  {
+    file: "pilot-trading-calendar.csv",
+    field: "isTradingDay",
+    required: "yes",
+    formatOrAllowedValue: "true|false",
+    example: "true",
+    validationRule: "true, 1, yes, evet veya false, 0, no, hayır kabul edilir."
+  },
+  {
+    file: "pilot-trading-calendar.csv",
+    field: "sessionType",
+    required: "yes",
+    formatOrAllowedValue: "full|half|closed",
+    example: "full",
+    validationRule: "isTradingDay false ise closed olmalı; true ise full veya half olmalı."
+  },
+  {
+    file: "pilot-trading-calendar.csv",
+    field: "note",
+    required: "yes",
+    formatOrAllowedValue: "free_text",
+    example: "Resmi işlem günü",
+    validationRule: "Tatil, yarım gün veya veri kaynağı notu yazılmalı."
+  }
+];
 
 const manifest = {
   version: "2026-05-25",
@@ -82,8 +193,12 @@ const manifest = {
     requirements: "data/imports/pilot-price-data-requirements.json",
     requiredSeries: "data/imports/pilot-required-series.csv",
     requiredDates: "data/imports/pilot-required-dates.csv",
+    priceFieldGuide: "data/imports/pilot-price-field-guide.csv",
+    calendarFieldGuide: "data/imports/pilot-calendar-field-guide.csv",
+    operatorChecklist: "data/imports/pilot-import-operator-checklist.md",
     priceImport: "data/imports/pilot-prices.csv",
-    tradingCalendarImport: "data/imports/pilot-trading-calendar.csv"
+    tradingCalendarImport: "data/imports/pilot-trading-calendar.csv",
+    validationReport: "data/imports/pilot-validation-report.json"
   },
   nextCommandAfterDataEntry:
     "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json",
@@ -128,6 +243,16 @@ fs.writeFileSync(
   "utf8"
 );
 fs.writeFileSync(
+  path.join(importsDir, "pilot-price-field-guide.csv"),
+  `${stringifyCsv(priceFieldGuideRows, fieldGuideHeaders)}\n`,
+  "utf8"
+);
+fs.writeFileSync(
+  path.join(importsDir, "pilot-calendar-field-guide.csv"),
+  `${stringifyCsv(calendarFieldGuideRows, fieldGuideHeaders)}\n`,
+  "utf8"
+);
+fs.writeFileSync(
   path.join(importsDir, "pilot-prices.csv"),
   `${priceHeaders.join(",")}\n`,
   "utf8"
@@ -140,6 +265,46 @@ fs.writeFileSync(
 fs.writeFileSync(
   path.join(importsDir, "pilot-import-manifest.json"),
   `${JSON.stringify(manifest, null, 2)}\n`,
+  "utf8"
+);
+fs.writeFileSync(
+  path.join(importsDir, "pilot-import-operator-checklist.md"),
+  `# Pilot Import Operatör Kontrol Listesi
+
+Bu dosya gerçek fiyat verisi girilirken hata payını azaltmak için üretilir.
+
+## Kapsam
+
+- Olay sayısı: ${selectedEvents.length}
+- Sembol sayısı: ${symbols.length}
+- Semboller: ${symbols.join(", ")}
+- Kısa tepki tarih aralığı: ${dateStart} - ${dateEnd}
+
+## Doldurma Sırası
+
+1. \`pilot-required-series.csv\` dosyasından sembol ve tarih aralığını kontrol et.
+2. \`pilot-required-dates.csv\` dosyasını resmi/lisanslı BIST işlem takvimine göre doldur.
+3. Sadece işlem günü olan tarihler için \`pilot-prices.csv\` içine fiyat satırları gir.
+4. Hisse satırlarında \`volume\` zorunludur; \`XU100\` satırında boş kalabilir.
+5. Her satırda \`source\` alanına veri sağlayıcı ve dışa aktarım notu yaz.
+6. Temettü içeren olaylarda \`adjustedClose\` alanını ayrıca kontrol et.
+
+## Hızlı Format Kuralları
+
+- Tarih: \`YYYY-MM-DD\`
+- Ondalık: virgül değil nokta kullan, örnek \`123.45\`
+- \`sessionType\`: \`full\`, \`half\` veya \`closed\`
+- Kapalı günlerde fiyat satırı girme.
+- Aynı \`symbol + date\` için ikinci satır girme.
+
+## Doğrulama Komutu
+
+\`\`\`bash
+${manifest.nextCommandAfterDataEntry}
+\`\`\`
+
+Rapor \`ready\` dönmeden public veri yayınlama.
+`,
   "utf8"
 );
 

@@ -1,0 +1,5 @@
+file,field,required,formatOrAllowedValue,example,validationRule
+pilot-trading-calendar.csv,date,yes,YYYY-MM-DD,2026-01-26,Tekrar eden tarih olamaz.
+pilot-trading-calendar.csv,isTradingDay,yes,true|false,true,"true, 1, yes, evet veya false, 0, no, hayır kabul edilir."
+pilot-trading-calendar.csv,sessionType,yes,full|half|closed,full,isTradingDay false ise closed olmalı; true ise full veya half olmalı.
+pilot-trading-calendar.csv,note,yes,free_text,Resmi işlem günü,"Tatil, yarım gün veya veri kaynağı notu yazılmalı."
