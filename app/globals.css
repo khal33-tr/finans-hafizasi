@@ -1010,6 +1010,152 @@ h3 {
   line-height: 1.45;
 }
 
+.import-workflow {
+  margin-top: 12px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.import-workflow-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.import-workflow-head strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--navy);
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.import-workflow-head p,
+.import-column p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.status-chip {
+  display: inline-flex;
+  min-height: 34px;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 12px;
+  font-size: 12px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.status-chip.amber {
+  background: #fff3de;
+  color: var(--amber);
+}
+
+.status-chip.green {
+  background: #e8f4ee;
+  color: var(--green);
+}
+
+.status-chip.red {
+  background: #fbecea;
+  color: var(--red);
+}
+
+.import-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0;
+  margin-top: 16px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.import-summary-grid div {
+  padding: 14px 12px;
+  border-right: 1px solid var(--line);
+}
+
+.import-summary-grid div:last-child {
+  border-right: 0;
+}
+
+.import-summary-grid span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.import-summary-grid strong {
+  display: block;
+  margin-top: 5px;
+  color: var(--navy);
+  font-size: 22px;
+}
+
+.import-columns {
+  display: grid;
+  grid-template-columns: 1.1fr 0.8fr 1.1fr;
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.import-column {
+  min-width: 0;
+}
+
+.import-column h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.import-file-list,
+.import-action-list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.import-file-list li,
+.import-action-list li {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.import-file-list strong {
+  display: block;
+  color: var(--navy);
+}
+
+.import-file-list span {
+  display: block;
+  margin-top: 2px;
+}
+
+.symbol-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.symbol-pills span {
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: #eef2f4;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 900;
+}
+
 .method-steps {
   display: grid;
   gap: 10px;
@@ -1051,6 +1197,8 @@ h3 {
   .section-row,
   .method,
   .operations-grid,
+  .import-summary-grid,
+  .import-columns,
   .archive-toolbar,
   .event-card,
   .detail-hero,
@@ -1082,6 +1230,19 @@ h3 {
 
   .event-side {
     gap: 10px;
+  }
+
+  .import-workflow-head {
+    flex-direction: column;
+  }
+
+  .import-summary-grid div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .import-summary-grid div:last-child {
+    border-bottom: 0;
   }
 }
 
