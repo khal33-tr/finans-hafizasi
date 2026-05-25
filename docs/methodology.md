@@ -51,6 +51,12 @@ Relatif getiri:
 Relatif getiri = Hisse getirisi - BIST 100 getirisi
 ```
 
+Faz 4 hazirliginda bu hesaplar icin girdi sozlesmesi ayrica tanimlanmistir:
+
+- `data/calculation-inputs.json`
+- `data/trading-calendar-template.json`
+- `docs/price-reaction-input-standard.md`
+
 ## Hacim Tepkisi
 
 Hacim tepkisi, olay sonrasi islem hacminin onceki 20 islem gunu ortalamasina gore degisimiyle olculur.

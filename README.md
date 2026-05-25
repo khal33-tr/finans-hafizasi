@@ -40,6 +40,12 @@ Faz 3 çıktıları:
 - `docs/candidate-source-log.md`: candidate kayıtların kaynak günlüğü
 - `docs/source-standard.md`: kaynak doğrulama standardı
 
+Faz 4 hazırlık çıktıları:
+
+- `data/calculation-inputs.json`: ilk 10 candidate için hesaplama girdi sözleşmesi
+- `data/trading-calendar-template.json`: BIST işlem takvimi şablonu
+- `docs/price-reaction-input-standard.md`: fiyat, hacim ve BIST 100 hesaplama standardı
+
 ## İlk Yayın Kriterleri
 
 - 20 BIST sembolü

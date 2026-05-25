@@ -1,0 +1,225 @@
+{
+  "version": "2026-05-25",
+  "status": "calculation_input_contract",
+  "sourceEventFile": "data/candidate-events.json",
+  "principle": "Bu dosya fiyat sonucu üretmez; candidate olayların hesap motoruna hangi girdilerle verileceğini tanımlar.",
+  "benchmark": {
+    "symbol": "XU100",
+    "name": "BIST 100",
+    "role": "relative_return_benchmark"
+  },
+  "requiredPriceFields": [
+    "symbol",
+    "date",
+    "open",
+    "high",
+    "low",
+    "close",
+    "adjustedClose",
+    "volume",
+    "source"
+  ],
+  "windowDefinitions": [
+    {
+      "key": "d1",
+      "label": "1G",
+      "type": "trading_day_offset",
+      "offset": 1,
+      "description": "Baz işlem tarihinden sonraki 1. uygun işlem günü"
+    },
+    {
+      "key": "d3",
+      "label": "3G",
+      "type": "trading_day_offset",
+      "offset": 3,
+      "description": "Baz işlem tarihinden sonraki 3. uygun işlem günü"
+    },
+    {
+      "key": "w1",
+      "label": "1H",
+      "type": "calendar_day_then_next_trading_day",
+      "calendarDays": 7,
+      "description": "Baz tarihten 7 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
+    },
+    {
+      "key": "w2",
+      "label": "2H",
+      "type": "calendar_day_then_next_trading_day",
+      "calendarDays": 14,
+      "description": "Baz tarihten 14 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
+    },
+    {
+      "key": "d30",
+      "label": "30G",
+      "type": "calendar_day_then_next_trading_day",
+      "calendarDays": 30,
+      "description": "Baz tarihten 30 takvim günü sonrası; işlem günü değilse en yakın sonraki işlem günü"
+    }
+  ],
+  "volumeDefinition": {
+    "baseline": "previous_20_trading_days",
+    "formula": "event_day_volume / average_previous_20_trading_day_volume",
+    "requires": ["eventDayVolume", "previous20TradingDayAverageVolume"]
+  },
+  "calculationRequirements": [
+    "BIST işlem günü takvimi yüklenmeli.",
+    "Hisse ve XU100 için aynı tarih aralığında düzeltilmiş kapanış serisi bulunmalı.",
+    "Hisse için hacim serisi bulunmalı.",
+    "Temettü ve sermaye işlemi etkileri adjustedClose alanına yansıtılmalı.",
+    "Her pencere için kullanılan baz tarih ve bitiş tarihi kaydedilmeli."
+  ],
+  "events": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "kapDisclosureId": 1598902,
+      "category": "earnings",
+      "eventDate": "2026-04-29",
+      "publishDateTime": "2026-04-29T18:21:33+03:00",
+      "baseDate": "2026-04-30",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["THYAO", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "kapDisclosureId": 1570793,
+      "category": "dividend",
+      "eventDate": "2026-03-11",
+      "publishDateTime": "2026-03-11T18:58:50+03:00",
+      "baseDate": "2026-03-12",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["TUPRS", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data",
+      "specialHandling": ["dividend_adjusted_price_required"]
+    },
+    {
+      "slug": "asels-2026-sozlesme-imzalanmasi",
+      "ticker": "ASELS",
+      "kapDisclosureId": 1609287,
+      "category": "contract",
+      "eventDate": "2026-05-21",
+      "publishDateTime": "2026-05-21T09:17:15+03:00",
+      "baseDate": "2026-05-21",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["ASELS", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "kchol-2026-ilk-ceyrek-finansal-raporlar",
+      "ticker": "KCHOL",
+      "kapDisclosureId": 1603638,
+      "category": "earnings",
+      "eventDate": "2026-05-08",
+      "publishDateTime": "2026-05-08T18:30:04+03:00",
+      "baseDate": "2026-05-11",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["KCHOL", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "sahol-akcansa-pay-devri-rekabet-kurumu-izni",
+      "ticker": "SAHOL",
+      "kapDisclosureId": 1610797,
+      "category": "investment",
+      "eventDate": "2026-05-22",
+      "publishDateTime": "2026-05-22T19:30:11+03:00",
+      "baseDate": "2026-05-25",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["SAHOL", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "eregl-2026-nakit-kar-payi-odeme-tarihi",
+      "ticker": "EREGL",
+      "kapDisclosureId": 1598409,
+      "category": "dividend",
+      "eventDate": "2026-04-28",
+      "publishDateTime": "2026-04-28T20:12:55+03:00",
+      "baseDate": "2026-04-29",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["EREGL", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data",
+      "specialHandling": ["dividend_adjusted_price_required"]
+    },
+    {
+      "slug": "sise-abd-stockton-liman-projesi-sonlandirilmasi",
+      "ticker": "SISE",
+      "kapDisclosureId": 1610722,
+      "category": "investment",
+      "eventDate": "2026-05-22",
+      "publishDateTime": "2026-05-22T18:32:55+03:00",
+      "baseDate": "2026-05-25",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["SISE", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "bimas-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "BIMAS",
+      "kapDisclosureId": 1605795,
+      "category": "earnings",
+      "eventDate": "2026-05-11",
+      "publishDateTime": "2026-05-11T22:34:46+03:00",
+      "baseDate": "2026-05-12",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["BIMAS", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "akbnk-2026-ilk-ceyrek-konsolide-sorumluluk-beyani",
+      "ticker": "AKBNK",
+      "kapDisclosureId": 1598268,
+      "category": "earnings",
+      "eventDate": "2026-04-28",
+      "publishDateTime": "2026-04-28T18:16:05+03:00",
+      "baseDate": "2026-04-29",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["AKBNK", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    },
+    {
+      "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+      "ticker": "GARAN",
+      "kapDisclosureId": 1598912,
+      "category": "earnings",
+      "eventDate": "2026-04-29",
+      "publishDateTime": "2026-04-29T18:24:21+03:00",
+      "baseDate": "2026-04-30",
+      "baseDateSource": "reactionStartDate",
+      "requiredSeries": ["GARAN", "XU100"],
+      "priceRangeStart": "previous_20_trading_days_before_baseDate",
+      "priceRangeEnd": "next_trading_day_after_baseDate_plus_30_calendar_days",
+      "windowStatus": "pending_trading_calendar",
+      "calculationStatus": "pending_price_data"
+    }
+  ]
+}

@@ -120,6 +120,37 @@ Notlar:
 - Temettü, bölünme ve sermaye artırımı etkileri için düzeltilmiş kapanış kullanılır.
 - Hesap tekrar üretilemiyorsa kayıt `verified` olamaz.
 
+## PriceCalculationInput
+
+Candidate olayların hesap motoruna verilmeden önceki girdi sözleşmesi.
+
+Ana dosya:
+
+- `data/calculation-inputs.json`
+
+Alanlar:
+
+- `slug`
+- `ticker`
+- `kapDisclosureId`
+- `eventDate`
+- `publishDateTime`
+- `baseDate`
+- `baseDateSource`
+- `requiredSeries`
+- `priceRangeStart`
+- `priceRangeEnd`
+- `windowStatus`
+- `calculationStatus`
+- `specialHandling`
+
+Notlar:
+
+- `requiredSeries`, ilgili hisse ve `XU100` endeksini birlikte içermelidir.
+- `windowStatus`, işlem günü takvimi çözülmeden `pending_trading_calendar` olarak kalır.
+- `calculationStatus`, fiyat ve hacim serisi gelmeden `pending_price_data` olarak kalır.
+- Temettü veya sermaye işlemi varsa `specialHandling` içinde ayrıca işaretlenir.
+
 ## SentimentSnapshot
 
 Kamuya açık söylem özeti.

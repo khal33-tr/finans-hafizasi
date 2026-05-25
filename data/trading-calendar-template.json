@@ -1,0 +1,32 @@
+{
+  "version": "2026-05-25",
+  "market": "BIST",
+  "status": "template",
+  "purpose": "Fiyat tepki motoru, pencere bitişlerini bu takvim üzerinden çözmelidir.",
+  "requiredFields": [
+    "date",
+    "isTradingDay",
+    "sessionType",
+    "note"
+  ],
+  "rules": [
+    "Hafta sonları varsayılan olarak işlem günü değildir.",
+    "Resmi tatiller ayrıca işaretlenmelidir.",
+    "Yarım gün seanslar sessionType alanında ayrıca belirtilmelidir.",
+    "Pencere hedefi işlem günü değilse en yakın sonraki işlem günü kullanılmalıdır."
+  ],
+  "sampleRows": [
+    {
+      "date": "2026-04-29",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "Örnek satır; resmi takvimle doğrulanmalıdır."
+    },
+    {
+      "date": "2026-05-01",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "Örnek tatil satırı; resmi takvimle doğrulanmalıdır."
+    }
+  ]
+}

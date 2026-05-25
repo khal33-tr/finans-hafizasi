@@ -77,6 +77,8 @@ Basari kriteri:
 
 ## Faz 4: Fiyat Tepkisi Hesaplama Motoru
 
+Durum: Hazirlik basladi.
+
 Hedef:
 
 - Olay tarihine gore fiyat pencereleri otomatik hesaplanabilir hale gelmeli.
@@ -84,10 +86,12 @@ Hedef:
 Isler:
 
 1. Fiyat veri kaynagi sec.
-2. Islem gunu takvimi mantigini kur.
-3. 1G, 3G, 1H, 2H ve 30G hesaplarini yaz.
-4. BIST 100 karsilastirmasini ekle.
-5. Hacim carpani hesabini ekle.
+2. `data/calculation-inputs.json` ile ilk 10 candidate icin hesaplama girdileri standartlastirildi.
+3. `data/trading-calendar-template.json` ile BIST islem takvimi sablonu olusturuldu.
+4. Islem gunu takvimi mantigini kur.
+5. 1G, 3G, 1H, 2H ve 30G hesaplarini yaz.
+6. BIST 100 karsilastirmasini ekle.
+7. Hacim carpani hesabini ekle.
 
 Basari kriteri:
 
@@ -156,5 +160,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 4'e hazirlik: Candidate kayitlar icin fiyat, hacim ve BIST 100 hesaplama girdilerini standartlastir.
+Faz 4: Ornek fiyat veri dosyasi ve tekrar uretilebilir getiri hesaplayici fonksiyonunu olustur.
 ```
