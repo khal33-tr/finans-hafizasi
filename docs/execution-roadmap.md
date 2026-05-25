@@ -52,7 +52,7 @@ Basari kriteri:
 
 ## Faz 3: Veri Standardi ve Icerik Sistemi
 
-Durum: Basladi.
+Durum: Tamamlandi.
 
 Hedef:
 
@@ -77,7 +77,7 @@ Basari kriteri:
 
 ## Faz 4: Fiyat Tepkisi Hesaplama Motoru
 
-Durum: Hazirlik basladi.
+Durum: Basladi.
 
 Hedef:
 
@@ -88,10 +88,12 @@ Isler:
 1. Fiyat veri kaynagi sec.
 2. `data/calculation-inputs.json` ile ilk 10 candidate icin hesaplama girdileri standartlastirildi.
 3. `data/trading-calendar-template.json` ile BIST islem takvimi sablonu olusturuldu.
-4. Islem gunu takvimi mantigini kur.
-5. 1G, 3G, 1H, 2H ve 30G hesaplarini yaz.
-6. BIST 100 karsilastirmasini ekle.
-7. Hacim carpani hesabini ekle.
+4. Islem gunu takvimi mantigi icin saf hesaplayici fonksiyon eklendi.
+5. 1G, 3G, 1H, 2H ve 30G hesaplari yazildi.
+6. BIST 100 karsilastirmasi eklendi.
+7. Hacim carpani hesabi eklendi.
+8. THYAO icin gercek piyasa verisi olmayan ornek fiyat fixture dosyasi eklendi.
+9. Ornek hesap ciktisi tekrar uretilebilir script ile olusturuldu.
 
 Basari kriteri:
 
@@ -160,5 +162,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 4: Ornek fiyat veri dosyasi ve tekrar uretilebilir getiri hesaplayici fonksiyonunu olustur.
+Faz 4: Gercek fiyat veri kaynagi veya CSV ice aktarma akisini sec, ilk 10 candidate kaydi gercek fiyat serisine bagla.
 ```

@@ -92,4 +92,14 @@ Notlar:
 
 ## İlk 10 Candidate İçin Durum
 
-İlk 10 candidate kaydın tamamı şu anda `pending_price_data` durumundadır. Bir sonraki teknik çıktı, örnek fiyat veri dosyası şablonunu ve hesaplayıcı fonksiyonunu oluşturmak olmalıdır.
+İlk 10 candidate kaydın tamamı şu anda `pending_price_data` durumundadır.
+
+Hesap motorunun ilk tekrar üretilebilir sürümü şu dosyalarla eklenmiştir:
+
+- `lib/price-reaction-calculator.js`
+- `scripts/generate-sample-calculation.mjs`
+- `data/sample-price-bars.json`
+- `data/sample-calculation-output.json`
+- `docs/price-reaction-calculator.md`
+
+`data/sample-price-bars.json` gerçek piyasa verisi değildir; yalnızca hesap mantığını test etmek için kullanılan örnek fixture dosyasıdır. Bir sonraki teknik çıktı, gerçek fiyat veri kaynağı veya CSV içe aktarma akışını seçip ilk 10 candidate kaydı gerçek fiyat serisine bağlamak olmalıdır.

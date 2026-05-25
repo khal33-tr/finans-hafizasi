@@ -1,0 +1,1304 @@
+{
+  "version": "2026-05-25",
+  "status": "sample_fixture_not_market_data",
+  "warning": "Bu dosya ger?ek piyasa verisi de?ildir; hesap motorunu do?rulamak i?in yapay olarak ?retilmi?tir.",
+  "coveredInputSlug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+  "symbols": [
+    "THYAO",
+    "XU100"
+  ],
+  "tradingCalendar": [
+    {
+      "date": "2026-04-02",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-03",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-04",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-05",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-06",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-07",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-08",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-09",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-10",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-11",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-12",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-13",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-14",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-15",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-16",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-17",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-18",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-19",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-20",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-21",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-22",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-23",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-24",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-25",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-26",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-27",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-28",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-29",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-04-30",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-01",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-02",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-03",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-04",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-05",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-06",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-07",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-08",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-09",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-10",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-11",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-12",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-13",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-14",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-15",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-16",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-17",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-18",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-19",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-20",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-21",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-22",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-23",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-24",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-25",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-26",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-27",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-28",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-29",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-30",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-05-31",
+      "isTradingDay": false,
+      "sessionType": "closed",
+      "note": "?rnek kapal? g?n; resmi takvim de?ildir."
+    },
+    {
+      "date": "2026-06-01",
+      "isTradingDay": true,
+      "sessionType": "full",
+      "note": "?rnek i?lem g?n?; resmi takvim de?ildir."
+    }
+  ],
+  "bars": [
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-02",
+      "open": 298.8,
+      "high": 305.4,
+      "low": 294.6,
+      "close": 300,
+      "adjustedClose": 300,
+      "volume": 950000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-02",
+      "open": 9980,
+      "high": 10060,
+      "low": 9930,
+      "close": 10000,
+      "adjustedClose": 10000,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-03",
+      "open": 300.8,
+      "high": 307.45,
+      "low": 296.57,
+      "close": 302.01,
+      "adjustedClose": 302.01,
+      "volume": 1009500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-03",
+      "open": 10005.15,
+      "high": 10085.35,
+      "low": 9955.02,
+      "close": 10025.2,
+      "adjustedClose": 10025.2,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-06",
+      "open": 302.59,
+      "high": 309.28,
+      "low": 298.34,
+      "close": 303.81,
+      "adjustedClose": 303.81,
+      "volume": 1069000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-06",
+      "open": 10029.5,
+      "high": 10109.9,
+      "low": 9979.25,
+      "close": 10049.6,
+      "adjustedClose": 10049.6,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-07",
+      "open": 304.03,
+      "high": 310.74,
+      "low": 299.76,
+      "close": 305.25,
+      "adjustedClose": 305.25,
+      "volume": 1128500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-07",
+      "open": 10052.36,
+      "high": 10132.95,
+      "low": 10002,
+      "close": 10072.51,
+      "adjustedClose": 10072.51,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-08",
+      "open": 305.02,
+      "high": 311.75,
+      "low": 300.73,
+      "close": 306.24,
+      "adjustedClose": 306.24,
+      "volume": 1188000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-08",
+      "open": 10073.19,
+      "high": 10153.94,
+      "low": 10022.73,
+      "close": 10093.38,
+      "adjustedClose": 10093.38,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-09",
+      "open": 305.6,
+      "high": 312.35,
+      "low": 301.31,
+      "close": 306.83,
+      "adjustedClose": 306.83,
+      "volume": 1037500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-09",
+      "open": 10091.68,
+      "high": 10172.57,
+      "low": 10041.12,
+      "close": 10111.9,
+      "adjustedClose": 10111.9,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-10",
+      "open": 305.92,
+      "high": 312.68,
+      "low": 301.62,
+      "close": 307.15,
+      "adjustedClose": 307.15,
+      "volume": 1097000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-10",
+      "open": 10107.74,
+      "high": 10188.77,
+      "low": 10057.1,
+      "close": 10128,
+      "adjustedClose": 10128,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-13",
+      "open": 306.19,
+      "high": 312.95,
+      "low": 301.89,
+      "close": 307.42,
+      "adjustedClose": 307.42,
+      "volume": 1156500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-13",
+      "open": 10121.63,
+      "high": 10202.76,
+      "low": 10070.92,
+      "close": 10141.91,
+      "adjustedClose": 10141.91,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-14",
+      "open": 306.61,
+      "high": 313.38,
+      "low": 302.3,
+      "close": 307.84,
+      "adjustedClose": 307.84,
+      "volume": 1216000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-14",
+      "open": 10133.75,
+      "high": 10214.98,
+      "low": 10082.98,
+      "close": 10154.06,
+      "adjustedClose": 10154.06,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-15",
+      "open": 307.36,
+      "high": 314.14,
+      "low": 303.04,
+      "close": 308.59,
+      "adjustedClose": 308.59,
+      "volume": 1275500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-15",
+      "open": 10144.77,
+      "high": 10226.09,
+      "low": 10093.94,
+      "close": 10165.1,
+      "adjustedClose": 10165.1,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-16",
+      "open": 308.53,
+      "high": 315.35,
+      "low": 304.19,
+      "close": 309.77,
+      "adjustedClose": 309.77,
+      "volume": 1125000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-16",
+      "open": 10155.46,
+      "high": 10236.86,
+      "low": 10104.58,
+      "close": 10175.81,
+      "adjustedClose": 10175.81,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-17",
+      "open": 310.13,
+      "high": 316.98,
+      "low": 305.78,
+      "close": 311.38,
+      "adjustedClose": 311.38,
+      "volume": 1184500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-17",
+      "open": 10166.6,
+      "high": 10248.09,
+      "low": 10115.66,
+      "close": 10186.97,
+      "adjustedClose": 10186.97,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-20",
+      "open": 312.05,
+      "high": 318.94,
+      "low": 307.66,
+      "close": 313.3,
+      "adjustedClose": 313.3,
+      "volume": 1244000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-20",
+      "open": 10178.95,
+      "high": 10260.55,
+      "low": 10127.95,
+      "close": 10199.35,
+      "adjustedClose": 10199.35,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-21",
+      "open": 314.08,
+      "high": 321.02,
+      "low": 309.66,
+      "close": 315.34,
+      "adjustedClose": 315.34,
+      "volume": 1303500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-21",
+      "open": 10193.13,
+      "high": 10274.84,
+      "low": 10142.07,
+      "close": 10213.56,
+      "adjustedClose": 10213.56,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-22",
+      "open": 316.01,
+      "high": 322.99,
+      "low": 311.57,
+      "close": 317.28,
+      "adjustedClose": 317.28,
+      "volume": 1363000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-22",
+      "open": 10209.56,
+      "high": 10291.4,
+      "low": 10158.41,
+      "close": 10230.02,
+      "adjustedClose": 10230.02,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-23",
+      "open": 317.66,
+      "high": 324.68,
+      "low": 313.2,
+      "close": 318.94,
+      "adjustedClose": 318.94,
+      "volume": 1212500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-23",
+      "open": 10228.4,
+      "high": 10310.39,
+      "low": 10177.16,
+      "close": 10248.9,
+      "adjustedClose": 10248.9,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-24",
+      "open": 318.9,
+      "high": 325.94,
+      "low": 314.42,
+      "close": 320.18,
+      "adjustedClose": 320.18,
+      "volume": 1272000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-24",
+      "open": 10249.57,
+      "high": 10331.73,
+      "low": 10198.22,
+      "close": 10270.11,
+      "adjustedClose": 10270.11,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-27",
+      "open": 319.71,
+      "high": 326.77,
+      "low": 315.21,
+      "close": 320.99,
+      "adjustedClose": 320.99,
+      "volume": 1331500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-27",
+      "open": 10272.69,
+      "high": 10355.04,
+      "low": 10221.23,
+      "close": 10293.28,
+      "adjustedClose": 10293.28,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-28",
+      "open": 320.15,
+      "high": 327.23,
+      "low": 315.65,
+      "close": 321.44,
+      "adjustedClose": 321.44,
+      "volume": 1391000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-28",
+      "open": 10297.21,
+      "high": 10379.76,
+      "low": 10245.63,
+      "close": 10317.85,
+      "adjustedClose": 10317.85,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-29",
+      "open": 320.42,
+      "high": 327.5,
+      "low": 315.92,
+      "close": 321.71,
+      "adjustedClose": 321.71,
+      "volume": 1450500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-29",
+      "open": 10322.41,
+      "high": 10405.16,
+      "low": 10270.7,
+      "close": 10343.1,
+      "adjustedClose": 10343.1,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-04-30",
+      "open": 320.73,
+      "high": 327.82,
+      "low": 316.22,
+      "close": 322.02,
+      "adjustedClose": 322.02,
+      "volume": 1300000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-04-30",
+      "open": 10347.49,
+      "high": 10430.44,
+      "low": 10295.65,
+      "close": 10368.23,
+      "adjustedClose": 10368.23,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-04",
+      "open": 321.28,
+      "high": 328.38,
+      "low": 316.76,
+      "close": 322.57,
+      "adjustedClose": 322.57,
+      "volume": 1359500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-04",
+      "open": 10371.67,
+      "high": 10454.8,
+      "low": 10319.7,
+      "close": 10392.45,
+      "adjustedClose": 10392.45,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-05",
+      "open": 322.21,
+      "high": 329.32,
+      "low": 317.68,
+      "close": 323.5,
+      "adjustedClose": 323.5,
+      "volume": 1419000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-05",
+      "open": 10394.25,
+      "high": 10477.57,
+      "low": 10342.17,
+      "close": 10415.08,
+      "adjustedClose": 10415.08,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-06",
+      "open": 323.57,
+      "high": 330.72,
+      "low": 319.02,
+      "close": 324.87,
+      "adjustedClose": 324.87,
+      "volume": 1478500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-06",
+      "open": 10414.75,
+      "high": 10498.23,
+      "low": 10362.57,
+      "close": 10435.62,
+      "adjustedClose": 10435.62,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-07",
+      "open": 325.32,
+      "high": 332.51,
+      "low": 320.75,
+      "close": 326.63,
+      "adjustedClose": 326.63,
+      "volume": 1538000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-07",
+      "open": 10432.86,
+      "high": 10516.49,
+      "low": 10380.59,
+      "close": 10453.77,
+      "adjustedClose": 10453.77,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-08",
+      "open": 327.32,
+      "high": 334.55,
+      "low": 322.71,
+      "close": 328.63,
+      "adjustedClose": 328.63,
+      "volume": 1387500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-08",
+      "open": 10448.58,
+      "high": 10532.34,
+      "low": 10396.23,
+      "close": 10469.52,
+      "adjustedClose": 10469.52,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-11",
+      "open": 329.34,
+      "high": 336.61,
+      "low": 324.71,
+      "close": 330.66,
+      "adjustedClose": 330.66,
+      "volume": 1447000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-11",
+      "open": 10462.16,
+      "high": 10546.03,
+      "low": 10409.75,
+      "close": 10483.13,
+      "adjustedClose": 10483.13,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-12",
+      "open": 331.17,
+      "high": 338.49,
+      "low": 326.51,
+      "close": 332.5,
+      "adjustedClose": 332.5,
+      "volume": 1506500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-12",
+      "open": 10474.08,
+      "high": 10558.04,
+      "low": 10421.6,
+      "close": 10495.07,
+      "adjustedClose": 10495.07,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-13",
+      "open": 332.64,
+      "high": 339.99,
+      "low": 327.97,
+      "close": 333.98,
+      "adjustedClose": 333.98,
+      "volume": 1566000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-13",
+      "open": 10485,
+      "high": 10569.05,
+      "low": 10432.47,
+      "close": 10506.01,
+      "adjustedClose": 10506.01,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-14",
+      "open": 333.69,
+      "high": 341.06,
+      "low": 329,
+      "close": 335.03,
+      "adjustedClose": 335.03,
+      "volume": 1625500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-14",
+      "open": 10495.7,
+      "high": 10579.83,
+      "low": 10443.11,
+      "close": 10516.73,
+      "adjustedClose": 10516.73,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-15",
+      "open": 334.33,
+      "high": 341.71,
+      "low": 329.63,
+      "close": 335.67,
+      "adjustedClose": 335.67,
+      "volume": 1475000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-15",
+      "open": 10506.97,
+      "high": 10591.2,
+      "low": 10454.33,
+      "close": 10528.03,
+      "adjustedClose": 10528.03,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-18",
+      "open": 334.68,
+      "high": 342.07,
+      "low": 329.97,
+      "close": 336.02,
+      "adjustedClose": 336.02,
+      "volume": 1534500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-18",
+      "open": 10519.57,
+      "high": 10603.89,
+      "low": 10466.87,
+      "close": 10540.65,
+      "adjustedClose": 10540.65,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-19",
+      "open": 334.93,
+      "high": 342.33,
+      "low": 330.23,
+      "close": 336.28,
+      "adjustedClose": 336.28,
+      "volume": 1594000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-19",
+      "open": 10534.07,
+      "high": 10618.51,
+      "low": 10481.29,
+      "close": 10555.18,
+      "adjustedClose": 10555.18,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-20",
+      "open": 335.32,
+      "high": 342.73,
+      "low": 330.61,
+      "close": 336.67,
+      "adjustedClose": 336.67,
+      "volume": 1653500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-20",
+      "open": 10550.86,
+      "high": 10635.43,
+      "low": 10498,
+      "close": 10572,
+      "adjustedClose": 10572,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-21",
+      "open": 336.02,
+      "high": 343.44,
+      "low": 331.3,
+      "close": 337.37,
+      "adjustedClose": 337.37,
+      "volume": 1713000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-21",
+      "open": 10570.06,
+      "high": 10654.79,
+      "low": 10517.1,
+      "close": 10591.24,
+      "adjustedClose": 10591.24,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-22",
+      "open": 337.14,
+      "high": 344.58,
+      "low": 332.4,
+      "close": 338.49,
+      "adjustedClose": 338.49,
+      "volume": 1562500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-22",
+      "open": 10591.54,
+      "high": 10676.45,
+      "low": 10538.48,
+      "close": 10612.77,
+      "adjustedClose": 10612.77,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-25",
+      "open": 338.69,
+      "high": 346.17,
+      "low": 333.93,
+      "close": 340.05,
+      "adjustedClose": 340.05,
+      "volume": 1622000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-25",
+      "open": 10614.93,
+      "high": 10700.02,
+      "low": 10561.75,
+      "close": 10636.2,
+      "adjustedClose": 10636.2,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-26",
+      "open": 340.56,
+      "high": 348.08,
+      "low": 335.78,
+      "close": 341.93,
+      "adjustedClose": 341.93,
+      "volume": 1681500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-26",
+      "open": 10639.6,
+      "high": 10724.89,
+      "low": 10586.29,
+      "close": 10660.92,
+      "adjustedClose": 10660.92,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-27",
+      "open": 342.59,
+      "high": 350.16,
+      "low": 337.78,
+      "close": 343.97,
+      "adjustedClose": 343.97,
+      "volume": 1741000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-27",
+      "open": 10664.83,
+      "high": 10750.32,
+      "low": 10611.4,
+      "close": 10686.2,
+      "adjustedClose": 10686.2,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-28",
+      "open": 344.56,
+      "high": 352.17,
+      "low": 339.71,
+      "close": 345.94,
+      "adjustedClose": 345.94,
+      "volume": 1800500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-28",
+      "open": 10689.82,
+      "high": 10775.51,
+      "low": 10636.26,
+      "close": 10711.24,
+      "adjustedClose": 10711.24,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-05-29",
+      "open": 346.25,
+      "high": 353.9,
+      "low": 341.38,
+      "close": 347.64,
+      "adjustedClose": 347.64,
+      "volume": 1650000,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-05-29",
+      "open": 10713.8,
+      "high": 10799.68,
+      "low": 10660.12,
+      "close": 10735.27,
+      "adjustedClose": 10735.27,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "THYAO",
+      "date": "2026-06-01",
+      "open": 347.54,
+      "high": 355.22,
+      "low": 342.66,
+      "close": 348.94,
+      "adjustedClose": 348.94,
+      "volume": 1709500,
+      "source": "sample_fixture_not_market_data"
+    },
+    {
+      "symbol": "XU100",
+      "date": "2026-06-01",
+      "open": 10736.09,
+      "high": 10822.16,
+      "low": 10682.31,
+      "close": 10757.61,
+      "adjustedClose": 10757.61,
+      "volume": null,
+      "source": "sample_fixture_not_market_data"
+    }
+  ]
+}

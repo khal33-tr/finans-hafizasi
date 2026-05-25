@@ -1,0 +1,74 @@
+{
+  "version": "2026-05-25",
+  "status": "sample_calculation_output",
+  "warning": "Bu dosya gerçek piyasa verisi değildir; hesap motorunu doğrulamak için üretilmiş örnek çıktıdır.",
+  "sourceInput": "data/calculation-inputs.json",
+  "sourcePrices": "data/sample-price-bars.json",
+  "results": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "benchmark": "XU100",
+      "calculationStatus": "calculated",
+      "baseDate": "2026-04-30",
+      "windows": {
+        "d1": {
+          "label": "1G",
+          "baseDate": "2026-04-30",
+          "endDate": "2026-05-04",
+          "basePrice": 322.02,
+          "endPrice": 322.57,
+          "stockReturnPct": 0.1708,
+          "indexReturnPct": 0.2336,
+          "relativeReturnPct": -0.0628
+        },
+        "d3": {
+          "label": "3G",
+          "baseDate": "2026-04-30",
+          "endDate": "2026-05-06",
+          "basePrice": 322.02,
+          "endPrice": 324.87,
+          "stockReturnPct": 0.885,
+          "indexReturnPct": 0.65,
+          "relativeReturnPct": 0.235
+        },
+        "w1": {
+          "label": "1H",
+          "baseDate": "2026-04-30",
+          "endDate": "2026-05-07",
+          "basePrice": 322.02,
+          "endPrice": 326.63,
+          "stockReturnPct": 1.4316,
+          "indexReturnPct": 0.825,
+          "relativeReturnPct": 0.6066
+        },
+        "w2": {
+          "label": "2H",
+          "baseDate": "2026-04-30",
+          "endDate": "2026-05-14",
+          "basePrice": 322.02,
+          "endPrice": 335.03,
+          "stockReturnPct": 4.0401,
+          "indexReturnPct": 1.4323,
+          "relativeReturnPct": 2.6078
+        },
+        "d30": {
+          "label": "30G",
+          "baseDate": "2026-04-30",
+          "endDate": "2026-06-01",
+          "basePrice": 322.02,
+          "endPrice": 348.94,
+          "stockReturnPct": 8.3597,
+          "indexReturnPct": 3.7555,
+          "relativeReturnPct": 4.6042
+        }
+      },
+      "volume": {
+        "eventDayVolume": 1300000,
+        "previousAverageVolume": 1200250,
+        "volumeMultiple": 1.0831
+      },
+      "dataStatus": "sample_fixture_not_market_data"
+    }
+  ]
+}

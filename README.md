@@ -27,9 +27,9 @@ Amaç: haberi yorumlamak değil; gelişmenin ardından fiyat, hacim ve BIST 100 
 
 ## Mevcut Aşama
 
-Faz 1 ve Faz 2 tamamlandı. Canlı domain, temel sayfalar, SEO dosyaları, hisse sayfaları ve olay detay sayfası çalışıyor.
+Faz 1, Faz 2 ve Faz 3 tamamlandı. Canlı domain, temel sayfalar, SEO dosyaları, hisse sayfaları, olay detay sayfası, veri standardı ve ilk candidate olay dosyaları hazır.
 
-Şu an Faz 3 içindeyiz: veri standardı ve içerik sistemi.
+Şu an Faz 4 içindeyiz: fiyat tepkisi hesaplama motoru.
 
 Faz 3 çıktıları:
 
@@ -45,6 +45,11 @@ Faz 4 hazırlık çıktıları:
 - `data/calculation-inputs.json`: ilk 10 candidate için hesaplama girdi sözleşmesi
 - `data/trading-calendar-template.json`: BIST işlem takvimi şablonu
 - `docs/price-reaction-input-standard.md`: fiyat, hacim ve BIST 100 hesaplama standardı
+- `lib/price-reaction-calculator.js`: tekrar üretilebilir fiyat tepkisi hesaplayıcı fonksiyonu
+- `scripts/generate-sample-calculation.mjs`: örnek hesap çıktısını yeniden üreten script
+- `data/sample-price-bars.json`: gerçek piyasa verisi olmayan örnek fiyat fixture dosyası
+- `data/sample-calculation-output.json`: THYAO örneği için üretilmiş hesap çıktısı
+- `docs/price-reaction-calculator.md`: hesaplayıcı kullanım ve kontrol notları
 
 ## İlk Yayın Kriterleri
 
