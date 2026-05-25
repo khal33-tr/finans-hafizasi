@@ -9,7 +9,9 @@
     "start": "next start",
     "generate:sample-calculation": "node scripts/generate-sample-calculation.mjs",
     "generate:price-requirements": "node scripts/generate-price-data-requirements.mjs",
-    "validate:price-import": "node scripts/validate-price-import.mjs"
+    "generate:pilot-import": "node scripts/generate-pilot-import-templates.mjs",
+    "validate:price-import": "node scripts/validate-price-import.mjs",
+    "validate:pilot-import": "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json"
   },
   "dependencies": {
     "next": "latest",

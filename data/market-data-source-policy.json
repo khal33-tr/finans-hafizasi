@@ -1,0 +1,60 @@
+{
+  "version": "2026-05-25",
+  "status": "source_policy",
+  "principle": "Finans Hafızası fiyat verisini yorum üretmek için değil, geçmiş piyasa tepkilerini tekrar üretilebilir biçimde göstermek için kullanır.",
+  "eventSource": {
+    "name": "Kamuyu Aydınlatma Platformu",
+    "shortName": "KAP",
+    "role": "primary_disclosure_source",
+    "url": "https://www.kap.org.tr/tr/bildirim-sorgu",
+    "status": "approved"
+  },
+  "priceSourceOptions": [
+    {
+      "name": "Borsa İstanbul DataStore",
+      "role": "historical_market_data",
+      "url": "https://datastore.borsaistanbul.com/",
+      "status": "preferred_if_license_allows_publication",
+      "useCase": "Tarihsel fiyat, endeks ve piyasa verisi edinimi"
+    },
+    {
+      "name": "Borsa İstanbul lisanslı veri dağıtıcı kuruluşlar",
+      "role": "licensed_market_data_distribution",
+      "url": "https://www.borsaistanbul.com/veriler/veri-yayini/veri-dagitici-kuruluslar",
+      "status": "approved_if_contract_allows_storage_and_public_display",
+      "useCase": "Terminal/API/CSV ihracı üzerinden fiyat ve hacim serisi"
+    },
+    {
+      "name": "Aracı kurum veya terminal CSV ihracı",
+      "role": "manual_market_data_import",
+      "url": null,
+      "status": "temporary_internal_calculation_only_until_terms_verified",
+      "useCase": "MVP hesap motorunu gerçek veriye yaklaştırmak için kontrollü pilot"
+    }
+  ],
+  "rejectedSources": [
+    {
+      "name": "Yetkisiz web kazıma",
+      "reason": "Lisans, doğruluk ve yeniden kullanım hakları belirsizdir."
+    },
+    {
+      "name": "Sosyal medya fiyat ekran görüntüleri",
+      "reason": "Tekrar üretilebilir veri kaynağı değildir."
+    },
+    {
+      "name": "Kaynağı belirsiz hazır CSV dosyaları",
+      "reason": "Düzeltilmiş kapanış ve hacim alanları doğrulanamaz."
+    }
+  ],
+  "publicationRule": "Kullanım şartları doğrulanmadan hiçbir fiyat veri sağlayıcısı public kaynak olarak gösterilmemeli veya yeniden dağıtım yapılmamalıdır.",
+  "requiredProvenanceFields": [
+    "providerName",
+    "providerUrl",
+    "licenseStatus",
+    "importedAt",
+    "importedBy",
+    "sourceFileName",
+    "adjustedClosePolicy",
+    "editorReviewStatus"
+  ]
+}

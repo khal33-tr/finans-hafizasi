@@ -97,6 +97,9 @@ Isler:
 10. CSV tabanli fiyat ve islem takvimi ice aktarma standardi eklendi.
 11. Ilk 10 candidate icin gerekli fiyat veri araliklari uretildi.
 12. Fiyat ve takvim CSV dogrulama raporu eklendi.
+13. Piyasa verisi kaynak ve lisans ilkesi tanimlandi.
+14. THYAO, GARAN ve TUPRS icin ilk pilot fiyat verisi giris plani olusturuldu.
+15. Pilot fiyat ve takvim CSV dosya yapisi uretildi.
 
 Basari kriteri:
 
@@ -165,5 +168,5 @@ Basari kriteri:
 Siradaki odak:
 
 ```text
-Faz 4: CSV sablonlarini gercek fiyat ve BIST takvim verisiyle doldur, dogrulama raporunda ilk 10 candidate kaydi ready durumuna getir.
+Faz 4: Pilot CSV dosyalarini gercek fiyat ve BIST takvim verisiyle doldur, once 3 pilot kaydi ready durumuna getir.
 ```

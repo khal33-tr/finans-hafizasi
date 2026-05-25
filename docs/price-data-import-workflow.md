@@ -73,3 +73,17 @@ Bir candidate olay `price_data_ready` durumuna ancak şu koşullarda alınabilir
 ## Mevcut Durum
 
 Şablon dosyaları gerçek piyasa verisi içermez. Bu yüzden doğrulama raporunun `valid_schema_with_coverage_gaps` dönmesi beklenir. Bu sonuç, dosya biçiminin doğru olduğunu ama gerçek fiyat serilerinin henüz yüklenmediğini gösterir.
+
+## Pilot Akış
+
+İlk gerçek veri pilotu için ayrı dosya yapısı eklenmiştir:
+
+- `data/pilot-price-import-plan.json`
+- `data/imports/pilot-price-data-requirements.json`
+- `data/imports/pilot-required-series.csv`
+- `data/imports/pilot-required-dates.csv`
+- `data/imports/pilot-prices.csv`
+- `data/imports/pilot-trading-calendar.csv`
+- `docs/pilot-price-data-runbook.md`
+
+Pilot kapsamı THYAO, GARAN, TUPRS ve XU100 serileridir.

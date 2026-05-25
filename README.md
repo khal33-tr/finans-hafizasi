@@ -55,6 +55,13 @@ Faz 4 hazırlık çıktıları:
 - `data/price-data-requirements.json`: ilk 10 candidate için gerekli fiyat aralıkları
 - `scripts/validate-price-import.mjs`: fiyat ve takvim CSV doğrulama scripti
 - `docs/price-data-import-workflow.md`: gerçek fiyat verisine geçiş akışı
+- `data/market-data-source-policy.json`: piyasa verisi kaynak ve lisans ilkesi
+- `data/pilot-price-import-plan.json`: ilk gerçek veri pilotu için seçilen 3 olay
+- `data/imports/`: pilot fiyat ve takvim verisi giriş dosyaları
+- `scripts/generate-pilot-import-templates.mjs`: pilot CSV giriş dosyalarını üreten script
+- `data/imports/pilot-validation-report.json`: pilot CSV dosyalarının ilk doğrulama raporu
+- `docs/market-data-source-plan.md`: resmi kaynak ve veri sağlayıcı karar planı
+- `docs/pilot-price-data-runbook.md`: pilot fiyat verisi giriş ve doğrulama adımları
 
 ## İlk Yayın Kriterleri
 

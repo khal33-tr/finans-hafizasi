@@ -1,0 +1,32 @@
+{
+  "version": "2026-05-25",
+  "status": "pilot_price_import_plan",
+  "sourcePolicy": "data/market-data-source-policy.json",
+  "selectionPrinciple": "İlk pilot, hesap motorunu üç farklı olay tipinde sınamalıdır: finansal sonuç, banka finansal sonucu ve temettü/düzeltilmiş fiyat kontrolü.",
+  "selectedSlugs": [
+    "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+    "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+    "tuprs-2025-kar-dagitim-onerisi"
+  ],
+  "pilotSymbols": [
+    "THYAO",
+    "GARAN",
+    "TUPRS",
+    "XU100"
+  ],
+  "acceptanceCriteria": [
+    "Pilot fiyat CSV dosyasında THYAO, GARAN, TUPRS ve XU100 satırları eksiksiz olmalıdır.",
+    "Pilot işlem takvimi, seçili olayların minimum birleşik tarih aralığını kapsamalıdır.",
+    "TUPRS için adjustedClose alanı temettü etkisi açısından ayrıca kontrol edilmelidir.",
+    "Doğrulama raporu üç pilot olay için ready döndürmelidir.",
+    "Her fiyat satırında source alanı doldurulmalıdır."
+  ],
+  "outputFiles": [
+    "data/imports/pilot-price-data-requirements.json",
+    "data/imports/pilot-required-series.csv",
+    "data/imports/pilot-required-dates.csv",
+    "data/imports/pilot-prices.csv",
+    "data/imports/pilot-trading-calendar.csv",
+    "data/imports/pilot-import-manifest.json"
+  ]
+}

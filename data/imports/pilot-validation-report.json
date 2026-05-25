@@ -1,0 +1,97 @@
+{
+  "version": "2026-05-25",
+  "status": "valid_schema_with_coverage_gaps",
+  "inputs": {
+    "prices": "data/imports/pilot-prices.csv",
+    "calendar": "data/imports/pilot-trading-calendar.csv",
+    "requirements": "data/imports/pilot-price-data-requirements.json"
+  },
+  "summary": {
+    "priceRows": 0,
+    "calendarRows": 0,
+    "symbols": [],
+    "coverageReadyEvents": 0,
+    "coverageIncompleteEvents": 3
+  },
+  "errors": [],
+  "coverage": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "calendarAvailableStart": null,
+      "calendarAvailableEnd": null,
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "THYAO",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+      "ticker": "GARAN",
+      "requiredRangeStart": "2026-03-16",
+      "requiredRangeEnd": "2026-06-06",
+      "calendarAvailableStart": null,
+      "calendarAvailableEnd": null,
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "GARAN",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    },
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "requiredRangeStart": "2026-01-26",
+      "requiredRangeEnd": "2026-04-18",
+      "calendarAvailableStart": null,
+      "calendarAvailableEnd": null,
+      "calendarStatus": "range_incomplete",
+      "series": [
+        {
+          "symbol": "TUPRS",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        },
+        {
+          "symbol": "XU100",
+          "requiredTradingDateCount": 0,
+          "missingDateCount": 0,
+          "sampleMissingDates": [],
+          "status": "calendar_insufficient"
+        }
+      ],
+      "status": "incomplete"
+    }
+  ]
+}

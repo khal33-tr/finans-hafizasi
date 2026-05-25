@@ -1,0 +1,30 @@
+{
+  "version": "2026-05-25",
+  "status": "awaiting_real_market_data",
+  "planFile": "data/pilot-price-import-plan.json",
+  "sourcePolicy": "data/market-data-source-policy.json",
+  "selectedSlugs": [
+    "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+    "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+    "tuprs-2025-kar-dagitim-onerisi"
+  ],
+  "symbols": [
+    "GARAN",
+    "THYAO",
+    "TUPRS",
+    "XU100"
+  ],
+  "requiredDateRange": {
+    "start": "2026-01-26",
+    "end": "2026-06-06"
+  },
+  "files": {
+    "requirements": "data/imports/pilot-price-data-requirements.json",
+    "requiredSeries": "data/imports/pilot-required-series.csv",
+    "requiredDates": "data/imports/pilot-required-dates.csv",
+    "priceImport": "data/imports/pilot-prices.csv",
+    "tradingCalendarImport": "data/imports/pilot-trading-calendar.csv"
+  },
+  "nextCommandAfterDataEntry": "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json",
+  "publicationGate": "Fiyat veri kaynağı lisans ve yeniden kullanım şartları doğrulanmadan public veri olarak yayımlanmaz."
+}

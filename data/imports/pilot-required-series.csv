@@ -1,0 +1,5 @@
+symbol,requiredRangeStart,requiredRangeEnd,eventSlugs,note
+GARAN,2026-03-16,2026-06-06,garan-2026-ilk-ceyrek-finansal-sonuc-sunumu,Hisse serisi; hacim ve adjustedClose zorunludur.
+THYAO,2026-03-16,2026-06-06,thyao-2026-ilk-ceyrek-finansal-sonuclari,Hisse serisi; hacim ve adjustedClose zorunludur.
+TUPRS,2026-01-26,2026-04-18,tuprs-2025-kar-dagitim-onerisi,Hisse serisi; hacim ve adjustedClose zorunludur.
+XU100,2026-01-26,2026-06-06,thyao-2026-ilk-ceyrek-finansal-sonuclari|garan-2026-ilk-ceyrek-finansal-sonuc-sunumu|tuprs-2025-kar-dagitim-onerisi,Benchmark endeks serisi; hacim boş kalabilir.
