@@ -7,6 +7,7 @@ import {
   sampleEvents,
   tickers
 } from "@/lib/market-data";
+import { getEventImportState } from "@/lib/data-operations";
 
 export const metadata = {
   title: "Olay Arşivi | Finans Hafızası",
@@ -14,14 +15,24 @@ export const metadata = {
 };
 
 export default function EventsArchivePage() {
-  const sortedEvents = [...sampleEvents].sort((first, second) => second.date.localeCompare(first.date));
+  const eventsWithImportState = sampleEvents.map((event) => ({
+    ...event,
+    importState: getEventImportState(event)
+  }));
+  const sortedEvents = [...eventsWithImportState].sort((first, second) => second.date.localeCompare(first.date));
   const categories = Object.entries(eventCategories).map(([value, label]) => ({ value, label }));
   const statuses = Object.entries(dataStatuses).map(([value, status]) => ({
     value,
     label: status.label
   }));
-  const candidateCount = sortedEvents.filter((event) => event.verificationStatus === "candidate").length;
-  const sourcedCount = sortedEvents.filter((event) => event.dataStatus === "source_found").length;
+  const importStatuses = [
+    { value: "pilot_included", label: "Pilot içinde" },
+    { value: "incomplete", label: "Import eksik" },
+    { value: "not_in_pilot", label: "Pilot dışında" },
+    { value: "sample_demo", label: "Örnek arayüz" }
+  ];
+  const pilotCount = sortedEvents.filter((event) => event.importState.inPilot).length;
+  const pilotOutsideCount = sortedEvents.filter((event) => event.importState.status === "not_in_pilot").length;
 
   return (
     <>
@@ -50,12 +61,12 @@ export default function EventsArchivePage() {
             <span>toplam olay kaydı</span>
           </div>
           <div className="compact-stat">
-            <strong>{candidateCount}</strong>
-            <span>aday kayıt</span>
+            <strong>{pilotCount}</strong>
+            <span>pilot içinde</span>
           </div>
           <div className="compact-stat">
-            <strong>{sourcedCount}</strong>
-            <span>kaynak bulundu</span>
+            <strong>{pilotOutsideCount}</strong>
+            <span>pilot dışında</span>
           </div>
         </section>
 
@@ -64,6 +75,7 @@ export default function EventsArchivePage() {
           tickers={tickers}
           categories={categories}
           statuses={statuses}
+          importStatuses={importStatuses}
         />
       </main>
       <SiteFooter />

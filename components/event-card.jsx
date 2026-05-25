@@ -6,7 +6,7 @@ import SentimentSummary from "@/components/sentiment-summary";
 export default function EventCard({ event, linked = true }) {
   const status = getEventStatus(event);
   const dataStatus = getEventDataStatus(event);
-  const importState = getEventImportState(event);
+  const importState = event.importState ?? getEventImportState(event);
   const primarySource = getPrimarySource(event);
   const relativeReturn = typeof event.bistRelative === "number" ? formatReturn(event.bistRelative) : "Bekliyor";
   const volumeMultiple =
