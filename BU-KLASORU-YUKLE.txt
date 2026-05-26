@@ -1,0 +1,4 @@
+﻿Bu klasor URL filtreleme duzeltmesidir.
+GitHub ana dizinine bu klasordeki components ve app klasorlerini yukleyin.
+Ozellikle components/events-archive-client.jsx dosyasi degismeli.
+Dogru dosyada su ifadeler vardir: initialFilters, replaceState, URLSearchParams.
