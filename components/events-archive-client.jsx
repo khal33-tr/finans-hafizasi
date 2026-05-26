@@ -1,7 +1,16 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import EventCard from "@/components/event-card";
+
+const defaultFilters = {
+  ticker: "all",
+  category: "all",
+  status: "all",
+  importStatus: "all",
+  sort: "newest",
+  query: ""
+};
 
 function matchesImportStatus(event, importStatus) {
   if (importStatus === "all") return true;
@@ -42,13 +51,30 @@ function sortEvents(events, sort) {
   return sorted.sort((first, second) => second.date.localeCompare(first.date));
 }
 
-export default function EventsArchiveClient({ events, tickers, categories, statuses, importStatuses }) {
-  const [ticker, setTicker] = useState("all");
-  const [category, setCategory] = useState("all");
-  const [status, setStatus] = useState("all");
-  const [importStatus, setImportStatus] = useState("all");
-  const [sort, setSort] = useState("newest");
-  const [query, setQuery] = useState("");
+export default function EventsArchiveClient({ events, tickers, categories, statuses, importStatuses, initialFilters }) {
+  const initial = { ...defaultFilters, ...initialFilters };
+  const [ticker, setTicker] = useState(initial.ticker);
+  const [category, setCategory] = useState(initial.category);
+  const [status, setStatus] = useState(initial.status);
+  const [importStatus, setImportStatus] = useState(initial.importStatus);
+  const [sort, setSort] = useState(initial.sort);
+  const [query, setQuery] = useState(initial.query);
+
+  useEffect(() => {
+    const params = new URLSearchParams();
+    if (ticker !== defaultFilters.ticker) params.set("ticker", ticker);
+    if (category !== defaultFilters.category) params.set("category", category);
+    if (status !== defaultFilters.status) params.set("status", status);
+    if (importStatus !== defaultFilters.importStatus) params.set("import", importStatus);
+    if (sort !== defaultFilters.sort) params.set("sort", sort);
+    if (query.trim()) params.set("q", query.trim());
+
+    const nextUrl = params.toString() ? `/olaylar?${params.toString()}` : "/olaylar";
+    const currentUrl = `${window.location.pathname}${window.location.search}`;
+    if (currentUrl !== nextUrl) {
+      window.history.replaceState(null, "", nextUrl);
+    }
+  }, [category, importStatus, query, sort, status, ticker]);
 
   const filteredEvents = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase("tr-TR");
