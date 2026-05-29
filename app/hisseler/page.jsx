@@ -1,3 +1,4 @@
+import DataReadinessNotice from "@/components/data-readiness-notice";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { companies, getEventsByTicker } from "@/lib/market-data";
@@ -35,6 +36,8 @@ export default function StocksPage() {
             <span>aday kayıt standardı</span>
           </div>
         </section>
+
+        <DataReadinessNotice compact />
 
         <section className="company-grid" aria-label="Hisse listesi">
           {companies.map((company) => {

@@ -8,9 +8,9 @@ export default function EventCard({ event, linked = true }) {
   const dataStatus = getEventDataStatus(event);
   const importState = event.importState ?? getEventImportState(event);
   const primarySource = getPrimarySource(event);
-  const relativeReturn = typeof event.bistRelative === "number" ? formatReturn(event.bistRelative) : "Bekliyor";
+  const relativeReturn = typeof event.bistRelative === "number" ? formatReturn(event.bistRelative) : "Veri bekleniyor";
   const volumeMultiple =
-    typeof event.volumeMultiple === "number" ? `${event.volumeMultiple.toFixed(1)}x` : "Bekliyor";
+    typeof event.volumeMultiple === "number" ? `${event.volumeMultiple.toFixed(1)}x` : "Veri bekleniyor";
   const title = linked ? (
     <a className="event-title-link" href={`/olaylar/${event.slug}`}>
       {event.title}

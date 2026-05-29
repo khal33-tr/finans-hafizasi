@@ -1,4 +1,5 @@
 import EventsArchiveClient from "@/components/events-archive-client";
+import DataReadinessNotice from "@/components/data-readiness-notice";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import {
@@ -102,6 +103,8 @@ export default async function EventsArchivePage({ searchParams }) {
             <span>pilot dışında</span>
           </div>
         </section>
+
+        <DataReadinessNotice compact />
 
         <EventsArchiveClient
           events={sortedEvents}

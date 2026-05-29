@@ -22,6 +22,8 @@ Bu kontrol, resmi veri saglayicilarindan cevap beklerken MVP yayina hazirlik ris
 - Mobil menude dar ekranda tasma riski vardi. Menu linkleri artik satir kirarak yerlestirilir.
 - Metadata tabani `finanshafizasi.com`, sitemap ise `www.finanshafizasi.com` kullaniyordu. Canonical/OG tabani `www.finanshafizasi.com` ile uyumlu hale getirildi.
 - Robots host degeri URL yerine host olarak duzenlendi.
+- Ana sayfa, olay arsivi, hisse sayfalari, olay detaylari ve veri operasyonu ekranina veri dogrulama notu eklendi.
+- Fiyat/hacim degeri henuz dogrulanmayan kartlarda bekleyen alanlar daha acik gosterilir.
 
 ## Bilinen Durumlar
 

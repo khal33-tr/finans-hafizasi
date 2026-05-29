@@ -1,3 +1,4 @@
+import DataReadinessNotice from "@/components/data-readiness-notice";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
 import { getDataOperationSnapshot } from "@/lib/data-operations";
@@ -38,6 +39,8 @@ export default function DataOperationsPage() {
             </a>
           </div>
         </section>
+
+        <DataReadinessNotice compact />
 
         <section className="info-strip" aria-label="Import kontrol özeti">
           <div className="compact-stat">

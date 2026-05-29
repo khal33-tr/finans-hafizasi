@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import DataReadinessNotice from "@/components/data-readiness-notice";
 import EventCard from "@/components/event-card";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -80,6 +81,8 @@ export default async function StockDetailPage({ params }) {
             <span>hedef olay sınıfı</span>
           </div>
         </section>
+
+        <DataReadinessNotice compact />
 
         <section className="content-panel wide-panel">
           <p className="eyebrow">İzleme gerekçesi</p>

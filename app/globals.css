@@ -989,6 +989,82 @@ h3 {
   padding: 28px 0;
 }
 
+.readiness-notice {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  gap: 18px;
+  margin: 18px 0;
+  padding: 18px;
+  border: 1px solid #edd39c;
+  border-left: 4px solid var(--amber);
+  border-radius: 8px;
+  background: #fffaf0;
+  box-shadow: var(--shadow);
+}
+
+.readiness-notice.compact {
+  margin: 0 0 18px;
+}
+
+.readiness-copy h2 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.readiness-copy p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.readiness-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.readiness-actions .text-link {
+  margin-top: 8px;
+  margin-right: 0;
+}
+
+.readiness-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.readiness-item {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(187, 122, 24, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.readiness-item span {
+  display: block;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.readiness-item strong {
+  display: block;
+  margin-top: 6px;
+  color: var(--navy);
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.readiness-item p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
 .operations-grid,
 .readiness-panel {
   display: grid;
@@ -1404,6 +1480,7 @@ h3 {
   .workspace,
   .section-row,
   .method,
+  .readiness-notice,
   .operations-grid,
   .import-summary-grid,
   .import-columns,
@@ -1444,6 +1521,10 @@ h3 {
 
   .event-side {
     gap: 10px;
+  }
+
+  .readiness-items {
+    grid-template-columns: 1fr;
   }
 
   .import-workflow-head {

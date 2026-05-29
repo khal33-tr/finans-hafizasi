@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import DataOperationsPanel from "@/components/data-operations-panel";
+import DataReadinessNotice from "@/components/data-readiness-notice";
 import EventCard from "@/components/event-card";
 import SiteFooter from "@/components/site-footer";
 import SiteHeader from "@/components/site-header";
@@ -82,6 +83,8 @@ export default function HomeClient({ events, tickers, operationSnapshot }) {
             </div>
           </aside>
         </section>
+
+        <DataReadinessNotice />
 
         <DataOperationsPanel snapshot={operationSnapshot} />
 

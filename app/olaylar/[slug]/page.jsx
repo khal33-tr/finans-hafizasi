@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import DataReadinessNotice from "@/components/data-readiness-notice";
 import EventDataStatusPanel from "@/components/event-data-status-panel";
 import ReturnGrid from "@/components/return-grid";
 import RecordReadiness from "@/components/record-readiness";
@@ -79,6 +80,8 @@ export default async function EventDetailPage({ params }) {
             </div>
           </div>
         </section>
+
+        <DataReadinessNotice compact />
 
         <section className="page-grid">
           <article className="content-panel">
