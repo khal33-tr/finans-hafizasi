@@ -11,6 +11,12 @@ Veri sağlayıcılar iki gruba ayrılır:
 
 Lisansı doğrulanmamış kaynaklardan gelen fiyat verisi kullanıcıya gerçek piyasa tepkisi olarak gösterilmez.
 
+## Operasyon Dosyaları
+
+- `data/market-data-provider-shortlist.json`: sağlayıcı adaylarının genel değerlendirmesi
+- `data/market-data-provider-outreach-tracker.json`: gönderim ve takip durumları
+- `docs/market-data-provider-contact-list.md`: iletişim listesi ve hazır mail metinleri
+
 ## İlk Temas Sırası
 
 1. Borsa İstanbul DataStore
