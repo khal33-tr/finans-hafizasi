@@ -20,6 +20,8 @@ npm run validate:pilot-import
 npm run validate:today-completable
 ```
 
+GitHub'a yukleme yapildiginda bu kontroller `.github/workflows/system-tests.yml` uzerinden otomatik calisir.
+
 Node modules yuklu degilse sistem testi dogrudan Node ile de calisir:
 
 ```bash
