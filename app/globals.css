@@ -87,6 +87,13 @@ select {
   font-size: 14px;
 }
 
+.nav a,
+.text-link {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
+}
+
 main {
   width: min(1180px, calc(100% - 32px));
   margin: 0 auto;
@@ -1560,6 +1567,11 @@ h3 {
     justify-content: flex-start;
     gap: 8px 14px;
     font-size: 13px;
+  }
+
+  .nav a {
+    min-height: 36px;
+    padding: 0 2px;
   }
 
   .search-row {
