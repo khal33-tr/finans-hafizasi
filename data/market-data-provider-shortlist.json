@@ -1,0 +1,91 @@
+{
+  "version": "2026-05-29",
+  "status": "provider_shortlist",
+  "principle": "Finans Hafızası public yayında yalnızca lisans, saklama ve gösterim hakkı açıkça doğrulanmış fiyat verisini kullanır. Lisansı doğrulanmamış API veya CSV kaynakları sadece iç test ve hesap motoru provası için kullanılabilir.",
+  "decision": {
+    "publication": "Borsa İstanbul DataStore veya Borsa İstanbul lisanslı veri dağıtıcıları önceliklidir.",
+    "internalPilot": "Teknik test için geçici API/CSV kullanılabilir; kullanıcıya gerçek fiyat tepkisi olarak yayımlanmaz.",
+    "blockedUntil": "Veri sağlayıcının adjustedClose, hacim, XU100, saklama ve public gösterim koşulları yazılı olarak netleşir."
+  },
+  "evaluationCriteria": [
+    "BIST payları için günlük OHLCV",
+    "BIST 100 veya XU100 karşılaştırma serisi",
+    "Düzeltilmiş kapanış fiyatı veya kurumsal aksiyon düzeltme yöntemi",
+    "Tarihsel veri derinliği",
+    "CSV/API ile dışa aktarım",
+    "Veriyi saklama hakkı",
+    "Public sitede hesaplanmış/türetilmiş sonuç gösterme hakkı",
+    "Kaynak adı ve lisans notu gösterme zorunluluğu",
+    "Fiyatlama ve minimum sözleşme süresi",
+    "MVP ölçeğinde teknik destek ve örnek veri"
+  ],
+  "providers": [
+    {
+      "name": "Borsa İstanbul DataStore",
+      "type": "official_exchange_store",
+      "priority": 1,
+      "url": "https://datastore.borsaistanbul.com/",
+      "candidateUse": "Tarihsel gün sonu fiyat, hacim, endeks ve düzeltilmiş fiyat verisi",
+      "publicationStatus": "preferred_if_license_allows_publication",
+      "nextAction": "Yanıt gecikirse doğru adres ve iletişim formu üzerinden takip et."
+    },
+    {
+      "name": "Borsa İstanbul lisanslı veri dağıtıcıları",
+      "type": "licensed_distributor_group",
+      "priority": 2,
+      "url": "https://borsaistanbul.com/veriler/veri-yayini/veri-dagitici-kuruluslar",
+      "candidateUse": "Lisanslı terminal, API veya CSV ihracı üzerinden fiyat/hacim serisi",
+      "publicationStatus": "approved_if_contract_allows_storage_and_public_display",
+      "nextAction": "MVP ölçekli fiyatlama ve public gösterim hakkı için kısa teklif iste."
+    },
+    {
+      "name": "dxFeed",
+      "type": "licensed_market_data_provider",
+      "priority": 3,
+      "url": "https://dxfeed.com/coverage/turkey/",
+      "candidateUse": "Borsa İstanbul hisse, endeks ve gün sonu verisi; API veya dosya erişimi",
+      "publicationStatus": "candidate_if_contract_allows_publication",
+      "nextAction": "Türkiye kapsamı, adjustedClose ve redisplay/türetilmiş veri koşullarını sor."
+    },
+    {
+      "name": "Datakapital",
+      "type": "local_market_data_and_analytics_candidate",
+      "priority": 4,
+      "url": "https://datakapital.com/",
+      "candidateUse": "BIST odaklı veri/analitik iş birliği veya yönlendirme",
+      "publicationStatus": "contact_to_verify_license",
+      "nextAction": "Gün sonu OHLCV, adjustedClose, API/CSV ve yayın izni kapsamını sor."
+    },
+    {
+      "name": "BiQuote",
+      "type": "technical_test_api",
+      "priority": 5,
+      "url": "https://biquote.io/docs",
+      "candidateUse": "İç test, adapter provası ve hesap motoru denemesi",
+      "publicationStatus": "internal_test_only_until_terms_verified",
+      "nextAction": "Üretim/public yayın için kullanılmadan önce lisans ve doğruluk koşulları yazılı doğrulanmalı."
+    }
+  ],
+  "outreachStatus": [
+    {
+      "provider": "Borsa İstanbul DataStore",
+      "status": "waiting_reply",
+      "ownerAction": "Doğru adrese takip maili ve iletişim formu"
+    },
+    {
+      "provider": "Borsa İstanbul lisanslı veri dağıtıcıları",
+      "status": "ready_to_contact",
+      "ownerAction": "Kısa teklif maili"
+    },
+    {
+      "provider": "dxFeed",
+      "status": "ready_to_contact",
+      "ownerAction": "API ve redisplay koşulları için demo/teklif talebi"
+    },
+    {
+      "provider": "BiQuote",
+      "status": "technical_probe_only",
+      "ownerAction": "Sadece adapter testi için incelenecek"
+    }
+  ]
+}

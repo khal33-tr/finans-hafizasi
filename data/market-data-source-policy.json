@@ -30,6 +30,20 @@
       "url": null,
       "status": "temporary_internal_calculation_only_until_terms_verified",
       "useCase": "MVP hesap motorunu gerçek veriye yaklaştırmak için kontrollü pilot"
+    },
+    {
+      "name": "dxFeed",
+      "role": "licensed_market_data_provider_candidate",
+      "url": "https://dxfeed.com/coverage/turkey/",
+      "status": "candidate_if_contract_allows_storage_and_public_display",
+      "useCase": "Borsa İstanbul hisse, endeks, API veya dosya erişimi için alternatif sağlayıcı görüşmesi"
+    },
+    {
+      "name": "BiQuote",
+      "role": "technical_test_api",
+      "url": "https://biquote.io/docs",
+      "status": "internal_test_only_until_terms_verified",
+      "useCase": "CSV import ve hesap motoru adaptörünü canlı yayın dışı test etmek"
     }
   ],
   "rejectedSources": [
