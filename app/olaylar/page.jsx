@@ -8,7 +8,7 @@ import {
   sampleEvents,
   tickers
 } from "@/lib/market-data";
-import { getEventImportState } from "@/lib/data-operations";
+import { getDataOperationSnapshot, getEventImportState, getEventPublicationState } from "@/lib/data-operations";
 
 export const metadata = {
   title: "Olay Arşivi | Finans Hafızası",
@@ -48,11 +48,22 @@ function buildInitialFilters(searchParams, { categories, statuses, importStatuse
 
 export default async function EventsArchivePage({ searchParams }) {
   const resolvedSearchParams = await searchParams;
+  const snapshot = getDataOperationSnapshot();
+  const publication = snapshot.mvpPublication;
+  const sourceArchiveBatch = publication.recommendedBatches[0];
+  const sourceArchiveTickers = new Set(sourceArchiveBatch.tickers);
   const eventsWithImportState = sampleEvents.map((event) => ({
     ...event,
-    importState: getEventImportState(event)
+    importState: getEventImportState(event),
+    publicationState: getEventPublicationState(event)
   }));
   const sortedEvents = [...eventsWithImportState].sort((first, second) => second.date.localeCompare(first.date));
+  const firstPublicationEvents = sortedEvents
+    .filter((event) => sourceArchiveTickers.has(event.ticker) && event.dataStatus === "source_found")
+    .sort(
+      (first, second) =>
+        sourceArchiveBatch.tickers.indexOf(first.ticker) - sourceArchiveBatch.tickers.indexOf(second.ticker)
+    );
   const categories = Object.entries(eventCategories).map(([value, label]) => ({ value, label }));
   const statuses = Object.entries(dataStatuses).map(([value, status]) => ({
     value,
@@ -86,6 +97,53 @@ export default async function EventsArchivePage({ searchParams }) {
             <a className="secondary-link" href="/metodoloji">
               Metodoloji
             </a>
+          </div>
+        </section>
+
+        <section className="archive-publication-panel" aria-label="İlk yayın paketi">
+          <div className="archive-publication-head">
+            <div>
+              <p className="eyebrow">İlk yayın paketi</p>
+              <h2>Kaynaklı arşiv açık, fiyat tepkisi kilitli</h2>
+              <p>
+                İlk 10 kayıt kaynaklarıyla gösterilebilir. Fiyat, hacim ve BIST 100 kıyası resmi veriyle
+                hesaplanmadan hiçbir kayıt doğrulanmış fiyat tepkisi olarak sunulmaz.
+              </p>
+            </div>
+            <span className="status-chip amber">{sourceArchiveBatch.statusLabel}</span>
+          </div>
+
+          <div className="archive-publication-grid">
+            <div>
+              <span>Kaynaklı olay</span>
+              <strong>{publication.summary.sourceReadyEvents}</strong>
+              <p>Birincil kaynak bağlantısı bulunan candidate kayıt.</p>
+            </div>
+            <div>
+              <span>İlk paket</span>
+              <strong>{publication.summary.firstTenSourceReadyEvents}</strong>
+              <p>Kullanıcının ilk bakışta göreceği kaynaklı arşiv seti.</p>
+            </div>
+            <div>
+              <span>Verified</span>
+              <strong>{publication.summary.verifiedEvents}</strong>
+              <p>Henüz doğrulanmış fiyat tepkisi yayımlanmıyor.</p>
+            </div>
+            <div>
+              <span>Veri bekleyen</span>
+              <strong>{publication.summary.waitingMarketDataEvents}</strong>
+              <p>Resmi/lisanslı piyasa verisi bekleyen kayıt.</p>
+            </div>
+          </div>
+
+          <div className="first-batch-list" aria-label="İlk kaynaklı arşiv kayıtları">
+            {firstPublicationEvents.map((event) => (
+              <a href={`/olaylar/${event.slug}`} key={event.slug}>
+                <span>{event.ticker}</span>
+                <strong>{event.title}</strong>
+                <small>{event.publicationState.calculationStatusLabel}</small>
+              </a>
+            ))}
           </div>
         </section>
 

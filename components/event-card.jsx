@@ -1,5 +1,5 @@
 import { formatReturn, getEventDataStatus, getEventStatus, getPrimarySource } from "@/lib/market-data";
-import { getEventImportState } from "@/lib/data-operations";
+import { getEventImportState, getEventPublicationState } from "@/lib/data-operations";
 import ReturnGrid from "@/components/return-grid";
 import SentimentSummary from "@/components/sentiment-summary";
 
@@ -7,6 +7,7 @@ export default function EventCard({ event, linked = true }) {
   const status = getEventStatus(event);
   const dataStatus = getEventDataStatus(event);
   const importState = event.importState ?? getEventImportState(event);
+  const publicationState = event.publicationState ?? getEventPublicationState(event);
   const primarySource = getPrimarySource(event);
   const relativeReturn = typeof event.bistRelative === "number" ? formatReturn(event.bistRelative) : "Veri bekleniyor";
   const volumeMultiple =
@@ -31,6 +32,7 @@ export default function EventCard({ event, linked = true }) {
           <span>{event.type}</span>
           <span className={`status-pill ${status.tone}`}>{status.label}</span>
           <span className={`status-pill ${importState.tone}`}>{importState.shortLabel}</span>
+          <span className="status-pill muted">{publicationState.publicModeLabel}</span>
         </div>
         <h3>{title}</h3>
         <p>{event.summary}</p>
@@ -46,13 +48,13 @@ export default function EventCard({ event, linked = true }) {
           </div>
           <div>
             <span>Veri durumu</span>
-            <strong>{importState.statusLabel}</strong>
+            <strong>{publicationState.calculationStatusLabel}</strong>
           </div>
         </div>
 
         <div className={`data-status-note ${importState.tone}`}>
-          <span>Yayın kontrolü</span>
-          <p>{importState.description}</p>
+          <span>{publicationState.isVerified ? "Doğrulanmış kayıt" : "Verified değil"}</span>
+          <p>{publicationState.decision}</p>
         </div>
 
         <a className="event-source" href={primarySource.url}>

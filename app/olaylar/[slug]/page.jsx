@@ -16,7 +16,7 @@ import {
   longMonitoringWindows,
   sourceTypeLabels
 } from "@/lib/market-data";
-import { getEventImportState } from "@/lib/data-operations";
+import { getEventImportState, getEventPublicationState } from "@/lib/data-operations";
 
 export function generateStaticParams() {
   return events.map((event) => ({ slug: event.slug }));
@@ -42,6 +42,7 @@ export default async function EventDetailPage({ params }) {
   const status = getEventStatus(event);
   const dataStatus = getEventDataStatus(event);
   const importState = getEventImportState(event);
+  const publicationState = getEventPublicationState(event);
   const primarySource = getPrimarySource(event);
 
   return (
@@ -82,6 +83,32 @@ export default async function EventDetailPage({ params }) {
         </section>
 
         <DataReadinessNotice compact />
+
+        <section className="detail-publication-panel" aria-label="Kayıt yayın durumu">
+          <div>
+            <p className="eyebrow">Bu kayıt şu an ne durumda?</p>
+            <h2>{publicationState.publicModeLabel}</h2>
+            <p>{publicationState.decision}</p>
+          </div>
+          <div className="detail-publication-grid">
+            <div>
+              <span>Kaynak durumu</span>
+              <strong>{event.sources?.some((source) => source.isPrimary) ? "Birincil kaynak var" : "Kaynak bekliyor"}</strong>
+            </div>
+            <div>
+              <span>Hesap durumu</span>
+              <strong>{publicationState.calculationStatusLabel}</strong>
+            </div>
+            <div>
+              <span>Verified</span>
+              <strong>{publicationState.isVerified ? "Evet" : "Hayır"}</strong>
+            </div>
+            <div>
+              <span>İlk paket</span>
+              <strong>{publicationState.isFirstSourceBatch ? "Dahil" : "Dışında"}</strong>
+            </div>
+          </div>
+        </section>
 
         <section className="page-grid">
           <article className="content-panel">
