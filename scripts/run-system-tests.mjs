@@ -213,6 +213,25 @@ test("price import validator rejects malformed imports", () => {
   }
 });
 
+test("mvp publication readiness matches candidate event state", () => {
+  const candidates = readJson("data/candidate-events.json");
+  const readiness = readJson("data/mvp-publication-readiness.json");
+
+  const sourceReadyCount = candidates.filter((event) =>
+    event.dataStatus === "source_found" && event.sources.some((source) => source.isPrimary)
+  ).length;
+  const verifiedCount = candidates.filter((event) => event.verificationStatus === "verified").length;
+
+  assert.equal(readiness.status, "mvp_publication_readiness");
+  assert.equal(readiness.summary.candidateEvents, candidates.length);
+  assert.equal(readiness.summary.sourceReadyEvents, sourceReadyCount);
+  assert.equal(readiness.summary.verifiedEvents, verifiedCount);
+  assert.equal(readiness.summary.waitingMarketDataEvents, candidates.length - verifiedCount);
+  assert.deepEqual(readiness.summary.shortWindows, ["d1", "d3", "w1", "w2", "d30"]);
+  assert.deepEqual(readiness.summary.longMonitoringWindows, ["d90", "d180", "y1"]);
+  assert.equal(readiness.recommendedBatches[0].status, "ready_as_source_archive");
+});
+
 let passed = 0;
 
 for (const { name, fn } of tests) {

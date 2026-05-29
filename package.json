@@ -11,6 +11,7 @@
     "generate:price-requirements": "node scripts/generate-price-data-requirements.mjs",
     "generate:pilot-import": "node scripts/generate-pilot-import-templates.mjs",
     "generate:pilot-readiness": "node scripts/generate-pilot-readiness.mjs",
+    "generate:mvp-readiness": "node scripts/generate-mvp-publication-readiness.mjs",
     "validate:price-import": "node scripts/validate-price-import.mjs",
     "validate:pilot-import": "node scripts/validate-price-import.mjs --prices=data/imports/pilot-prices.csv --calendar=data/imports/pilot-trading-calendar.csv --requirements=data/imports/pilot-price-data-requirements.json --out=data/imports/pilot-validation-report.json",
     "validate:today-completable": "node scripts/validate-price-import.mjs --prices=data/imports/today-completable-prices.csv --calendar=data/imports/today-completable-trading-calendar.csv --requirements=data/imports/today-completable-price-data-requirements.json --out=data/imports/today-completable-validation-report.json",
