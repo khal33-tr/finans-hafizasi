@@ -5,6 +5,6 @@ export default function robots() {
       allow: "/"
     },
     sitemap: "https://www.finanshafizasi.com/sitemap.xml",
-    host: "https://www.finanshafizasi.com"
+    host: "www.finanshafizasi.com"
   };
 }

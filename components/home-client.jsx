@@ -12,9 +12,9 @@ export default function HomeClient({ events, tickers, operationSnapshot }) {
   const filteredEvents = useMemo(() => {
     const normalized = query.trim().toUpperCase();
     if (!normalized) return events;
-    const matches = events.filter((event) => event.ticker.includes(normalized));
-    return matches.length ? matches : events;
+    return events.filter((event) => event.ticker.includes(normalized));
   }, [events, query]);
+  const hasActiveSearch = query.trim().length > 0;
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -120,20 +120,32 @@ export default function HomeClient({ events, tickers, operationSnapshot }) {
               </p>
             </div>
             <div className="window-tabs" aria-label="Zaman pencereleri">
-              <button type="button" className="active">
-                1G
-              </button>
-              <button type="button">3G</button>
-              <button type="button">1H</button>
-              <button type="button">2H</button>
-              <button type="button">30G</button>
+              <span className="active">1G</span>
+              <span>3G</span>
+              <span>1H</span>
+              <span>2H</span>
+              <span>30G</span>
             </div>
           </div>
-          <div className="event-list" aria-live="polite">
-            {filteredEvents.map((event) => (
-              <EventCard event={event} key={`${event.ticker}-${event.date}`} />
-            ))}
-          </div>
+          {filteredEvents.length ? (
+            <div className="event-list" aria-live="polite">
+              {filteredEvents.map((event) => (
+                <EventCard event={event} key={`${event.ticker}-${event.date}`} />
+              ))}
+            </div>
+          ) : (
+            <div className="empty-state" aria-live="polite">
+              <h2>Kayıt bulunamadı</h2>
+              <p>
+                {hasActiveSearch
+                  ? "Bu sembol için ana sayfada gösterilen olay kaydı yok. Tüm olay arşivinde arama yapabilirsiniz."
+                  : "Ana sayfada gösterilecek olay kaydı bulunamadı."}
+              </p>
+              <a className="text-link" href="/olaylar">
+                Tüm olay arşivi
+              </a>
+            </div>
+          )}
         </section>
 
         <section className="method" id="metodoloji">
