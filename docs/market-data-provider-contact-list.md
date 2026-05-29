@@ -6,11 +6,11 @@ Bu liste, Borsa İstanbul yanıtı beklenirken paralel iletişim kurulacak sağl
 
 | Öncelik | Sağlayıcı | Kanal | Durum | Not |
 |---:|---|---|---|---|
-| 1 | Borsa İstanbul DataStore | `vyk-marketing@borsaistanbul.com` veya DataStore/iletişim formu | Takip maili | Resmi kaynak, ilk öncelik |
-| 2 | Finnet | `pazarlama@finnet.gen.tr` | Gönderime hazır | BIST veri dağıtıcı listesinde |
-| 3 | ForInvest | `https://www.forinvest.com/contactUs` | Gönderime hazır | Form üzerinden temas |
-| 4 | Datakapital | `info@datakapital.com` | Gönderime hazır | Yerel BIST veri/analitik adayı |
-| 5 | dxFeed / Devexperts | `https://dxfeed.com/tr/contact-sales/` | Gönderime hazır | Global sağlayıcı, Türkiye kapsamı var |
+| 1 | Borsa İstanbul DataStore | `vyk-marketing@borsaistanbul.com` veya DataStore/iletişim formu | Gönderildi, yanıt bekleniyor | 29 Mayıs 2026 takip maili |
+| 2 | Finnet | `pazarlama@finnet.gen.tr` | Gönderildi, yanıt bekleniyor | 29 Mayıs 2026 e-posta |
+| 3 | ForInvest | `https://www.forinvest.com/contactUs` | Gönderildi, yanıt bekleniyor | 29 Mayıs 2026 form |
+| 4 | Datakapital | `info@datakapital.com` | Gönderildi, yanıt bekleniyor | 29 Mayıs 2026 e-posta |
+| 5 | dxFeed / Devexperts | `https://dxfeed.com/tr/contact-sales/` | Gönderildi, yanıt bekleniyor | 29 Mayıs 2026 form |
 | 6 | Unica Fintech | `info@unicafintech.com` | Yedek dalga | İlk dönüşlere göre |
 | 7 | BiQuote | `https://biquote.io/docs` | İç test | Public yayın için kullanılmaz |
 

@@ -1,6 +1,7 @@
 {
   "version": "2026-05-29",
-  "status": "ready_to_contact",
+  "status": "first_contact_round_sent",
+  "lastUpdated": "2026-05-29",
   "owner": "founder",
   "principle": "Önce lisanslı/public kullanıma uygun kaynaklar aranır. Teknik API kaynakları yalnızca iç test ve hesap motoru doğrulaması için kullanılır.",
   "criticalQuestions": [
@@ -27,10 +28,10 @@
       "contactUrl": "https://datastore.borsaistanbul.com/",
       "sourceUrl": "https://www.borsaistanbul.com/sss/veri-endeks-yayini-ve-satisi",
       "messageTemplate": "licensedProvider",
-      "status": "follow_up_ready",
-      "lastContactDate": null,
-      "nextAction": "Yanıt gelmediği için doğru adrese kısa takip maili gönder ve mümkünse Borsa İstanbul iletişim formundan da kayıt aç.",
-      "notes": "Resmi kaynak olduğu için ilk öncelik. Yanıt gecikirse lisanslı dağıtıcılar paralel ilerletilecek."
+      "status": "sent_waiting_reply",
+      "lastContactDate": "2026-05-29",
+      "nextAction": "Yanıt bekleniyor. 3 iş günü içinde dönüş olmazsa iletişim formu veya telefonla tekrar takip et.",
+      "notes": "29 Mayıs 2026 tarihinde takip maili gönderildi. Resmi kaynak olduğu için ilk öncelik."
     },
     {
       "id": "finnet",
@@ -43,10 +44,10 @@
       "contactUrl": "https://www.finnet.com.tr/finnetstore/tr/kurumsal/iletisim",
       "sourceUrl": "https://borsaistanbul.com/veriler/veri-yayini/veri-dagitici-kuruluslar",
       "messageTemplate": "licensedProvider",
-      "status": "ready_to_send",
-      "lastContactDate": null,
-      "nextAction": "Pazarlama adresine lisans ve MVP paketi sorusu gönder.",
-      "notes": "Borsa İstanbul veri dağıtıcı listesinde yer alıyor; yerel sağlayıcı olduğu için MVP ölçeğinde daha erişilebilir olabilir."
+      "status": "sent_waiting_reply",
+      "lastContactDate": "2026-05-29",
+      "nextAction": "Yanıt bekleniyor. Dönüş gelirse lisans, fiyatlama ve adjustedClose koşulları ayrı kayda işlenecek.",
+      "notes": "29 Mayıs 2026 tarihinde e-posta ile gönderildi. Borsa İstanbul veri dağıtıcı listesinde yer alıyor."
     },
     {
       "id": "forinvest",
@@ -59,10 +60,10 @@
       "contactUrl": "https://www.forinvest.com/contactUs",
       "sourceUrl": "https://borsaistanbul.com/veriler/veri-yayini/veri-dagitici-kuruluslar",
       "messageTemplate": "licensedProvider",
-      "status": "ready_to_send",
-      "lastContactDate": null,
-      "nextAction": "İletişim formundan veri lisansı, API/CSV ve public hesap sonucu gösterimi için dönüş iste.",
-      "notes": "Borsa İstanbul veri dağıtıcı listesinde Forinvest Yazılım ve Teknoloji Hizmetleri A.Ş. olarak yer alıyor."
+      "status": "sent_waiting_reply",
+      "lastContactDate": "2026-05-29",
+      "nextAction": "Yanıt bekleniyor. Dönüş gelirse API/CSV, redisplay ve public hesap sonucu gösterimi koşulları netleştirilecek.",
+      "notes": "29 Mayıs 2026 tarihinde iletişim formundan gönderildi. Borsa İstanbul veri dağıtıcı listesinde Forinvest Yazılım ve Teknoloji Hizmetleri A.Ş. olarak yer alıyor."
     },
     {
       "id": "datakapital",
@@ -75,10 +76,10 @@
       "contactUrl": "https://datakapital.com/iletisim",
       "sourceUrl": "https://borsaistanbul.com/veriler/veri-yayini/veri-dagitici-kuruluslar",
       "messageTemplate": "licensedProvider",
-      "status": "ready_to_send",
-      "lastContactDate": null,
-      "nextAction": "BIST odaklı tarihsel fiyat verisi ve sosyal/söylem verisi iş birliği ihtimalini birlikte sor.",
-      "notes": "Borsa İstanbul veri dağıtıcı listesinde Datakapital Veri Hizmetleri olarak yer alıyor."
+      "status": "sent_waiting_reply",
+      "lastContactDate": "2026-05-29",
+      "nextAction": "Yanıt bekleniyor. Dönüş gelirse tarihsel fiyat verisi ve olası sosyal/söylem verisi iş birliği ayrı değerlendirilecek.",
+      "notes": "29 Mayıs 2026 tarihinde e-posta ile gönderildi. Borsa İstanbul veri dağıtıcı listesinde Datakapital Veri Hizmetleri olarak yer alıyor."
     },
     {
       "id": "dxfeed",
@@ -91,10 +92,10 @@
       "contactUrl": "https://dxfeed.com/tr/contact-sales/",
       "sourceUrl": "https://dxfeed.com/coverage/turkey/",
       "messageTemplate": "licensedProvider",
-      "status": "ready_to_send",
-      "lastContactDate": null,
-      "nextAction": "Contact Sales formundan Borsa İstanbul günlük/historical/end-of-day kapsamı ve redisplay koşullarını sor.",
-      "notes": "Türkiye kapsam sayfasında Borsa İstanbul hisse, endeks ve gün sonu veri kapsamı belirtiliyor."
+      "status": "sent_waiting_reply",
+      "lastContactDate": "2026-05-29",
+      "nextAction": "Yanıt bekleniyor. Dönüş gelirse Borsa İstanbul end-of-day kapsamı, redisplay ve derived data koşulları netleştirilecek.",
+      "notes": "29 Mayıs 2026 tarihinde Contact Sales formundan gönderildi. Website bilgisi mesaj gövdesine eklendi."
     },
     {
       "id": "unicafintech",
