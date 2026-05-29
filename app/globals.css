@@ -269,6 +269,8 @@ h3 {
 
 .breadcrumb {
   display: inline-flex;
+  min-height: 32px;
+  align-items: center;
   margin-bottom: 16px;
   color: var(--teal);
   font-size: 14px;
@@ -434,6 +436,8 @@ h3 {
 
 .source-link {
   display: inline-flex;
+  min-height: 32px;
+  align-items: center;
   margin-top: 10px;
   color: var(--teal);
   font-weight: 800;
@@ -807,6 +811,9 @@ h3 {
 }
 
 .badge {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
   padding: 5px 8px;
   border-radius: 999px;
   background: #eef2f4;
@@ -841,6 +848,9 @@ h3 {
 }
 
 .event-title-link {
+  display: inline-flex;
+  min-height: 32px;
+  align-items: center;
   color: inherit;
 }
 
