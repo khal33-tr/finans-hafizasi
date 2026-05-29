@@ -1,0 +1,702 @@
+{
+  "version": "2026-05-29",
+  "asOfDate": "2026-05-29",
+  "status": "mvp_publication_readiness",
+  "principle": "Kaynak bulunan candidate kayıtlar public kaynak arşivi olarak gösterilebilir; fiyat tepkisi, hacim ve BIST 100 kıyası tamamlanmadan verified kayıt sayılmaz.",
+  "summary": {
+    "candidateEvents": 20,
+    "sourceReadyEvents": 20,
+    "firstTenSourceReadyEvents": 10,
+    "verifiedEvents": 0,
+    "waitingMarketDataEvents": 20,
+    "shortWindows": [
+      "d1",
+      "d3",
+      "w1",
+      "w2",
+      "d30"
+    ],
+    "longMonitoringWindows": [
+      "d90",
+      "d180",
+      "y1"
+    ],
+    "firstCalculationPilotEvents": 3,
+    "todayCompletableShortReactionEvents": 1,
+    "futureShortReactionEvents": 2,
+    "longMonitoringPilotEvents": 3
+  },
+  "publicationGates": [
+    {
+      "gate": "source_archive",
+      "required": [
+        "primary_source_found",
+        "neutral_summary",
+        "data_pending_notice"
+      ],
+      "allowedPublicLabel": "Kaynak bulundu, fiyat tepkisi için resmi veri bekleniyor."
+    },
+    {
+      "gate": "verified_reaction",
+      "required": [
+        "licensed_adjusted_close",
+        "volume_series",
+        "benchmark_xu100_series",
+        "calculation_report",
+        "editor_review"
+      ],
+      "allowedPublicLabel": "Doğrulanmış fiyat tepkisi."
+    }
+  ],
+  "recommendedBatches": [
+    {
+      "name": "ilk_10_kaynakli_arsiv",
+      "purpose": "Siteye giren kullanıcıya projenin gerçek kaynak bulma disiplinini göstermek.",
+      "tickers": [
+        "THYAO",
+        "TUPRS",
+        "ASELS",
+        "KCHOL",
+        "SAHOL",
+        "EREGL",
+        "SISE",
+        "BIMAS",
+        "AKBNK",
+        "GARAN"
+      ],
+      "status": "ready_as_source_archive"
+    },
+    {
+      "name": "ilk_hesaplama_pilotu",
+      "purpose": "Resmi piyasa verisi gelince hesaplama motorunu uçtan uca denemek.",
+      "slugs": [
+        "tuprs-2025-kar-dagitim-onerisi",
+        "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+        "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu"
+      ],
+      "status": "waiting_market_data"
+    }
+  ],
+  "events": [
+    {
+      "slug": "thyao-2026-ilk-ceyrek-finansal-sonuclari",
+      "ticker": "THYAO",
+      "priority": 1,
+      "title": "THYAO 2026 ilk çeyrek finansal sonuçları",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "short_window_not_yet_mature",
+      "reactionStartDate": "2026-04-30",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "tuprs-2025-kar-dagitim-onerisi",
+      "ticker": "TUPRS",
+      "priority": 2,
+      "title": "TUPRS 2025 kar dağıtım önerisi",
+      "category": "dividend",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "short_window_mature_waiting_csv",
+      "reactionStartDate": "2026-03-12",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "asels-2026-sozlesme-imzalanmasi",
+      "ticker": "ASELS",
+      "priority": 3,
+      "title": "ASELS 2026 sözleşme imzalanması",
+      "category": "contract",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-21",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "kchol-2026-ilk-ceyrek-finansal-raporlar",
+      "ticker": "KCHOL",
+      "priority": 4,
+      "title": "KCHOL 2026 ilk çeyrek finansal raporları",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-11",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "sahol-akcansa-pay-devri-rekabet-kurumu-izni",
+      "ticker": "SAHOL",
+      "priority": 5,
+      "title": "SAHOL Akçansa pay devri için Rekabet Kurumu izni",
+      "category": "investment",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-25",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "eregl-2026-nakit-kar-payi-odeme-tarihi",
+      "ticker": "EREGL",
+      "priority": 6,
+      "title": "EREGL 2026 nakit kar payı ödeme tarihi",
+      "category": "dividend",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-04-29",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "sise-abd-stockton-liman-projesi-sonlandirilmasi",
+      "ticker": "SISE",
+      "priority": 7,
+      "title": "SISE ABD Stockton Liman Projesinin sonlandırılması",
+      "category": "investment",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-25",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "bimas-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "BIMAS",
+      "priority": 8,
+      "title": "BIMAS 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-12",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "akbnk-2026-ilk-ceyrek-konsolide-sorumluluk-beyani",
+      "ticker": "AKBNK",
+      "priority": 9,
+      "title": "AKBNK 2026 ilk çeyrek konsolide raporlama paketi",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-04-29",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "garan-2026-ilk-ceyrek-finansal-sonuc-sunumu",
+      "ticker": "GARAN",
+      "priority": 10,
+      "title": "GARAN 2026 ilk çeyrek finansal sonuç sunumu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "short_window_not_yet_mature",
+      "reactionStartDate": "2026-04-30",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "ykbnk-2026-ilk-ceyrek-konsolide-finansal-rapor",
+      "ticker": "YKBNK",
+      "priority": 11,
+      "title": "YKBNK 2026 ilk çeyrek konsolide finansal raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-04-29",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "isctr-2026-olagan-genel-kurul-kar-dagitim-karari",
+      "ticker": "ISCTR",
+      "priority": 12,
+      "title": "ISCTR 2026 olağan genel kurul kar dağıtım kararı",
+      "category": "dividend",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-03-31",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "tcell-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "TCELL",
+      "priority": 13,
+      "title": "TCELL 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-12",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "froto-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "FROTO",
+      "priority": 14,
+      "title": "FROTO 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-06",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "toaso-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "TOASO",
+      "priority": 15,
+      "title": "TOASO 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-06",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "sasa-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "SASA",
+      "priority": 16,
+      "title": "SASA 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-04",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "hekts-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "HEKTS",
+      "priority": 17,
+      "title": "HEKTS 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-06",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "kontr-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "KONTR",
+      "priority": 18,
+      "title": "KONTR 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-12",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "astor-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "ASTOR",
+      "priority": 19,
+      "title": "ASTOR 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-12",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    },
+    {
+      "slug": "petkm-2026-ilk-ceyrek-faaliyet-raporu",
+      "ticker": "PETKM",
+      "priority": 20,
+      "title": "PETKM 2026 ilk çeyrek faaliyet raporu",
+      "category": "earnings",
+      "sourceStatus": "primary_source_found",
+      "calculationStatus": "waiting_market_data",
+      "verificationStatus": "candidate",
+      "publicMode": "source_archive_with_data_pending_notice",
+      "pilotStatus": "not_in_first_calculation_pilot",
+      "reactionStartDate": "2026-05-07",
+      "shortWindows": [
+        "d1",
+        "d3",
+        "w1",
+        "w2",
+        "d30"
+      ],
+      "longMonitoringWindows": [
+        "d90",
+        "d180",
+        "y1"
+      ],
+      "requiredMarketData": [
+        "adjustedClose",
+        "volume",
+        "XU100"
+      ],
+      "nextAction": "Lisans/kullanım şartı net fiyat, hacim ve XU100 serisi geldikten sonra hesaplama motoruna alınır."
+    }
+  ]
+}
